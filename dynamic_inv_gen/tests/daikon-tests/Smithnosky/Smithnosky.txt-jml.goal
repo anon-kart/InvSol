@@ -1,0 +1,179 @@
+===========================================================================
+misc.Smithnosky:::OBJECT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() size(this.s[]) size(this.s[])-1
+this != null
+this.b >= 0
+this.c >= 0
+this.size == 0 || this.size == 1 || this.size == 2
+this.s != null
+this.s != null
+daikon.Quant.eltsNotEqual(this.s, null)
+daikon.Quant.eltsNotEqual(this.s, null)
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.s), "java.lang.String")
+daikon.Quant.size(this.s) == 0 || daikon.Quant.size(this.s) == 1 || daikon.Quant.size(this.s) == 2
+(!(this.a == 0)) || (this.b == 0)
+this.a >= this.b
+(!(this.a == 0)) || (this.c == 0)
+this.a >= this.c
+(!(this.b == 0)) || (this.c == 0)
+this.b >= this.c
+(!(this.aXb == 0)) || (this.b == 0)
+this.b <= this.aXb
+(!(this.aXb == 0)) || (this.c == 0)
+this.c <= this.aXb
+this.c <= this.aXc
+(daikon.Quant.size(this.s) & daikon.Quant.size(this.s)-1) == 0
+===========================================================================
+misc.Smithnosky.Smithnosky(int, int, int):::ENTER
+    Variables: a b c
+a == 2
+b == 3
+c == 4
+===========================================================================
+misc.Smithnosky.Smithnosky(int, int, int):::EXIT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() a b c orig(a) orig(b) orig(c) size(this.s[]) size(this.s[])-1
+this.a == this.b
+this.a == this.c
+this.a == 0
+this.aXb == 6
+this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.add(java.lang.Object):::ENTER
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() o o.getClass().getName() size(this.s[]) size(this.s[])-1
+this.a == this.b
+this.a == this.c
+this.aXb == this.aXc
+this.a == 3
+this.aXb == 9
+this.size == 0 || this.size == 1
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] { "java.lang.String" })
+o != null
+o.getClass().getName() == java.lang.String.class.getName()
+daikon.Quant.size(this.s) == 0 || daikon.Quant.size(this.s) == 1
+===========================================================================
+misc.Smithnosky.add(java.lang.Object):::EXIT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() o o.getClass().getName() orig(this) orig(this.a) orig(this.b) orig(this.c) orig(this.aXb) orig(this.aXc) orig(this.size) orig(this.s) orig(this.s[]) orig(this.s[].getClass().getName()) orig(o) orig(o.getClass().getName()) size(this.s[]) size(this.s[])-1 orig(size(this.s[])) orig(size(this.s[]))-1
+assignable this.size, this.s[*]
+this.a == this.b
+this.a == this.c
+this.a == \old(this.a)
+this.a == \old(this.b)
+this.a == \old(this.c)
+this.aXb == this.aXc
+this.aXb == \old(this.aXb)
+this.aXb == \old(this.aXc)
+this.s == \old(this.s)
+daikon.Quant.size(this.s)-1 == \old(daikon.Quant.size(this.s))
+this.a == 3
+this.aXb == 9
+this.size == 1 || this.size == 2
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] { "java.lang.String" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] { "java.lang.String", "java.lang.String" })
+daikon.Quant.size(this.s) == 1 || daikon.Quant.size(this.s) == 2
+warning: method daikon.inv.binary.twoSequence.SuperSequence.format(OutputFormat:JML) needs to be implemented: orig(this.s[]) is a subsequence of this.s[]
+daikon.Quant.subsetOf(\old(this.s), this.s)
+daikon.Quant.memberOf(\old(o.getClass().getName()) , daikon.Quant.typeArray(this.s) )
+===========================================================================
+misc.Smithnosky.incA():::ENTER
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() size(this.s[]) size(this.s[])-1
+this.a == this.b
+this.a == this.c
+this.a == 0 || this.a == 1 || this.a == 2
+this.aXb == 1 || this.aXb == 4 || this.aXb == 6
+this.aXc == 1 || this.aXc == 4 || this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.incA():::EXIT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() orig(this) orig(this.a) orig(this.b) orig(this.c) orig(this.aXb) orig(this.aXc) orig(this.size) orig(this.s) orig(this.s[]) orig(this.s[].getClass().getName()) size(this.s[]) size(this.s[])-1 orig(size(this.s[])) orig(size(this.s[]))-1
+assignable this.a, this.aXb
+this.b == this.c
+this.b == \old(this.a)
+this.b == \old(this.b)
+this.b == \old(this.c)
+this.aXc == \old(this.aXc)
+this.size == \old(this.size)
+this.s == \old(this.s)
+daikon.Quant.pairwiseEqual(this.s, \old(this.s))
+this.a == 1 || this.a == 2 || this.a == 3
+this.b == 0 || this.b == 1 || this.b == 2
+this.aXb == 0 || this.aXb == 2 || this.aXb == 6
+this.aXc == 1 || this.aXc == 4 || this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.incB():::ENTER
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() size(this.s[]) size(this.s[])-1
+this.b == this.c
+this.a == 1 || this.a == 2 || this.a == 3
+this.b == 0 || this.b == 1 || this.b == 2
+this.aXb == 0 || this.aXb == 2 || this.aXb == 6
+this.aXc == 1 || this.aXc == 4 || this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.incB():::EXIT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() orig(this) orig(this.a) orig(this.b) orig(this.c) orig(this.aXb) orig(this.aXc) orig(this.size) orig(this.s) orig(this.s[]) orig(this.s[].getClass().getName()) size(this.s[]) size(this.s[])-1 orig(size(this.s[])) orig(size(this.s[]))-1
+assignable this.b, this.aXb
+this.a == this.b
+this.a == \old(this.a)
+this.c == \old(this.b)
+this.c == \old(this.c)
+this.aXc == \old(this.aXc)
+this.size == \old(this.size)
+this.s == \old(this.s)
+daikon.Quant.pairwiseEqual(this.s, \old(this.s))
+this.a == 1 || this.a == 2 || this.a == 3
+this.c == 0 || this.c == 1 || this.c == 2
+this.aXb == 1 || this.aXb == 4 || this.aXb == 9
+this.aXc == 1 || this.aXc == 4 || this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.incC():::ENTER
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() size(this.s[]) size(this.s[])-1
+this.a == this.b
+this.a == 1 || this.a == 2 || this.a == 3
+this.c == 0 || this.c == 1 || this.c == 2
+this.aXb == 1 || this.aXb == 4 || this.aXb == 9
+this.aXc == 1 || this.aXc == 4 || this.aXc == 8
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.incC():::EXIT
+    Variables: this this.a this.b this.c this.aXb this.aXc this.size this.s this.s[] this.s[].getClass().getName() orig(this) orig(this.a) orig(this.b) orig(this.c) orig(this.aXb) orig(this.aXc) orig(this.size) orig(this.s) orig(this.s[]) orig(this.s[].getClass().getName()) size(this.s[]) size(this.s[])-1 orig(size(this.s[])) orig(size(this.s[]))-1
+assignable this.c, this.aXc
+this.a == this.b
+this.a == this.c
+this.a == \old(this.a)
+this.a == \old(this.b)
+this.aXb == this.aXc
+this.aXb == \old(this.aXb)
+this.size == \old(this.size)
+this.s == \old(this.s)
+daikon.Quant.pairwiseEqual(this.s, \old(this.s))
+this.a == 1 || this.a == 2 || this.a == 3
+this.aXb == 1 || this.aXb == 4 || this.aXb == 9
+this.size == 0
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.s), new String[] {  })
+===========================================================================
+misc.Smithnosky.main(java.lang.String[]):::ENTER
+    Variables: args args.getClass().getName() args[] args[].toString size(args[]) size(args[])-1
+args != null
+args.getClass().getName() == java.lang.String[].class.getName()
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.collectObject(args, "toString()"), new String[] {  })
+===========================================================================
+misc.Smithnosky.main(java.lang.String[]):::EXIT
+    Variables: args args.getClass().getName() args[] args[].toString orig(args) orig(args.getClass().getName()) orig(args[]) orig(args[].toString) size(args[]) size(args[])-1 orig(size(args[])) orig(size(args[]))-1
+daikon.Quant.pairwiseEqual(args, \old(args))
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.pairwiseEqual(daikon.Quant.collectObject(args, "toString()"), new String[] {  })

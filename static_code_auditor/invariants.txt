@@ -1,0 +1,6 @@
+balances[msg_sender] >= 0
+Implies(msg_value > 0, balances[msg_sender] == balances[msg_sender] + msg_value)
+balances[msg_sender] >= amount
+balances[msg_sender] == balances[msg_sender] - amount
+Implies(msg_sender == owner, msg_sender == owner)
+Implies(msg_sender == owner, balances[msg_sender] == balances[msg_sender])

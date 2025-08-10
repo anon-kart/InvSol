@@ -1,0 +1,950 @@
+## This CircleCI configuration file is provided for the convenience of people who wish to run CircleCI.
+## CircleCI does not run in the codespecs organization (home of the main Daikon repository).
+
+version: 2.1
+
+jobs:
+
+  # Only proceed to other jobs if ubuntu-jdk17-jobs passes.
+  jdk17-jobs:
+    docker:
+      - image: cimg/base:2022.06
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - run: /bin/true
+
+  quick-txt-diff-ubuntu-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  quick-txt-diff-ubuntu-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  quick-txt-diff-ubuntu-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  quick-txt-diff-ubuntu-jdk21:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk21
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  nonquick-txt-diff-ubuntu-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  nonquick-txt-diff-ubuntu-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  nonquick-txt-diff-ubuntu-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  nonquick-txt-diff-ubuntu-jdk21:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk21
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  non-txt-diff-ubuntu-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  non-txt-diff-ubuntu-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  non-txt-diff-ubuntu-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  non-txt-diff-ubuntu-jdk21:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk21
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  misc-ubuntu-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-misc.sh
+
+  misc-ubuntu-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-misc.sh
+
+  misc-ubuntu-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-misc.sh
+
+  misc-ubuntu-jdk21:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk21-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-misc.sh
+
+  kvasir-ubuntu-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run:
+          name: Test Kvasir
+          command: ./scripts/test-kvasir.sh
+          no_output_timeout: 20m
+
+  kvasir-ubuntu-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run:
+          name: Test Kvasir
+          command: ./scripts/test-kvasir.sh
+          no_output_timeout: 20m
+
+  kvasir-ubuntu-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run:
+          name: Test Kvasir
+          command: ./scripts/test-kvasir.sh
+          no_output_timeout: 20m
+
+  kvasir-ubuntu-jdk21:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk21-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run:
+          name: Test Kvasir
+          command: ./scripts/test-kvasir.sh
+          no_output_timeout: 20m
+
+  quick-txt-diff-rockylinux-jdk8:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  quick-txt-diff-rockylinux-jdk11:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  quick-txt-diff-rockylinux-jdk17:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-quick-txt-diff.sh
+
+  nonquick-txt-diff-rockylinux-jdk8:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  nonquick-txt-diff-rockylinux-jdk11:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  nonquick-txt-diff-rockylinux-jdk17:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-nonquick-txt-diff.sh
+
+  non-txt-diff-rockylinux-jdk8:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  non-txt-diff-rockylinux-jdk11:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  non-txt-diff-rockylinux-jdk17:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-non-txt-diff.sh
+
+  misc-rockylinux-jdk8:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk8-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      - run:
+          command: ./scripts/test-misc.sh
+          no_output_timeout: 20m
+
+  misc-rockylinux-jdk11:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk11-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      - run:
+          command: ./scripts/test-misc.sh
+          no_output_timeout: 20m
+
+  misc-rockylinux-jdk17:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk17-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+
+      - run:
+          command: ./scripts/test-misc.sh
+          no_output_timeout: 20m
+
+  kvasir-rockylinux-jdk8:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk8-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-kvasir.sh
+
+  kvasir-rockylinux-jdk11:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk11-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-kvasir.sh
+
+  kvasir-rockylinux-jdk17:
+    docker:
+      - image: mdernst/daikon-rockylinux-jdk17-plus
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: ./scripts/test-kvasir.sh
+
+  # This task typechecks Daikon using the Checker Framework that is bundled with Daikon.
+  # If this task fails but task `typecheck-with-latest-CF-jdk*` succeeds, then update the
+  # Checker Framework jar files in java/lib/ .
+  typecheck-with-bundled-CF-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: |
+          make showvars
+          make compile daikon.jar
+      - run:
+          command: scripts/test-typecheck-with-bundled-cf.sh
+          no_output_timeout: 30m
+
+  typecheck-with-latest-CF-jdk8:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk8
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: env
+      - run:
+          command: scripts/test-typecheck-with-latest-cf.sh
+          no_output_timeout: 30m
+
+  typecheck-with-latest-CF-jdk11:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk11
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: env
+      - run:
+          command: scripts/test-typecheck-with-latest-cf.sh
+          no_output_timeout: 30m
+
+  typecheck-with-latest-CF-jdk17:
+    docker:
+      - image: mdernst/daikon-ubuntu-jdk17
+    resource_class: large
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
+    steps:
+      - restore_cache:
+          keys:
+            - source-v1-{{ .Branch }}-{{ .Revision }}
+            - source-v1-{{ .Branch }}-
+            - source-v1-
+      - checkout
+      - save_cache:
+          key: source-v1-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
+      - run: env
+      - run:
+          command: scripts/test-typecheck-with-latest-cf.sh
+          no_output_timeout: 30m
+
+
+# For dependence logic, see ../azure-pipelines.yml .
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - jdk17-jobs:
+          requires:
+            - quick-txt-diff-ubuntu-jdk17
+            - nonquick-txt-diff-ubuntu-jdk17
+            - non-txt-diff-ubuntu-jdk17
+            - misc-ubuntu-jdk17
+            - kvasir-ubuntu-jdk17
+            - typecheck-with-bundled-CF-jdk17
+      - quick-txt-diff-ubuntu-jdk8:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-ubuntu-jdk17
+      - quick-txt-diff-ubuntu-jdk11:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-ubuntu-jdk17
+      - quick-txt-diff-ubuntu-jdk17
+      - quick-txt-diff-ubuntu-jdk21:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-ubuntu-jdk17
+      - nonquick-txt-diff-ubuntu-jdk8:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-ubuntu-jdk17
+      - nonquick-txt-diff-ubuntu-jdk11:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-ubuntu-jdk17
+      - nonquick-txt-diff-ubuntu-jdk17
+      - nonquick-txt-diff-ubuntu-jdk21:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-ubuntu-jdk17
+      - non-txt-diff-ubuntu-jdk8:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-ubuntu-jdk17
+      - non-txt-diff-ubuntu-jdk11:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-ubuntu-jdk17
+      - non-txt-diff-ubuntu-jdk17
+      - non-txt-diff-ubuntu-jdk21:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-ubuntu-jdk17
+      - misc-ubuntu-jdk8:
+          requires:
+            - jdk17-jobs
+            - misc-ubuntu-jdk17
+      - misc-ubuntu-jdk11:
+          requires:
+            - jdk17-jobs
+            - misc-ubuntu-jdk17
+      - misc-ubuntu-jdk17
+      - misc-ubuntu-jdk21:
+          requires:
+            - jdk17-jobs
+            - misc-ubuntu-jdk17
+      - kvasir-ubuntu-jdk8:
+          requires:
+            - jdk17-jobs
+            - kvasir-ubuntu-jdk17
+      - kvasir-ubuntu-jdk11:
+          requires:
+            - jdk17-jobs
+            - kvasir-ubuntu-jdk17
+      - kvasir-ubuntu-jdk17
+      - kvasir-ubuntu-jdk21:
+          requires:
+            - jdk17-jobs
+            - kvasir-ubuntu-jdk17
+      - kvasir-rockylinux-jdk8:
+          requires:
+            - jdk17-jobs
+            - kvasir-rockylinux-jdk17
+            - kvasir-ubuntu-jdk8
+      - kvasir-rockylinux-jdk11:
+          requires:
+            - jdk17-jobs
+            - kvasir-rockylinux-jdk17
+            - kvasir-ubuntu-jdk11
+      - kvasir-rockylinux-jdk17:
+          requires:
+            - jdk17-jobs
+            - kvasir-ubuntu-jdk17
+      - quick-txt-diff-rockylinux-jdk8:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-rockylinux-jdk17
+            - quick-txt-diff-ubuntu-jdk8
+      - quick-txt-diff-rockylinux-jdk11:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-rockylinux-jdk17
+            - quick-txt-diff-ubuntu-jdk11
+      - quick-txt-diff-rockylinux-jdk17:
+          requires:
+            - jdk17-jobs
+            - quick-txt-diff-ubuntu-jdk17
+      - nonquick-txt-diff-rockylinux-jdk8:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-rockylinux-jdk17
+            - nonquick-txt-diff-ubuntu-jdk8
+      - nonquick-txt-diff-rockylinux-jdk11:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-rockylinux-jdk17
+            - nonquick-txt-diff-ubuntu-jdk11
+      - nonquick-txt-diff-rockylinux-jdk17:
+          requires:
+            - jdk17-jobs
+            - nonquick-txt-diff-ubuntu-jdk17
+      - non-txt-diff-rockylinux-jdk8:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-rockylinux-jdk17
+            - non-txt-diff-ubuntu-jdk8
+      - non-txt-diff-rockylinux-jdk11:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-rockylinux-jdk17
+            - non-txt-diff-ubuntu-jdk11
+      - non-txt-diff-rockylinux-jdk17:
+          requires:
+            - jdk17-jobs
+            - non-txt-diff-ubuntu-jdk17
+      - misc-rockylinux-jdk8:
+          requires:
+            - jdk17-jobs
+            - misc-rockylinux-jdk17
+            - misc-ubuntu-jdk8
+      - misc-rockylinux-jdk11:
+          requires:
+            - jdk17-jobs
+            - misc-rockylinux-jdk17
+            - misc-ubuntu-jdk11
+      - misc-rockylinux-jdk17:
+          requires:
+            - jdk17-jobs
+            - misc-ubuntu-jdk17
+      - typecheck-with-bundled-CF-jdk17
+# Seems to run out of memory on CircleCI.  It's being checked on Azure Pipelines.
+#      -  typecheck-with-latest-CF-jdk8:
+#      -  typecheck-with-latest-CF-jdk11:
+#      -  typecheck-with-latest-CF-jdk17:

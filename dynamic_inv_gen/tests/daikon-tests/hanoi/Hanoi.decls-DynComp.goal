@@ -1,0 +1,718 @@
+// Declarations for six170.Hanoi
+// Declarations written 2020-11-18T07:23:43.098 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt six170.Hanoi:::CLASS
+ppt-type class
+
+ppt six170.Hanoi:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[3]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+
+ppt six170.Hanoi.Hanoi(int):::ENTER
+ppt-type enter
+variable height
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt six170.Hanoi.Hanoi(int):::EXIT38
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[2]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable height
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt six170.Hanoi.Hanoi(int, boolean):::ENTER
+ppt-type enter
+variable height
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable noOutput
+  var-kind variable
+  dec-type boolean
+  rep-type boolean
+  flags is_param
+  comparability 3
+
+ppt six170.Hanoi.Hanoi(int, boolean):::EXIT43
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[2]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable height
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable noOutput
+  var-kind variable
+  dec-type boolean
+  rep-type boolean
+  flags is_param
+  comparability 4
+
+ppt six170.Hanoi.moveDisk(int, int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable fromPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable toPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt six170.Hanoi.moveDisk(int, int):::EXIT57
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable fromPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable toPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt six170.Hanoi.otherPeg(int, int):::ENTER
+ppt-type enter
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT65
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT66
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT67
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT68
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT69
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT70
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.otherPeg(int, int):::EXIT71
+ppt-type subexit
+variable pegA
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable pegB
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 3
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt six170.Hanoi.moveTower(int, int, int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable fromPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable toPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable towerHeight
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 4
+
+ppt six170.Hanoi.moveTower(int, int, int):::EXIT98
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable fromPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable toPeg
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable towerHeight
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 4
+
+ppt six170.Hanoi.showTowers():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[3]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+
+ppt six170.Hanoi.showTowers():::EXIT136
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[3]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+
+ppt six170.Hanoi.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt six170.Hanoi.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 6
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 7[5]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 5
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt six170.Hanoi.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[4]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt six170.Hanoi.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type six170.Hanoi
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.diskLocation
+  var-kind field diskLocation
+  dec-type int[]
+  rep-type hashcode
+  comparability 6
+variable this.diskLocation[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 7[5]
+variable this.height
+  var-kind field height
+  dec-type int
+  rep-type int
+  comparability 5
+variable this.noOutput
+  var-kind field noOutput
+  dec-type boolean
+  rep-type boolean
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

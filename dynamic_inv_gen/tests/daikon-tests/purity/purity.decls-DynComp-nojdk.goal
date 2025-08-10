@@ -1,0 +1,1755 @@
+// Declarations for misc.Purity
+// Declarations written 2022-07-26T09:55:05.115984799 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt misc.Purity:::CLASS
+ppt-type class
+
+ppt misc.Purity:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.Purity(int, int):::ENTER
+ppt-type enter
+variable value
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable shift
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt misc.Purity.Purity(int, int):::EXIT25
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable value
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable shift
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt misc.Purity.getValue():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.getValue():::EXIT28
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt misc.Purity.getShift():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.getShift():::EXIT32
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt misc.Purity.isHeavy():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.isHeavy():::EXIT36
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 2
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 2
+
+ppt misc.Purity.getNum():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.getNum():::EXIT40
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type java.lang.Number
+  rep-type hashcode
+  comparability 2
+variable return.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.getJWrap():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 8
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 4
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 5[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 6
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.getJWrap():::EXIT44
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type java.lang.Integer
+  rep-type hashcode
+  comparability 2
+
+ppt misc.Purity.scale(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable scale
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt misc.Purity.scale(int):::EXIT48
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[9]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[10]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[11]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable scale
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt misc.Purity.sum(java.lang.Number):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable n
+  var-kind variable
+  dec-type java.lang.Number
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable n.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.sum(java.lang.Number):::EXIT52
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 6
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 7[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 8
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 9[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable n
+  var-kind variable
+  dec-type java.lang.Number
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable n.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 3
+
+ppt misc.Purity.retrieve(java.util.List):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 6
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 8
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 9[13]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[14]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable l
+  var-kind variable
+  dec-type java.util.List
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable l[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 3[15]
+variable l[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args l[]
+  flags synthetic classname non_null
+  comparability 1[16]
+variable l.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args l
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.retrieve(java.util.List):::EXIT56
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 11
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 11
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 6
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 7
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 9
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 10[14]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[15]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable l
+  var-kind variable
+  dec-type java.util.List
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable l[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 3[16]
+variable l[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args l[]
+  flags synthetic classname non_null
+  comparability 1[17]
+variable l.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args l
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 4
+
+ppt misc.Purity.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 6
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 8
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 9[13]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[14]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt misc.Purity.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 9
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 4
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 5
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 6[10]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[11]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 7
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 8[12]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[13]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Purity.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Purity
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.value
+  var-kind field value
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.shift
+  var-kind field shift
+  dec-type int
+  rep-type int
+  comparability 10
+variable this.heavy
+  var-kind field heavy
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+variable this.list1
+  var-kind field list1
+  dec-type java.util.LinkedList
+  rep-type hashcode
+  comparability 6
+variable this.list1[..]
+  var-kind array
+  array 1
+  dec-type java.util.LinkedList
+  rep-type hashcode[]
+  comparability 7[11]
+variable this.list1[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list1[]
+  flags synthetic classname non_null
+  comparability 1[12]
+variable this.list2
+  var-kind field list2
+  dec-type java.util.List
+  rep-type hashcode
+  comparability 8
+variable this.list2[..]
+  var-kind array
+  array 1
+  dec-type java.util.List
+  rep-type hashcode[]
+  comparability 9[13]
+variable this.list2[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.list2[]
+  flags synthetic classname non_null
+  comparability 1[14]
+variable this.list2.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.list2
+  flags synthetic classname non_null
+  comparability 1
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

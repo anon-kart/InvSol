@@ -1,0 +1,328 @@
+===========================================================================
+javautil.AbstractList17:::OBJECT
+this.getClass().getName() == javautil.ArrayList17.class
+this.modCount == 0
+===========================================================================
+javautil.AbstractList17.AbstractList17():::EXIT
+===========================================================================
+javautil.ArrayList17:::CLASS
+javautil.ArrayList17.EMPTY_ELEMENTDATA has only one value
+javautil.ArrayList17.EMPTY_ELEMENTDATA != null
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == java.lang.Object[].class
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == []
+javautil.ArrayList17.EMPTY_ELEMENTDATA[].getClass().getName() == []
+===========================================================================
+javautil.ArrayList17:::OBJECT
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == this.elementData.getClass().getName()
+this.elementData != null
+this.size >= 0
+this.modCount >= 0
+size(this.elementData[])-1 != 0
+this.elementData[this.size..] elements == null
+this.elementData[0..this.size-1] contains no duplicates
+this.elementData[0..this.size-1] elements != null
+this.size >= size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+(size(this.elementData[]) == 0) ==> (this.size == 0)
+this.size <= size(this.elementData[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) <= size(this.elementData[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) != size(this.elementData[])-1
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])-1 <= size(this.elementData[])-1
+===========================================================================
+javautil.ArrayList17.ArrayList17():::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == this.elementData
+this.size == size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size == size(this.elementData[])
+this.elementData[] == []
+this.modCount == 0
+===========================================================================
+javautil.ArrayList17.ArrayList17(int):::ENTER
+initialCapacity == 22
+===========================================================================
+javautil.ArrayList17.ArrayList17(int):::EXIT
+this.size == size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(initialCapacity) == size(this.elementData[])
+this.elementData[this.size] == this.elementData[orig(initialCapacity)-1]
+this.elementData has only one value
+this.elementData[] contains only nulls and has only one value, of length 22
+this.elementData[] elements == null
+this.elementData[].getClass().getName() == [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+this.elementData[].getClass().getName() elements == null
+this.modCount == 0
+this.elementData[this.size+1..] contains only nulls and has only one value, of length 21
+this.elementData[0..this.size] == [null]
+this.elementData[orig(initialCapacity)..] == []
+this.elementData[] elements == this.elementData[this.size]
+===========================================================================
+javautil.ArrayList17.add(java.lang.Object):::ENTER
+this has only one value
+e != null
+e.getClass().getName() == java.lang.Integer.class
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() != e.getClass().getName()
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+===========================================================================
+javautil.ArrayList17.add(java.lang.Object):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(e) == this.elementData[this.size-1]
+orig(e) == this.elementData[orig(this.size)]
+this.elementData[0..orig(this.size)-1] == orig(this.elementData[0..this.size-1])
+return == true
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() != orig(e.getClass().getName())
+orig(e.getClass().getName()) in this.elementData[].getClass().getName()
+this.size - orig(this.size) - 1 == 0
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.modCount - orig(this.modCount) - 1 == 0
+orig(this.size) >= size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(this.size) <= size(this.elementData[])-1
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < orig(size(this.elementData[]))-1
+size(this.elementData[]) >= orig(size(this.elementData[]))
+size(this.elementData[])-1 != orig(size(this.elementData[]))
+size(this.elementData[])-1 >= orig(size(this.elementData[]))-1
+===========================================================================
+javautil.ArrayList17.add(java.lang.Object):::EXIT;condition="return == true"
+===========================================================================
+javautil.ArrayList17.elementData(int):::ENTER
+this has only one value
+this.elementData has only one value
+index == 0  (mod 3)
+size(this.elementData[]) == 109
+3 * this.size - index - 201 == 0
+this.size > index
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+index > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+index < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+===========================================================================
+javautil.ArrayList17.elementData(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.elementData == orig(this.elementData)
+this.elementData[] == orig(this.elementData[])
+this.size == orig(this.size)
+this.modCount == orig(this.modCount)
+return == this.elementData[orig(index)]
+return == orig(this.elementData[post(index)])
+return == orig(this.elementData[index])
+this.elementData has only one value
+return.getClass().getName() == java.lang.Integer.class
+size(this.elementData[]) == 109
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() != return.getClass().getName()
+return.getClass().getName() in this.elementData[].getClass().getName()
+3 * this.size - orig(index) - 201 == 0
+this.size > orig(index)
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+orig(index) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(index) < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+===========================================================================
+javautil.ArrayList17.ensureCapacityInternal(int):::ENTER
+this has only one value
+this.size - minCapacity + 1 == 0
+minCapacity > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+===========================================================================
+javautil.ArrayList17.ensureCapacityInternal(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size == orig(this.size)
+this.elementData[this.size] == this.elementData[orig(minCapacity)-1]
+this.elementData[0..this.size-1] == orig(this.elementData[0..post(this.size)-1])
+this.elementData[0..this.size-1] == orig(this.elementData[0..this.size-1])
+this.elementData[0..this.size] contains no duplicates
+orig(this.elementData[]) is a subsequence of this.elementData[]
+this.elementData[] is a superset of orig(this.elementData[])
+this.size - orig(minCapacity) + 1 == 0
+this.size <= size(this.elementData[])-1
+this.size <= orig(size(this.elementData[]))
+this.modCount - orig(this.modCount) - 1 == 0
+orig(this.elementData[]) is a subset of this.elementData[0..this.size]
+orig(minCapacity) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(minCapacity) <= size(this.elementData[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < orig(size(this.elementData[]))-1
+size(this.elementData[]) >= orig(size(this.elementData[]))
+size(this.elementData[])-1 != orig(size(this.elementData[]))
+size(this.elementData[])-1 >= orig(size(this.elementData[]))-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+orig(this.elementData[this.size..]) is a subsequence of this.elementData[this.size..]
+===========================================================================
+javautil.ArrayList17.ensureExplicitCapacity(int):::ENTER
+this has only one value
+this.size - minCapacity + 1 == 0
+minCapacity > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+===========================================================================
+javautil.ArrayList17.ensureExplicitCapacity(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size == orig(this.size)
+this.elementData[this.size] == this.elementData[orig(minCapacity)-1]
+this.elementData[0..this.size-1] == orig(this.elementData[0..post(this.size)-1])
+this.elementData[0..this.size-1] == orig(this.elementData[0..this.size-1])
+this.elementData[0..this.size] contains no duplicates
+orig(this.elementData[]) is a subsequence of this.elementData[]
+this.elementData[] is a superset of orig(this.elementData[])
+this.size - orig(minCapacity) + 1 == 0
+this.size <= size(this.elementData[])-1
+this.size <= orig(size(this.elementData[]))
+this.modCount - orig(this.modCount) - 1 == 0
+orig(this.elementData[]) is a subset of this.elementData[0..this.size]
+orig(minCapacity) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(minCapacity) <= size(this.elementData[])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < size(this.elementData[])-1
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) < orig(size(this.elementData[]))-1
+size(this.elementData[]) >= orig(size(this.elementData[]))
+size(this.elementData[])-1 != orig(size(this.elementData[]))
+size(this.elementData[])-1 >= orig(size(this.elementData[]))-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+orig(this.elementData[this.size..]) is a subsequence of this.elementData[this.size..]
+===========================================================================
+javautil.ArrayList17.grow(int):::ENTER
+this.size == size(this.elementData[])
+this has only one value
+this.elementData[].getClass().getName() elements == java.lang.Integer.class
+this.elementData[this.size..] == []
+this.size - minCapacity + 1 == 0
+===========================================================================
+javautil.ArrayList17.grow(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size == orig(this.size)
+this.size == orig(size(this.elementData[]))
+this.modCount == orig(this.modCount)
+orig(this.elementData[]) == this.elementData[0..this.size-1]
+orig(this.elementData[]) == this.elementData[0..orig(this.size)-1]
+this.elementData[this.size] == this.elementData[orig(minCapacity)]
+this.elementData[this.size] == this.elementData[orig(minCapacity)-1]
+this.elementData[this.size-1] == orig(this.elementData[post(this.size)-1])
+this.elementData[this.size-1] == orig(this.elementData[this.size-1])
+this.size - orig(minCapacity) + 1 == 0
+this.elementData[this.size..] elements == this.elementData[this.size]
+===========================================================================
+javautil.ArrayList17.rangeCheck(int):::ENTER
+this has only one value
+this.elementData has only one value
+index == 0  (mod 3)
+size(this.elementData[]) == 109
+3 * this.size - index - 201 == 0
+this.size > index
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+index > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+index < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+===========================================================================
+javautil.ArrayList17.rangeCheck(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.elementData == orig(this.elementData)
+this.elementData[] == orig(this.elementData[])
+this.size == orig(this.size)
+this.modCount == orig(this.modCount)
+this.elementData has only one value
+size(this.elementData[]) == 109
+3 * this.size - orig(index) - 201 == 0
+this.size > orig(index)
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+orig(index) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(index) < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+===========================================================================
+javautil.ArrayList17.remove(int):::ENTER
+this has only one value
+this.elementData has only one value
+index == 0  (mod 3)
+size(this.elementData[]) == 109
+3 * this.size - 3 * index - 201 == 0
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+index > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+index < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+===========================================================================
+javautil.ArrayList17.remove(int):::EXIT
+javautil.ArrayList17.EMPTY_ELEMENTDATA == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA)
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() == orig(this.elementData.getClass().getName())
+javautil.ArrayList17.EMPTY_ELEMENTDATA[] == orig(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.elementData == orig(this.elementData)
+size(this.elementData[]) == orig(size(this.elementData[]))
+this.elementData[this.size] == this.elementData[orig(this.size)]
+this.elementData[this.size] == this.elementData[orig(this.size)-1]
+this.elementData[this.size] == orig(this.elementData[this.size])
+this.elementData[this.size+1..] == orig(this.elementData[post(this.size)+1..])
+this.elementData[this.size+1..] == orig(this.elementData[this.size..])
+this.elementData[orig(this.size)+1..] == orig(this.elementData[this.size+1..])
+this.elementData[orig(index)-1] == orig(this.elementData[post(index)-1])
+this.elementData[orig(index)-1] == orig(this.elementData[index-1])
+this.elementData[0..orig(index)-1] == orig(this.elementData[0..post(index)-1])
+this.elementData[0..orig(index)-1] == orig(this.elementData[0..index-1])
+orig(this.elementData[post(this.size)]) == orig(this.elementData[this.size-1])
+this.elementData has only one value
+return != null
+return.getClass().getName() == java.lang.Integer.class
+size(this.elementData[]) == 109
+this.elementData[this.size-1] has only one value
+orig(this.elementData[0..post(this.size)]) elements != null
+javautil.ArrayList17.EMPTY_ELEMENTDATA.getClass().getName() != return.getClass().getName()
+this.elementData[] is a subset of orig(this.elementData[])
+orig(this.elementData[post(this.size)-1]) in this.elementData[]
+this.elementData[] is a subset of orig(this.elementData[0..this.size])
+return.getClass().getName() in this.elementData[].getClass().getName()
+this.size - orig(this.size) + 1 == 0
+3 * this.size - orig(index) - 198 == 0
+this.size >= orig(index)
+this.size > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+this.size < size(this.elementData[])-1
+this.modCount - orig(this.modCount) - 1 == 0
+return.getClass().getName() in orig(this.elementData[].getClass().getName())
+orig(this.size) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(this.size) < size(this.elementData[])-1
+orig(index) > size(javautil.ArrayList17.EMPTY_ELEMENTDATA[])
+orig(index) < size(this.elementData[])-1
+this.elementData[this.size..] elements == this.elementData[this.size]
+this.elementData[this.size-1] in orig(this.elementData[0..post(this.size)])
+this.elementData[this.size..] is a subset of orig(this.elementData[post(this.size)..])
+this.elementData[this.size..] is a subset of orig(this.elementData[0..this.size])
+this.elementData[this.size..] is a subset of orig(this.elementData[index..])
+this.elementData[this.size..] is a subset of orig(this.elementData[index+1..])
+orig(this.elementData[post(this.size)-1]) in this.elementData[0..this.size]
+this.elementData[0..this.size] is a subset of orig(this.elementData[0..this.size])
+orig(this.elementData[post(this.size)-1]) in this.elementData[0..this.size-1]
+this.elementData[0..this.size-1] is a subset of orig(this.elementData[0..post(this.size)])
+this.elementData[0..this.size-1] is a subset of orig(this.elementData[0..this.size])
+orig(this.elementData[post(this.size)-1]) in this.elementData[0..orig(this.size)]
+this.elementData[0..orig(this.size)] is a subset of orig(this.elementData[0..this.size])
+this.elementData[orig(index)] in orig(this.elementData[index..])
+this.elementData[orig(index)] in orig(this.elementData[index+1..])
+this.elementData[orig(index)..] is a subset of orig(this.elementData[0..this.size])
+this.elementData[orig(index)..] is a subset of orig(this.elementData[index..])
+orig(this.elementData[index+1..]) is a subsequence of this.elementData[orig(index)..]
+this.elementData[orig(index)..] is a subset of orig(this.elementData[index+1..])
+this.elementData[orig(index)+1..] is a subset of orig(this.elementData[0..this.size])
+this.elementData[orig(index)+1..] is a subset of orig(this.elementData[index..])
+this.elementData[orig(index)+1..] is a subset of orig(this.elementData[index+1..])
+this.elementData[0..orig(index)] is a subset of orig(this.elementData[0..this.size])
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, this.size))
+size(javautil.ArrayList17.EMPTY_ELEMENTDATA[]) == (java.lang.Math.pow(size(this.elementData[])-1, orig(this.size)))

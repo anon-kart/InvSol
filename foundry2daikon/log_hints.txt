@@ -1,0 +1,3584 @@
+(venv) kartik@kartik-ASUS-TUF-Gaming-A15-FA506NCR-FA506NCR:~/foundry2daikon$ python3 main.py all_traces.txt --combined my_output.dtrace
+DECLS_LOG: =================== Starting main() ===================
+DECLS_LOG: Input trace file: all_traces.txt
+DECLS_LOG: Output decls file: contract.decls
+DECLS_LOG: Output dtrace file: contract.dtrace
+DECLS_LOG: Output combined file: my_output.dtrace
+DECLS_LOG: Reading Foundry execution traces...
+DECLS_LOG: Parsed 118 fuzz runs successfully.
+DECLS_LOG: Generating .decls content...
+DECLS_LOG: =================== START generate_decls ===================
+DECLS_LOG: [STEP 1] Collecting variables and types PER PPT
+DECLS_LOG:   RUN nonce=1
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=2
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=3
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=4
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=5
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=6
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=7
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=8
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=9
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=10
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=11
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=12
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=13
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=14
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=15
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=16
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=17
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=18
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=19
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=20
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=21
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=22
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=23
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=24
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=25
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=26
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=27
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=28
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=29
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=30
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=31
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=32
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=33
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=34
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=35
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=36
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=37
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=38
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=39
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=40
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=41
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=42
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=43
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=44
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=45
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=46
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=47
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=48
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=49
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=50
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=51
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=52
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=53
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=54
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=55
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=56
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=57
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=58
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=59
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=60
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=61
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=62
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=63
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=64
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=65
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=66
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=67
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=68
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=69
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=70
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=71
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=72
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=73
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=74
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=75
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=76
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=77
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=78
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=79
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=80
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=81
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=82
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=83
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=84
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=85
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=86
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=87
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=88
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=89
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=90
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=91
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=92
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=93
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=94
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=95
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=96
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=97
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=98
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=99
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=100
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=101
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=102
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=103
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=104
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=105
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=106
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=107
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=108
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=109
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=110
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=111
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=112
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=113
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=114
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=115
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=116
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=117
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG:   RUN nonce=118
+DECLS_LOG:     PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:       VAR: user   TYPE SEEN: string
+DECLS_LOG:       VAR: user.toString   TYPE SEEN: string
+DECLS_LOG:       VAR: depositAmount   TYPE SEEN: int
+DECLS_LOG:     PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       VAR: withdrawAmount   TYPE SEEN: int
+DECLS_LOG: 
+[INFO] Collected raw types PER PPT:
+DECLS_LOG:   - Bank.deposit(uint256):::ENTER
+DECLS_LOG:       * depositAmount: ['int']
+DECLS_LOG:       * user: ['string']
+DECLS_LOG:       * user.toString: ['string']
+DECLS_LOG:   - Bank.withdraw(uint256):::ENTER
+DECLS_LOG:       * withdrawAmount: ['int']
+DECLS_LOG: 
+[STEP 2] Resolving most-permissive types PER PPT
+DECLS_LOG:   PPT: Bank.deposit(uint256):::ENTER
+DECLS_LOG:     - user: chosen_type=string
+DECLS_LOG:     - user.toString: chosen_type=string
+DECLS_LOG:     - depositAmount: chosen_type=int
+DECLS_LOG:   PPT: Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     - withdrawAmount: chosen_type=int
+DECLS_LOG: 
+[STEP 3] Writing .decls text
+DECLS_LOG: 
+=================== END generate_decls ===================
+DECLS_LOG: Generated .decls content size: 1052 characters
+DECLS_LOG: Number of Ppt entries in .decls: 2
+DECLS_LOG:  - Declared variables for Bank.deposit(uint256):::ENTER: ['user', 'user.toString', 'depositAmount']
+DECLS_LOG:  - Declared variables for Bank.withdraw(uint256):::ENTER: ['withdrawAmount']
+DECLS_LOG: Generating .dtrace content...
+DECLS_LOG: =================== START generate_dtrace ===================
+DECLS_LOG: [RUN 0] Invocation nonce = 1
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 1
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4042
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000008C2"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000008C2"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 1
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 210
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 1] Invocation nonce = 2
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 2
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 452857328471
+DECLS_LOG:        - user: PRESENT -> "0x6bBb5C4089Ff920a1C80805F7a0078539956902f"
+DECLS_LOG:        - user.toString: PRESENT -> "0x6bBb5C4089Ff920a1C80805F7a0078539956902f"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 2
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4435
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 2] Invocation nonce = 3
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 3
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3124842407
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000012a6"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000012a6"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 3
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4702
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 3] Invocation nonce = 4
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 4
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4294967295
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000001a"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000001a"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 4
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3200
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 4] Invocation nonce = 5
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 5
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3605
+DECLS_LOG:        - user: PRESENT -> "0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01"
+DECLS_LOG:        - user.toString: PRESENT -> "0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 5
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 255
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 5] Invocation nonce = 6
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 6
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 158418
+DECLS_LOG:        - user: PRESENT -> "0x484399099DCa254eA1365B03ccc6CCaC4f72610C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x484399099DCa254eA1365B03ccc6CCaC4f72610C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 6
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 558
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 6] Invocation nonce = 7
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 7
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3515
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000000f3"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000000f3"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 7
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 646
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 7] Invocation nonce = 8
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 8
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3792478066
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000064"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000064"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 8
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 177362147
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 8] Invocation nonce = 9
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 9
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4454
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000003Ca"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000003Ca"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 9
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1547
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 9] Invocation nonce = 10
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 10
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3041954473
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000066f"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000066f"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 10
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1547
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 10] Invocation nonce = 11
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 11
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3632
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000001cA"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000001cA"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 11
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 109
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 11] Invocation nonce = 12
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 12
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2208
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000000ca"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000000ca"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 12
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 416
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 12] Invocation nonce = 13
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 13
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4205
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000001aa"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000001aa"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 13
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1547
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 13] Invocation nonce = 14
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 14
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3814
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000066f"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000066f"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 14
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 73
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 14] Invocation nonce = 15
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 15
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3041954474
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000553"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000553"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 15
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 969
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 15] Invocation nonce = 16
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 16
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3139
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000012A8"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000012A8"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 16
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 430
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 16] Invocation nonce = 17
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 17
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 409
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000004FA"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000004FA"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 17
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 21
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 17] Invocation nonce = 18
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 18
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 5361
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000063B"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000063B"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 18
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 91
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 18] Invocation nonce = 19
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 19
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3036
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000015"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000015"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 19
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2939
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 19] Invocation nonce = 20
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 20
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3065339684
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000148"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000148"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 20
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 13
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 20] Invocation nonce = 21
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 21
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4042
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000639"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000639"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 21
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2206
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 21] Invocation nonce = 22
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 22
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3451
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000004D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000004D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 22
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 721
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 22] Invocation nonce = 23
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 23
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3484
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000010D5"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000010D5"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 23
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3035
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 23] Invocation nonce = 24
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 24
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 5362
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000003b7"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000003b7"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 24
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 391
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 24] Invocation nonce = 25
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 25
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4498
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000002D1"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000002D1"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 25
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1364
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 25] Invocation nonce = 26
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 26
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 150208609853888325
+DECLS_LOG:        - user: PRESENT -> "0xc69E717d06afD76F479E02fDae7282659d1FAB5a"
+DECLS_LOG:        - user.toString: PRESENT -> "0xc69E717d06afD76F479E02fDae7282659d1FAB5a"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 26
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 0
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 26] Invocation nonce = 27
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 27
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3675
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000006D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000006D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 27
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 75
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 27] Invocation nonce = 28
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 28
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3792478065
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000eDE"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000eDE"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 28
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1943
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 28] Invocation nonce = 29
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 29
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4155
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001086"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001086"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 29
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 223
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 29] Invocation nonce = 30
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 30
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1225
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001093"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001093"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 30
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 994
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 30] Invocation nonce = 31
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 31
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4722
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000524"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000524"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 31
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3813
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 31] Invocation nonce = 32
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 32
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4171761
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000124"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000124"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 32
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 524
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 32] Invocation nonce = 33
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 33
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4680
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000EDf"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000EDf"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 33
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 145
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 33] Invocation nonce = 34
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 34
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3426
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000001e613B"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000001e613B"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 34
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 205
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 34] Invocation nonce = 35
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 35
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 180417931990397543
+DECLS_LOG:        - user: PRESENT -> "0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA"
+DECLS_LOG:        - user.toString: PRESENT -> "0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 35
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4181543167643396
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 35] Invocation nonce = 36
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 36
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2860
+DECLS_LOG:        - user: PRESENT -> "0x6bBb5C4089Ff920a1C80805F7a0078539956902f"
+DECLS_LOG:        - user.toString: PRESENT -> "0x6bBb5C4089Ff920a1C80805F7a0078539956902f"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 36
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2797
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 36] Invocation nonce = 37
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 37
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4309
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000120E"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000120E"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 37
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 410
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 37] Invocation nonce = 38
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 38
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4080
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000106C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000106C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 38
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3906
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 38] Invocation nonce = 39
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 39
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 525
+DECLS_LOG:        - user: PRESENT -> "0x1Ef1983F082706B3975E823967Be292fe9725303"
+DECLS_LOG:        - user.toString: PRESENT -> "0x1Ef1983F082706B3975E823967Be292fe9725303"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 39
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 429
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 39] Invocation nonce = 40
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 40
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 407458711208991678
+DECLS_LOG:        - user: PRESENT -> "0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4"
+DECLS_LOG:        - user.toString: PRESENT -> "0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 40
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 508
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 40] Invocation nonce = 41
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 41
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 21363071
+DECLS_LOG:        - user: PRESENT -> "0xD46bE28699898f71F5Cb517FDec6bF65A364A278"
+DECLS_LOG:        - user.toString: PRESENT -> "0xD46bE28699898f71F5Cb517FDec6bF65A364A278"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 41
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 64088
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 41] Invocation nonce = 42
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 42
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4702
+DECLS_LOG:        - user: PRESENT -> "0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00"
+DECLS_LOG:        - user.toString: PRESENT -> "0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 42
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 17
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 42] Invocation nonce = 43
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 43
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3124842406
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000000e1"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000000e1"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 43
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 304
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 43] Invocation nonce = 44
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 44
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3634
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000003b7"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000003b7"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 44
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2206
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 44] Invocation nonce = 45
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 45
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 55626307945478351
+DECLS_LOG:        - user: PRESENT -> "0x8Fea22f0095487b198409F1e9e872eA757F0DCD6"
+DECLS_LOG:        - user.toString: PRESENT -> "0x8Fea22f0095487b198409F1e9e872eA757F0DCD6"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 45
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 45] Invocation nonce = 46
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 46
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4754
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000A9254e4"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000A9254e4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 46
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 451
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 46] Invocation nonce = 47
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 47
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 153
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000003223EaB"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000003223EaB"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 47
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 96
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 47] Invocation nonce = 48
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 48
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 429
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000010Fc"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000010Fc"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 48
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 21
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 48] Invocation nonce = 49
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 49
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4437
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000000F4"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000000F4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 49
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3921
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 49] Invocation nonce = 50
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 50
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3771
+DECLS_LOG:        - user: PRESENT -> "0x0018985b185b98D950599D195C91195C1bDCDA5C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0018985b185b98D950599D195C91195C1bDCDA5C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 50
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 202
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 50] Invocation nonce = 51
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 51
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 77372032709549371
+DECLS_LOG:        - user: PRESENT -> "0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2"
+DECLS_LOG:        - user.toString: PRESENT -> "0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 51
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 14978579859452835
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 51] Invocation nonce = 52
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 52
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3806
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000001B1"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000001B1"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 52
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1392
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 52] Invocation nonce = 53
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 53
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4475
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000A70"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000A70"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 53
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1316
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 53] Invocation nonce = 54
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 54
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1545
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001248"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001248"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 54
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 417
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 54] Invocation nonce = 55
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 55
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4782
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001297"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001297"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 55
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 75
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 55] Invocation nonce = 56
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 56
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1281615203
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000010A5"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000010A5"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 56
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3139
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 56] Invocation nonce = 57
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 57
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2673
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000006e4"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000006e4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 57
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 320
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 57] Invocation nonce = 58
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 58
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2207
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000667f9D71"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000667f9D71"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 58
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1593
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 58] Invocation nonce = 59
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 59
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 112737
+DECLS_LOG:        - user: PRESENT -> "0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58"
+DECLS_LOG:        - user.toString: PRESENT -> "0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 59
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 59] Invocation nonce = 60
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 60
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 285
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000082af3A44"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000082af3A44"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 60
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 263
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 60] Invocation nonce = 61
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 61
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2860
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000012"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000012"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 61
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 75
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 61] Invocation nonce = 62
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 62
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3
+DECLS_LOG:        - user: PRESENT -> "0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E"
+DECLS_LOG:        - user.toString: PRESENT -> "0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 62
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 62] Invocation nonce = 63
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 63
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 467
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000AeE"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000AeE"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 63
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 140
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 63] Invocation nonce = 64
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 64
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1096
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000001ed7831C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000001ed7831C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 64
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 312
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 64] Invocation nonce = 65
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 65
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 495790613314
+DECLS_LOG:        - user: PRESENT -> "Create2Deployer:"
+DECLS_LOG:        - user.toString: PRESENT -> "Create2Deployer:"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 65
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 2957397981
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 65] Invocation nonce = 66
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 66
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2832
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000004FA"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000004FA"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 66
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 228
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 66] Invocation nonce = 67
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 67
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 669136355
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000085226C82"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000085226C82"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 67
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1460
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 67] Invocation nonce = 68
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 68
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 154
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000916a17c5"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000916a17c5"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 68
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 148
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 68] Invocation nonce = 69
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 69
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 107477464
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000b0464fDd"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000b0464fDd"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 69
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 240
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 69] Invocation nonce = 70
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 70
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3
+DECLS_LOG:        - user: PRESENT -> "0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca"
+DECLS_LOG:        - user.toString: PRESENT -> "0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 70
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 70] Invocation nonce = 71
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 71
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3041954473
+DECLS_LOG:        - user: PRESENT -> "VM:"
+DECLS_LOG:        - user.toString: PRESENT -> "VM:"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 71
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 325
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 71] Invocation nonce = 72
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 72
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3065339685
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000671"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000671"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 72
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 98
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 72] Invocation nonce = 73
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 73
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3605
+DECLS_LOG:        - user: PRESENT -> "0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00"
+DECLS_LOG:        - user.toString: PRESENT -> "0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 73
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1594
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 73] Invocation nonce = 74
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 74
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1281615202
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000012A8"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000012A8"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 74
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3557
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 74] Invocation nonce = 75
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 75
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4300
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001167"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001167"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 75
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4243
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 75] Invocation nonce = 76
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 76
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3124842406
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000063"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000063"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 76
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4205
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 76] Invocation nonce = 77
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 77
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 105151831
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000000"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000000"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 77
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 686
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 77] Invocation nonce = 78
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 78
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4241
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000006C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000006C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 78
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1226
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 78] Invocation nonce = 79
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 79
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2951
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000001c3"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000001c3"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 79
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 160
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 79] Invocation nonce = 80
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 80
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 739347983090
+DECLS_LOG:        - user: PRESENT -> "0x862d56C5278f19f473CB65483a005C6464336f0D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x862d56C5278f19f473CB65483a005C6464336f0D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 80
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 80] Invocation nonce = 81
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 81
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 591
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000Eba"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000Eba"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 81
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 549
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 81] Invocation nonce = 82
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 82
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 108
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000120D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000120D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 82
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 100
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 82] Invocation nonce = 83
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 83
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1667
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000Aed"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000Aed"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 83
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1393
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 83] Invocation nonce = 84
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 84
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1281615202
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000398"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000398"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 84
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4534
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 84] Invocation nonce = 85
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 85
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1850
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000005B5"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000005B5"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 85
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 490
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 85] Invocation nonce = 86
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 86
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3994
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001291"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001291"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 86
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1189
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 86] Invocation nonce = 87
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 87
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1272
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000005f2"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000005f2"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 87
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 96
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 87] Invocation nonce = 88
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 88
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 30923626087259
+DECLS_LOG:        - user: PRESENT -> "0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1"
+DECLS_LOG:        - user.toString: PRESENT -> "0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 88
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 88] Invocation nonce = 89
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 89
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2
+DECLS_LOG:        - user: PRESENT -> "0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7"
+DECLS_LOG:        - user.toString: PRESENT -> "0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 89
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 0
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 89] Invocation nonce = 90
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 90
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 589
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000e44"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000e44"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 90
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 20
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 90] Invocation nonce = 91
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 91
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2428830012
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000014f"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000014f"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 91
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 476
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 91] Invocation nonce = 92
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 92
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4229
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000191"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000191"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 92
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 207
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 92] Invocation nonce = 93
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 93
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1665
+DECLS_LOG:        - user: PRESENT -> "0x00000000003Db70BeAF97164736F6C634300081D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000003Db70BeAF97164736F6C634300081D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 93
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 7
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 93] Invocation nonce = 94
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 94
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4723
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000D79"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000D79"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 94
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4583
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 94] Invocation nonce = 95
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 95
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 645
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000002ADe3880"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000002ADe3880"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 95
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 367
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 95] Invocation nonce = 96
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 96
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 873925434937072529
+DECLS_LOG:        - user: PRESENT -> "0xBe117241E92AF57FEE3ce918937Dc057f73946E1"
+DECLS_LOG:        - user.toString: PRESENT -> "0xBe117241E92AF57FEE3ce918937Dc057f73946E1"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 96
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 20326599539
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 96] Invocation nonce = 97
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 97
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3945
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000001248"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000001248"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 97
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1545
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 97] Invocation nonce = 98
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 98
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 525
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000019195C1bdcDa5d105b5BDd5b9C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000019195C1bdcDa5d105b5BDd5b9C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 98
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 326
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 98] Invocation nonce = 99
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 99
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4776
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000C99"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000C99"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 99
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3908
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 99] Invocation nonce = 100
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 100
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 42931470839029
+DECLS_LOG:        - user: PRESENT -> "0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E"
+DECLS_LOG:        - user.toString: PRESENT -> "0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 100
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 5793272389
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 100] Invocation nonce = 101
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 101
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 495790613315
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000795"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000795"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 101
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 253
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 101] Invocation nonce = 102
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 102
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1867
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000001a"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000001a"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 102
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1002
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 102] Invocation nonce = 103
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 103
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 3603
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000123"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000123"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 103
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 3450
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 103] Invocation nonce = 104
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 104
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 4437
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000117C"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000117C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 104
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4387
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 104] Invocation nonce = 105
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 105
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1746
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000aE3"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000aE3"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 105
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 189
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 105] Invocation nonce = 106
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 106
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1391
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000A9254e4"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000A9254e4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 106
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 253
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 106] Invocation nonce = 107
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 107
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 29515170545166319
+DECLS_LOG:        - user: PRESENT -> "0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C"
+DECLS_LOG:        - user.toString: PRESENT -> "0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 107
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 15716628956169879
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 107] Invocation nonce = 108
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 108
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1226
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000085226C80"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000085226C80"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 108
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 875
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 108] Invocation nonce = 109
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 109
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 910
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000AeE"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000AeE"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 109
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 106
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 109] Invocation nonce = 110
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 110
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 333
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000010a4"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000010a4"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 110
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 75
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 110] Invocation nonce = 111
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 111
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1
+DECLS_LOG:        - user: PRESENT -> "0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD"
+DECLS_LOG:        - user.toString: PRESENT -> "0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 111
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 1
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 111] Invocation nonce = 112
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 112
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 2233625728
+DECLS_LOG:        - user: PRESENT -> "0x000000000000000000000000000000000000001D"
+DECLS_LOG:        - user.toString: PRESENT -> "0x000000000000000000000000000000000000001D"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 112
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 229
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 112] Invocation nonce = 113
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 113
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 5360
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000224"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000224"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 113
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4347
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 113] Invocation nonce = 114
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 114
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 76636043565
+DECLS_LOG:        - user: PRESENT -> "0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC"
+DECLS_LOG:        - user.toString: PRESENT -> "0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 114
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 64
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 114] Invocation nonce = 115
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 115
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 257
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000F6A"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000F6A"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 115
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 203
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 115] Invocation nonce = 116
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 116
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 773487950
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000010cc"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000010cc"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 116
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 305
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 116] Invocation nonce = 117
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 117
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 1745
+DECLS_LOG:        - user: PRESENT -> "0x00000000000000000000000000000000000001cA"
+DECLS_LOG:        - user.toString: PRESENT -> "0x00000000000000000000000000000000000001cA"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 117
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 491
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: [RUN 117] Invocation nonce = 118
+DECLS_LOG:   [PPT 0] Name = Bank.deposit(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 118
+DECLS_LOG:     -> Declared variables for this PPT (3 total):
+DECLS_LOG:        - depositAmount: declared_type=int
+DECLS_LOG:        - user: declared_type=string
+DECLS_LOG:        - user.toString: declared_type=string
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - depositAmount: PRESENT -> 177362147
+DECLS_LOG:        - user: PRESENT -> "0x0000000000000000000000000000000000000d9d"
+DECLS_LOG:        - user.toString: PRESENT -> "0x0000000000000000000000000000000000000d9d"
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG:   [PPT 1] Name = Bank.withdraw(uint256):::ENTER
+DECLS_LOG:     -> this = 0x1
+DECLS_LOG:     -> this_invocation_nonce = 118
+DECLS_LOG:     -> Declared variables for this PPT (1 total):
+DECLS_LOG:        - withdrawAmount: declared_type=int
+DECLS_LOG:     -> Emitting values:
+DECLS_LOG:        - withdrawAmount: PRESENT -> 4476
+DECLS_LOG:     -> END of PPT block
+
+DECLS_LOG: =================== END generate_dtrace ===================
+DECLS_LOG: Generated .dtrace content size: 34913 characters
+DECLS_LOG: Writing single combined file: my_output.dtrace
+DECLS_LOG: ✅ Combined file written successfully: my_output.dtrace
+DECLS_LOG: File size: 35966 bytes
+DECLS_LOG: =================== Done! ===================
+

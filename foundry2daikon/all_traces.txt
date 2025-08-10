@@ -1,0 +1,3780 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000008C2, 4042, 210)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000008C2)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4042)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000008C2)
+    ├─ emit TraceUint(label: "depositAmount", val: 4042)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000008C2) [staticcall]
+    │   └─ ← [Return] 4042
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4042)
+    ├─ [790] Bank::withdraw(210)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 210)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000008C2) [staticcall]
+    │   └─ ← [Return] 3832
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3832)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 867.79µs (477.36µs CPU time)
+
+Ran 1 test suite in 1.31s (867.79µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x6bBb5C4089Ff920a1C80805F7a0078539956902f, 452857328471 [4.528e11], 4435)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x6bBb5C4089Ff920a1C80805F7a0078539956902f)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(452857328471 [4.528e11])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x6bBb5C4089Ff920a1C80805F7a0078539956902f)
+    ├─ emit TraceUint(label: "depositAmount", val: 452857328471 [4.528e11])
+    ├─ [512] Bank::balanceOf(0x6bBb5C4089Ff920a1C80805F7a0078539956902f) [staticcall]
+    │   └─ ← [Return] 452857328471 [4.528e11]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 452857328471 [4.528e11])
+    ├─ [790] Bank::withdraw(4435)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4435)
+    ├─ [512] Bank::balanceOf(0x6bBb5C4089Ff920a1C80805F7a0078539956902f) [staticcall]
+    │   └─ ← [Return] 452857324036 [4.528e11]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 452857324036 [4.528e11])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 976.71µs (520.22µs CPU time)
+
+Ran 1 test suite in 4.93s (976.71µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000012a6, 3124842407 [3.124e9], 4702)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000012a6)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3124842407 [3.124e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000012a6)
+    ├─ emit TraceUint(label: "depositAmount", val: 3124842407 [3.124e9])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012a6) [staticcall]
+    │   └─ ← [Return] 3124842407 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3124842407 [3.124e9])
+    ├─ [790] Bank::withdraw(4702)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4702)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012a6) [staticcall]
+    │   └─ ← [Return] 3124837705 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3124837705 [3.124e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.04ms (503.21µs CPU time)
+
+Ran 1 test suite in 2.58s (1.04ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000001a, 4294967295 [4.294e9], 3200)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000001a)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4294967295 [4.294e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000001a)
+    ├─ emit TraceUint(label: "depositAmount", val: 4294967295 [4.294e9])
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001a) [staticcall]
+    │   └─ ← [Return] 4294967295 [4.294e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4294967295 [4.294e9])
+    ├─ [790] Bank::withdraw(3200)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3200)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001a) [staticcall]
+    │   └─ ← [Return] 4294964095 [4.294e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4294964095 [4.294e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 963.91µs (586.90µs CPU time)
+
+Ran 1 test suite in 1.18s (963.91µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01, 3605, 255)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3605)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01)
+    ├─ emit TraceUint(label: "depositAmount", val: 3605)
+    ├─ [512] Bank::balanceOf(0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01) [staticcall]
+    │   └─ ← [Return] 3605
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3605)
+    ├─ [790] Bank::withdraw(255)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 255)
+    ├─ [512] Bank::balanceOf(0x15DEB798bB3E4dFa0139DFA1B3D433cC23B72f01) [staticcall]
+    │   └─ ← [Return] 3350
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3350)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.10ms (630.68µs CPU time)
+
+Ran 1 test suite in 2.02s (1.10ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x484399099DCa254eA1365B03ccc6CCaC4f72610C, 158418 [1.584e5], 558)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x484399099DCa254eA1365B03ccc6CCaC4f72610C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(158418 [1.584e5])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x484399099DCa254eA1365B03ccc6CCaC4f72610C)
+    ├─ emit TraceUint(label: "depositAmount", val: 158418 [1.584e5])
+    ├─ [512] Bank::balanceOf(0x484399099DCa254eA1365B03ccc6CCaC4f72610C) [staticcall]
+    │   └─ ← [Return] 158418 [1.584e5]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 158418 [1.584e5])
+    ├─ [790] Bank::withdraw(558)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 558)
+    ├─ [512] Bank::balanceOf(0x484399099DCa254eA1365B03ccc6CCaC4f72610C) [staticcall]
+    │   └─ ← [Return] 157860 [1.578e5]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 157860 [1.578e5])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 831.11µs (432.55µs CPU time)
+
+Ran 1 test suite in 3.28s (831.11µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000000f3, 3515, 646)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000000f3)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3515)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000000f3)
+    ├─ emit TraceUint(label: "depositAmount", val: 3515)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000f3) [staticcall]
+    │   └─ ← [Return] 3515
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3515)
+    ├─ [790] Bank::withdraw(646)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 646)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000f3) [staticcall]
+    │   └─ ← [Return] 2869
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2869)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.19ms (496.54µs CPU time)
+
+Ran 1 test suite in 2.91s (1.19ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000064, 3792478066 [3.792e9], 177362147 [1.773e8])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000064)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3792478066 [3.792e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000064)
+    ├─ emit TraceUint(label: "depositAmount", val: 3792478066 [3.792e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000064) [staticcall]
+    │   └─ ← [Return] 3792478066 [3.792e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3792478066 [3.792e9])
+    ├─ [790] Bank::withdraw(177362147 [1.773e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 177362147 [1.773e8])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000064) [staticcall]
+    │   └─ ← [Return] 3615115919 [3.615e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3615115919 [3.615e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 923.95µs (472.29µs CPU time)
+
+Ran 1 test suite in 2.90s (923.95µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000003Ca, 4454, 1547)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000003Ca)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4454)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000003Ca)
+    ├─ emit TraceUint(label: "depositAmount", val: 4454)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003Ca) [staticcall]
+    │   └─ ← [Return] 4454
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4454)
+    ├─ [790] Bank::withdraw(1547)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1547)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003Ca) [staticcall]
+    │   └─ ← [Return] 2907
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2907)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.02ms (565.57µs CPU time)
+
+Ran 1 test suite in 1.47s (1.02ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000066f, 3041954473 [3.041e9], 1547)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000066f)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3041954473 [3.041e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000066f)
+    ├─ emit TraceUint(label: "depositAmount", val: 3041954473 [3.041e9])
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000066f) [staticcall]
+    │   └─ ← [Return] 3041954473 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3041954473 [3.041e9])
+    ├─ [790] Bank::withdraw(1547)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1547)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000066f) [staticcall]
+    │   └─ ← [Return] 3041952926 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3041952926 [3.041e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.68ms (950.64µs CPU time)
+
+Ran 1 test suite in 2.43s (1.68ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000001cA, 3632, 109)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000001cA)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3632)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000001cA)
+    ├─ emit TraceUint(label: "depositAmount", val: 3632)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001cA) [staticcall]
+    │   └─ ← [Return] 3632
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3632)
+    ├─ [790] Bank::withdraw(109)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 109)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001cA) [staticcall]
+    │   └─ ← [Return] 3523
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3523)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.28ms (548.93µs CPU time)
+
+Ran 1 test suite in 2.56s (1.28ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000000ca, 2208, 416)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000000ca)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2208)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000000ca)
+    ├─ emit TraceUint(label: "depositAmount", val: 2208)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000ca) [staticcall]
+    │   └─ ← [Return] 2208
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2208)
+    ├─ [790] Bank::withdraw(416)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 416)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000ca) [staticcall]
+    │   └─ ← [Return] 1792
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1792)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.91ms (1.14ms CPU time)
+
+Ran 1 test suite in 1.16s (1.91ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000001aa, 4205, 1547)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000001aa)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4205)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000001aa)
+    ├─ emit TraceUint(label: "depositAmount", val: 4205)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001aa) [staticcall]
+    │   └─ ← [Return] 4205
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4205)
+    ├─ [790] Bank::withdraw(1547)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1547)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001aa) [staticcall]
+    │   └─ ← [Return] 2658
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2658)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 961.63µs (505.38µs CPU time)
+
+Ran 1 test suite in 1.96s (961.63µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000066f, 3814, 73)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000066f)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3814)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000066f)
+    ├─ emit TraceUint(label: "depositAmount", val: 3814)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000066f) [staticcall]
+    │   └─ ← [Return] 3814
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3814)
+    ├─ [790] Bank::withdraw(73)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 73)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000066f) [staticcall]
+    │   └─ ← [Return] 3741
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3741)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.25ms (549.48µs CPU time)
+
+Ran 1 test suite in 1.15s (1.25ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000553, 3041954474 [3.041e9], 969)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000553)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3041954474 [3.041e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000553)
+    ├─ emit TraceUint(label: "depositAmount", val: 3041954474 [3.041e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000553) [staticcall]
+    │   └─ ← [Return] 3041954474 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3041954474 [3.041e9])
+    ├─ [790] Bank::withdraw(969)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 969)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000553) [staticcall]
+    │   └─ ← [Return] 3041953505 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3041953505 [3.041e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.33ms (822.72µs CPU time)
+
+Ran 1 test suite in 1.63s (1.33ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000012A8, 3139, 430)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000012A8)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3139)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000012A8)
+    ├─ emit TraceUint(label: "depositAmount", val: 3139)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012A8) [staticcall]
+    │   └─ ← [Return] 3139
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3139)
+    ├─ [790] Bank::withdraw(430)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 430)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012A8) [staticcall]
+    │   └─ ← [Return] 2709
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2709)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.02ms (638.34µs CPU time)
+
+Ran 1 test suite in 4.98s (1.02ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000004FA, 409, 21)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000004FA)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(409)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000004FA)
+    ├─ emit TraceUint(label: "depositAmount", val: 409)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000004FA) [staticcall]
+    │   └─ ← [Return] 409
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 409)
+    ├─ [790] Bank::withdraw(21)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 21)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000004FA) [staticcall]
+    │   └─ ← [Return] 388
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 388)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.43ms (547.90µs CPU time)
+
+Ran 1 test suite in 3.06s (1.43ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000063B, 5361, 91)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000063B)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(5361)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000063B)
+    ├─ emit TraceUint(label: "depositAmount", val: 5361)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000063B) [staticcall]
+    │   └─ ← [Return] 5361
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 5361)
+    ├─ [790] Bank::withdraw(91)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 91)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000063B) [staticcall]
+    │   └─ ← [Return] 5270
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 5270)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.07ms (636.55µs CPU time)
+
+Ran 1 test suite in 3.07s (1.07ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000015, 3036, 2939)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000015)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3036)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000015)
+    ├─ emit TraceUint(label: "depositAmount", val: 3036)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000015) [staticcall]
+    │   └─ ← [Return] 3036
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3036)
+    ├─ [790] Bank::withdraw(2939)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2939)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000015) [staticcall]
+    │   └─ ← [Return] 97
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 97)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.42ms (527.82µs CPU time)
+
+Ran 1 test suite in 1.60s (1.42ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000148, 3065339684 [3.065e9], 13)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000148)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3065339684 [3.065e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000148)
+    ├─ emit TraceUint(label: "depositAmount", val: 3065339684 [3.065e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000148) [staticcall]
+    │   └─ ← [Return] 3065339684 [3.065e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3065339684 [3.065e9])
+    ├─ [790] Bank::withdraw(13)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 13)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000148) [staticcall]
+    │   └─ ← [Return] 3065339671 [3.065e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3065339671 [3.065e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.12ms (633.04µs CPU time)
+
+Ran 1 test suite in 1.10s (1.12ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000639, 4042, 2206)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000639)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4042)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000639)
+    ├─ emit TraceUint(label: "depositAmount", val: 4042)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000639) [staticcall]
+    │   └─ ← [Return] 4042
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4042)
+    ├─ [790] Bank::withdraw(2206)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2206)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000639) [staticcall]
+    │   └─ ← [Return] 1836
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1836)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.22ms (619.69µs CPU time)
+
+Ran 1 test suite in 2.40s (1.22ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000004D, 3451, 721)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000004D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3451)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000004D)
+    ├─ emit TraceUint(label: "depositAmount", val: 3451)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000004D) [staticcall]
+    │   └─ ← [Return] 3451
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3451)
+    ├─ [790] Bank::withdraw(721)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 721)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000004D) [staticcall]
+    │   └─ ← [Return] 2730
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2730)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 889.83µs (379.62µs CPU time)
+
+Ran 1 test suite in 2.50s (889.83µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000010D5, 3484, 3035)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000010D5)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3484)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000010D5)
+    ├─ emit TraceUint(label: "depositAmount", val: 3484)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010D5) [staticcall]
+    │   └─ ← [Return] 3484
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3484)
+    ├─ [790] Bank::withdraw(3035)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3035)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010D5) [staticcall]
+    │   └─ ← [Return] 449
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 449)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 737.98µs (451.78µs CPU time)
+
+Ran 1 test suite in 1.06s (737.98µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000003b7, 5362, 391)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000003b7)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(5362)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000003b7)
+    ├─ emit TraceUint(label: "depositAmount", val: 5362)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003b7) [staticcall]
+    │   └─ ← [Return] 5362
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 5362)
+    ├─ [790] Bank::withdraw(391)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 391)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003b7) [staticcall]
+    │   └─ ← [Return] 4971
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4971)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.01ms (547.68µs CPU time)
+
+Ran 1 test suite in 1.76s (1.01ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000002D1, 4498, 1364)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000002D1)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4498)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000002D1)
+    ├─ emit TraceUint(label: "depositAmount", val: 4498)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000002D1) [staticcall]
+    │   └─ ← [Return] 4498
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4498)
+    ├─ [790] Bank::withdraw(1364)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1364)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000002D1) [staticcall]
+    │   └─ ← [Return] 3134
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3134)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.02ms (636.35µs CPU time)
+
+Ran 1 test suite in 3.55s (1.02ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xc69E717d06afD76F479E02fDae7282659d1FAB5a, 150208609853888325 [1.502e17], 0)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xc69E717d06afD76F479E02fDae7282659d1FAB5a)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(150208609853888325 [1.502e17])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xc69E717d06afD76F479E02fDae7282659d1FAB5a)
+    ├─ emit TraceUint(label: "depositAmount", val: 150208609853888325 [1.502e17])
+    ├─ [512] Bank::balanceOf(0xc69E717d06afD76F479E02fDae7282659d1FAB5a) [staticcall]
+    │   └─ ← [Return] 150208609853888325 [1.502e17]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 150208609853888325 [1.502e17])
+    ├─ [790] Bank::withdraw(0)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 0)
+    ├─ [512] Bank::balanceOf(0xc69E717d06afD76F479E02fDae7282659d1FAB5a) [staticcall]
+    │   └─ ← [Return] 150208609853888325 [1.502e17]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 150208609853888325 [1.502e17])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 846.71µs (388.84µs CPU time)
+
+Ran 1 test suite in 1.48s (846.71µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000006D, 3675, 75)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000006D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3675)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000006D)
+    ├─ emit TraceUint(label: "depositAmount", val: 3675)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000006D) [staticcall]
+    │   └─ ← [Return] 3675
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3675)
+    ├─ [790] Bank::withdraw(75)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 75)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000006D) [staticcall]
+    │   └─ ← [Return] 3600
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3600)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 826.34µs (423.90µs CPU time)
+
+Ran 1 test suite in 1.15s (826.34µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000eDE, 3792478065 [3.792e9], 1943)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000eDE)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3792478065 [3.792e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000eDE)
+    ├─ emit TraceUint(label: "depositAmount", val: 3792478065 [3.792e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000eDE) [staticcall]
+    │   └─ ← [Return] 3792478065 [3.792e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3792478065 [3.792e9])
+    ├─ [790] Bank::withdraw(1943)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1943)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000eDE) [staticcall]
+    │   └─ ← [Return] 3792476122 [3.792e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3792476122 [3.792e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.18ms (714.92µs CPU time)
+
+Ran 1 test suite in 4.85s (1.18ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001086, 4155, 223)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001086)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4155)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001086)
+    ├─ emit TraceUint(label: "depositAmount", val: 4155)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001086) [staticcall]
+    │   └─ ← [Return] 4155
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4155)
+    ├─ [790] Bank::withdraw(223)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 223)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001086) [staticcall]
+    │   └─ ← [Return] 3932
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3932)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 983.10µs (530.80µs CPU time)
+
+Ran 1 test suite in 1.11s (983.10µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001093, 1225, 994)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001093)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1225)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001093)
+    ├─ emit TraceUint(label: "depositAmount", val: 1225)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001093) [staticcall]
+    │   └─ ← [Return] 1225
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1225)
+    ├─ [790] Bank::withdraw(994)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 994)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001093) [staticcall]
+    │   └─ ← [Return] 231
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 231)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.02ms (567.65µs CPU time)
+
+Ran 1 test suite in 2.59s (1.02ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000524, 4722, 3813)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000524)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4722)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000524)
+    ├─ emit TraceUint(label: "depositAmount", val: 4722)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000524) [staticcall]
+    │   └─ ← [Return] 4722
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4722)
+    ├─ [790] Bank::withdraw(3813)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3813)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000524) [staticcall]
+    │   └─ ← [Return] 909
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 909)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.19ms (570.74µs CPU time)
+
+Ran 1 test suite in 1.14s (1.19ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000124, 4171761 [4.171e6], 524)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000124)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4171761 [4.171e6])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000124)
+    ├─ emit TraceUint(label: "depositAmount", val: 4171761 [4.171e6])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000124) [staticcall]
+    │   └─ ← [Return] 4171761 [4.171e6]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4171761 [4.171e6])
+    ├─ [790] Bank::withdraw(524)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 524)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000124) [staticcall]
+    │   └─ ← [Return] 4171237 [4.171e6]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4171237 [4.171e6])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 843.37µs (449.91µs CPU time)
+
+Ran 1 test suite in 1.06s (843.37µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000EDf, 4680, 145)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000EDf)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4680)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000EDf)
+    ├─ emit TraceUint(label: "depositAmount", val: 4680)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000EDf) [staticcall]
+    │   └─ ← [Return] 4680
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4680)
+    ├─ [790] Bank::withdraw(145)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 145)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000EDf) [staticcall]
+    │   └─ ← [Return] 4535
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4535)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.52ms (783.93µs CPU time)
+
+Ran 1 test suite in 2.84s (1.52ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000001e613B, 3426, 205)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000001e613B)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3426)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000001e613B)
+    ├─ emit TraceUint(label: "depositAmount", val: 3426)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000001e613B) [staticcall]
+    │   └─ ← [Return] 3426
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3426)
+    ├─ [790] Bank::withdraw(205)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 205)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000001e613B) [staticcall]
+    │   └─ ← [Return] 3221
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3221)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 861.07µs (480.11µs CPU time)
+
+Ran 1 test suite in 2.58s (861.07µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA, 180417931990397543 [1.804e17], 4181543167643396 [4.181e15])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(180417931990397543 [1.804e17])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA)
+    ├─ emit TraceUint(label: "depositAmount", val: 180417931990397543 [1.804e17])
+    ├─ [512] Bank::balanceOf(0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA) [staticcall]
+    │   └─ ← [Return] 180417931990397543 [1.804e17]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 180417931990397543 [1.804e17])
+    ├─ [790] Bank::withdraw(4181543167643396 [4.181e15])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4181543167643396 [4.181e15])
+    ├─ [512] Bank::balanceOf(0xf4913B1BD35Fac5091a0946cdc61bdCFA71744fA) [staticcall]
+    │   └─ ← [Return] 176236388822754147 [1.762e17]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 176236388822754147 [1.762e17])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 997.22µs (513.06µs CPU time)
+
+Ran 1 test suite in 2.64s (997.22µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x6bBb5C4089Ff920a1C80805F7a0078539956902f, 2860, 2797)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x6bBb5C4089Ff920a1C80805F7a0078539956902f)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2860)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x6bBb5C4089Ff920a1C80805F7a0078539956902f)
+    ├─ emit TraceUint(label: "depositAmount", val: 2860)
+    ├─ [512] Bank::balanceOf(0x6bBb5C4089Ff920a1C80805F7a0078539956902f) [staticcall]
+    │   └─ ← [Return] 2860
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2860)
+    ├─ [790] Bank::withdraw(2797)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2797)
+    ├─ [512] Bank::balanceOf(0x6bBb5C4089Ff920a1C80805F7a0078539956902f) [staticcall]
+    │   └─ ← [Return] 63
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 63)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.10ms (621.83µs CPU time)
+
+Ran 1 test suite in 1.25s (1.10ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000120E, 4309, 410)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000120E)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4309)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000120E)
+    ├─ emit TraceUint(label: "depositAmount", val: 4309)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000120E) [staticcall]
+    │   └─ ← [Return] 4309
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4309)
+    ├─ [790] Bank::withdraw(410)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 410)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000120E) [staticcall]
+    │   └─ ← [Return] 3899
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3899)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 872.77µs (488.47µs CPU time)
+
+Ran 1 test suite in 2.76s (872.77µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000106C, 4080, 3906)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000106C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4080)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000106C)
+    ├─ emit TraceUint(label: "depositAmount", val: 4080)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000106C) [staticcall]
+    │   └─ ← [Return] 4080
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4080)
+    ├─ [790] Bank::withdraw(3906)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3906)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000106C) [staticcall]
+    │   └─ ← [Return] 174
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 174)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.06ms (507.85µs CPU time)
+
+Ran 1 test suite in 2.69s (1.06ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x1Ef1983F082706B3975E823967Be292fe9725303, 525, 429)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x1Ef1983F082706B3975E823967Be292fe9725303)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(525)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x1Ef1983F082706B3975E823967Be292fe9725303)
+    ├─ emit TraceUint(label: "depositAmount", val: 525)
+    ├─ [512] Bank::balanceOf(0x1Ef1983F082706B3975E823967Be292fe9725303) [staticcall]
+    │   └─ ← [Return] 525
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 525)
+    ├─ [790] Bank::withdraw(429)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 429)
+    ├─ [512] Bank::balanceOf(0x1Ef1983F082706B3975E823967Be292fe9725303) [staticcall]
+    │   └─ ← [Return] 96
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 96)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.56ms (733.62µs CPU time)
+
+Ran 1 test suite in 1.47s (1.56ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4, 407458711208991678 [4.074e17], 508)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(407458711208991678 [4.074e17])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4)
+    ├─ emit TraceUint(label: "depositAmount", val: 407458711208991678 [4.074e17])
+    ├─ [512] Bank::balanceOf(0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4) [staticcall]
+    │   └─ ← [Return] 407458711208991678 [4.074e17]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 407458711208991678 [4.074e17])
+    ├─ [790] Bank::withdraw(508)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 508)
+    ├─ [512] Bank::balanceOf(0xFAAdfde6997633A0371Fb5910e6C6fFfB259d3D4) [staticcall]
+    │   └─ ← [Return] 407458711208991170 [4.074e17]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 407458711208991170 [4.074e17])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.90ms (1.19ms CPU time)
+
+Ran 1 test suite in 1.66s (1.90ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xD46bE28699898f71F5Cb517FDec6bF65A364A278, 21363071 [2.136e7], 64088 [6.408e4])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xD46bE28699898f71F5Cb517FDec6bF65A364A278)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(21363071 [2.136e7])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xD46bE28699898f71F5Cb517FDec6bF65A364A278)
+    ├─ emit TraceUint(label: "depositAmount", val: 21363071 [2.136e7])
+    ├─ [512] Bank::balanceOf(0xD46bE28699898f71F5Cb517FDec6bF65A364A278) [staticcall]
+    │   └─ ← [Return] 21363071 [2.136e7]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 21363071 [2.136e7])
+    ├─ [790] Bank::withdraw(64088 [6.408e4])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 64088 [6.408e4])
+    ├─ [512] Bank::balanceOf(0xD46bE28699898f71F5Cb517FDec6bF65A364A278) [staticcall]
+    │   └─ ← [Return] 21298983 [2.129e7]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 21298983 [2.129e7])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.08ms (444.57µs CPU time)
+
+Ran 1 test suite in 2.58s (1.08ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00, 4702, 17)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4702)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00)
+    ├─ emit TraceUint(label: "depositAmount", val: 4702)
+    ├─ [512] Bank::balanceOf(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00) [staticcall]
+    │   └─ ← [Return] 4702
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4702)
+    ├─ [790] Bank::withdraw(17)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 17)
+    ├─ [512] Bank::balanceOf(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00) [staticcall]
+    │   └─ ← [Return] 4685
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4685)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.17ms (575.08µs CPU time)
+
+Ran 1 test suite in 4.94s (1.17ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000000e1, 3124842406 [3.124e9], 304)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000000e1)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3124842406 [3.124e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000000e1)
+    ├─ emit TraceUint(label: "depositAmount", val: 3124842406 [3.124e9])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000e1) [staticcall]
+    │   └─ ← [Return] 3124842406 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3124842406 [3.124e9])
+    ├─ [790] Bank::withdraw(304)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 304)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000e1) [staticcall]
+    │   └─ ← [Return] 3124842102 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3124842102 [3.124e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 871.75µs (400.60µs CPU time)
+
+Ran 1 test suite in 2.04s (871.75µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000003b7, 3634, 2206)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000003b7)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3634)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000003b7)
+    ├─ emit TraceUint(label: "depositAmount", val: 3634)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003b7) [staticcall]
+    │   └─ ← [Return] 3634
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3634)
+    ├─ [790] Bank::withdraw(2206)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2206)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000003b7) [staticcall]
+    │   └─ ← [Return] 1428
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1428)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.07ms (585.73µs CPU time)
+
+Ran 1 test suite in 5.30s (1.07ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x8Fea22f0095487b198409F1e9e872eA757F0DCD6, 55626307945478351 [5.562e16], 1)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x8Fea22f0095487b198409F1e9e872eA757F0DCD6)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(55626307945478351 [5.562e16])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x8Fea22f0095487b198409F1e9e872eA757F0DCD6)
+    ├─ emit TraceUint(label: "depositAmount", val: 55626307945478351 [5.562e16])
+    ├─ [512] Bank::balanceOf(0x8Fea22f0095487b198409F1e9e872eA757F0DCD6) [staticcall]
+    │   └─ ← [Return] 55626307945478351 [5.562e16]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 55626307945478351 [5.562e16])
+    ├─ [790] Bank::withdraw(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0x8Fea22f0095487b198409F1e9e872eA757F0DCD6) [staticcall]
+    │   └─ ← [Return] 55626307945478350 [5.562e16]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 55626307945478350 [5.562e16])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 900.15µs (528.17µs CPU time)
+
+Ran 1 test suite in 2.36s (900.15µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000A9254e4, 4754, 451)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000A9254e4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4754)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000A9254e4)
+    ├─ emit TraceUint(label: "depositAmount", val: 4754)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000A9254e4) [staticcall]
+    │   └─ ← [Return] 4754
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4754)
+    ├─ [790] Bank::withdraw(451)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 451)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000A9254e4) [staticcall]
+    │   └─ ← [Return] 4303
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4303)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.23ms (764.16µs CPU time)
+
+Ran 1 test suite in 1.67s (1.23ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000003223EaB, 153, 96)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000003223EaB)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(153)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000003223EaB)
+    ├─ emit TraceUint(label: "depositAmount", val: 153)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000003223EaB) [staticcall]
+    │   └─ ← [Return] 153
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 153)
+    ├─ [790] Bank::withdraw(96)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 96)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000003223EaB) [staticcall]
+    │   └─ ← [Return] 57
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 57)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 978.55µs (530.58µs CPU time)
+
+Ran 1 test suite in 1.15s (978.55µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000010Fc, 429, 21)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000010Fc)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(429)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000010Fc)
+    ├─ emit TraceUint(label: "depositAmount", val: 429)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010Fc) [staticcall]
+    │   └─ ← [Return] 429
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 429)
+    ├─ [790] Bank::withdraw(21)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 21)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010Fc) [staticcall]
+    │   └─ ← [Return] 408
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 408)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.50ms (859.51µs CPU time)
+
+Ran 1 test suite in 2.49s (1.50ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000000F4, 4437, 3921)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000000F4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4437)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000000F4)
+    ├─ emit TraceUint(label: "depositAmount", val: 4437)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000F4) [staticcall]
+    │   └─ ← [Return] 4437
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4437)
+    ├─ [790] Bank::withdraw(3921)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3921)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000000F4) [staticcall]
+    │   └─ ← [Return] 516
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 516)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.03ms (638.45µs CPU time)
+
+Ran 1 test suite in 3.01s (1.03ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0018985b185b98D950599D195C91195C1bDCDA5C, 3771, 202)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0018985b185b98D950599D195C91195C1bDCDA5C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3771)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0018985b185b98D950599D195C91195C1bDCDA5C)
+    ├─ emit TraceUint(label: "depositAmount", val: 3771)
+    ├─ [512] Bank::balanceOf(0x0018985b185b98D950599D195C91195C1bDCDA5C) [staticcall]
+    │   └─ ← [Return] 3771
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3771)
+    ├─ [790] Bank::withdraw(202)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 202)
+    ├─ [512] Bank::balanceOf(0x0018985b185b98D950599D195C91195C1bDCDA5C) [staticcall]
+    │   └─ ← [Return] 3569
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3569)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.03ms (418.30µs CPU time)
+
+Ran 1 test suite in 2.91s (1.03ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2, 77372032709549371 [7.737e16], 14978579859452835 [1.497e16])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(77372032709549371 [7.737e16])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2)
+    ├─ emit TraceUint(label: "depositAmount", val: 77372032709549371 [7.737e16])
+    ├─ [512] Bank::balanceOf(0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2) [staticcall]
+    │   └─ ← [Return] 77372032709549371 [7.737e16]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 77372032709549371 [7.737e16])
+    ├─ [790] Bank::withdraw(14978579859452835 [1.497e16])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 14978579859452835 [1.497e16])
+    ├─ [512] Bank::balanceOf(0x154010f1369296257D3D9e4B0b0DB1110DDeb5b2) [staticcall]
+    │   └─ ← [Return] 62393452850096536 [6.239e16]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 62393452850096536 [6.239e16])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.16ms (419.83µs CPU time)
+
+Ran 1 test suite in 2.59s (1.16ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000001B1, 3806, 1392)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000001B1)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3806)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000001B1)
+    ├─ emit TraceUint(label: "depositAmount", val: 3806)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001B1) [staticcall]
+    │   └─ ← [Return] 3806
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3806)
+    ├─ [790] Bank::withdraw(1392)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1392)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001B1) [staticcall]
+    │   └─ ← [Return] 2414
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2414)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.22ms (503.74µs CPU time)
+
+Ran 1 test suite in 1.14s (1.22ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000A70, 4475, 1316)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000A70)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4475)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000A70)
+    ├─ emit TraceUint(label: "depositAmount", val: 4475)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000A70) [staticcall]
+    │   └─ ← [Return] 4475
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4475)
+    ├─ [790] Bank::withdraw(1316)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1316)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000A70) [staticcall]
+    │   └─ ← [Return] 3159
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3159)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.38ms (768.92µs CPU time)
+
+Ran 1 test suite in 1.10s (1.38ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001248, 1545, 417)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001248)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1545)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001248)
+    ├─ emit TraceUint(label: "depositAmount", val: 1545)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001248) [staticcall]
+    │   └─ ← [Return] 1545
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1545)
+    ├─ [790] Bank::withdraw(417)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 417)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001248) [staticcall]
+    │   └─ ← [Return] 1128
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1128)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.37ms (629.02µs CPU time)
+
+Ran 1 test suite in 1.67s (1.37ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001297, 4782, 75)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001297)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4782)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001297)
+    ├─ emit TraceUint(label: "depositAmount", val: 4782)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001297) [staticcall]
+    │   └─ ← [Return] 4782
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4782)
+    ├─ [790] Bank::withdraw(75)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 75)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001297) [staticcall]
+    │   └─ ← [Return] 4707
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4707)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.07ms (470.38µs CPU time)
+
+Ran 1 test suite in 2.35s (1.07ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000010A5, 1281615203 [1.281e9], 3139)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000010A5)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1281615203 [1.281e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000010A5)
+    ├─ emit TraceUint(label: "depositAmount", val: 1281615203 [1.281e9])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010A5) [staticcall]
+    │   └─ ← [Return] 1281615203 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1281615203 [1.281e9])
+    ├─ [790] Bank::withdraw(3139)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3139)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010A5) [staticcall]
+    │   └─ ← [Return] 1281612064 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1281612064 [1.281e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 949.44µs (514.17µs CPU time)
+
+Ran 1 test suite in 2.82s (949.44µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000006e4, 2673, 320)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000006e4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2673)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000006e4)
+    ├─ emit TraceUint(label: "depositAmount", val: 2673)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000006e4) [staticcall]
+    │   └─ ← [Return] 2673
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2673)
+    ├─ [790] Bank::withdraw(320)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 320)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000006e4) [staticcall]
+    │   └─ ← [Return] 2353
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2353)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 909.07µs (530.41µs CPU time)
+
+Ran 1 test suite in 1.49s (909.07µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000667f9D71, 2207, 1593)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000667f9D71)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2207)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000667f9D71)
+    ├─ emit TraceUint(label: "depositAmount", val: 2207)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000667f9D71) [staticcall]
+    │   └─ ← [Return] 2207
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2207)
+    ├─ [790] Bank::withdraw(1593)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1593)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000667f9D71) [staticcall]
+    │   └─ ← [Return] 614
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 614)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 851.98µs (449.80µs CPU time)
+
+Ran 1 test suite in 2.72s (851.98µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58, 112737 [1.127e5], 1)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(112737 [1.127e5])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58)
+    ├─ emit TraceUint(label: "depositAmount", val: 112737 [1.127e5])
+    ├─ [512] Bank::balanceOf(0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58) [staticcall]
+    │   └─ ← [Return] 112737 [1.127e5]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 112737 [1.127e5])
+    ├─ [790] Bank::withdraw(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0xDb69E5e6e4b88b3F50F788Ac44EA769f6E607c58) [staticcall]
+    │   └─ ← [Return] 112736 [1.127e5]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 112736 [1.127e5])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.10ms (434.26µs CPU time)
+
+Ran 1 test suite in 3.31s (1.10ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000082af3A44, 285, 263)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000082af3A44)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(285)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000082af3A44)
+    ├─ emit TraceUint(label: "depositAmount", val: 285)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000082af3A44) [staticcall]
+    │   └─ ← [Return] 285
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 285)
+    ├─ [790] Bank::withdraw(263)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 263)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000082af3A44) [staticcall]
+    │   └─ ← [Return] 22
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 22)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.26ms (526.45µs CPU time)
+
+Ran 1 test suite in 2.62s (1.26ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000012, 2860, 75)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000012)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2860)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000012)
+    ├─ emit TraceUint(label: "depositAmount", val: 2860)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000012) [staticcall]
+    │   └─ ← [Return] 2860
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2860)
+    ├─ [790] Bank::withdraw(75)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 75)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000012) [staticcall]
+    │   └─ ← [Return] 2785
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2785)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.38ms (973.16µs CPU time)
+
+Ran 1 test suite in 1.58s (1.38ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E, 3, 2)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E)
+    ├─ emit TraceUint(label: "depositAmount", val: 3)
+    ├─ [512] Bank::balanceOf(0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E) [staticcall]
+    │   └─ ← [Return] 3
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3)
+    ├─ [790] Bank::withdraw(2)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2)
+    ├─ [512] Bank::balanceOf(0x5f6e9cb43b4cFeD4253fdB5ccFcE2C494b790c0E) [staticcall]
+    │   └─ ← [Return] 1
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.12ms (438.41µs CPU time)
+
+Ran 1 test suite in 3.05s (1.12ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000AeE, 467, 140)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000AeE)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(467)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000AeE)
+    ├─ emit TraceUint(label: "depositAmount", val: 467)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000AeE) [staticcall]
+    │   └─ ← [Return] 467
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 467)
+    ├─ [790] Bank::withdraw(140)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 140)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000AeE) [staticcall]
+    │   └─ ← [Return] 327
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 327)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 959.39µs (457.60µs CPU time)
+
+Ran 1 test suite in 2.49s (959.39µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000001ed7831C, 1096, 312)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000001ed7831C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1096)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000001ed7831C)
+    ├─ emit TraceUint(label: "depositAmount", val: 1096)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000001ed7831C) [staticcall]
+    │   └─ ← [Return] 1096
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1096)
+    ├─ [790] Bank::withdraw(312)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 312)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000001ed7831C) [staticcall]
+    │   └─ ← [Return] 784
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 784)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.69ms (877.78µs CPU time)
+
+Ran 1 test suite in 1.31s (1.69ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(Create2Deployer: [0x4e59b44847b379578588920cA78FbF26c0B4956C], 495790613314 [4.957e11], 2957397981 [2.957e9])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(Create2Deployer: [0x4e59b44847b379578588920cA78FbF26c0B4956C])
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(495790613314 [4.957e11])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: Create2Deployer: [0x4e59b44847b379578588920cA78FbF26c0B4956C])
+    ├─ emit TraceUint(label: "depositAmount", val: 495790613314 [4.957e11])
+    ├─ [512] Bank::balanceOf(Create2Deployer: [0x4e59b44847b379578588920cA78FbF26c0B4956C]) [staticcall]
+    │   └─ ← [Return] 495790613314 [4.957e11]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 495790613314 [4.957e11])
+    ├─ [790] Bank::withdraw(2957397981 [2.957e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 2957397981 [2.957e9])
+    ├─ [512] Bank::balanceOf(Create2Deployer: [0x4e59b44847b379578588920cA78FbF26c0B4956C]) [staticcall]
+    │   └─ ← [Return] 492833215333 [4.928e11]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 492833215333 [4.928e11])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.76ms (914.52µs CPU time)
+
+Ran 1 test suite in 1.79s (1.76ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000004FA, 2832, 228)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000004FA)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2832)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000004FA)
+    ├─ emit TraceUint(label: "depositAmount", val: 2832)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000004FA) [staticcall]
+    │   └─ ← [Return] 2832
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2832)
+    ├─ [790] Bank::withdraw(228)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 228)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000004FA) [staticcall]
+    │   └─ ← [Return] 2604
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2604)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.11ms (644.03µs CPU time)
+
+Ran 1 test suite in 1.70s (1.11ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000085226C82, 669136355 [6.691e8], 1460)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000085226C82)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(669136355 [6.691e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000085226C82)
+    ├─ emit TraceUint(label: "depositAmount", val: 669136355 [6.691e8])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000085226C82) [staticcall]
+    │   └─ ← [Return] 669136355 [6.691e8]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 669136355 [6.691e8])
+    ├─ [790] Bank::withdraw(1460)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1460)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000085226C82) [staticcall]
+    │   └─ ← [Return] 669134895 [6.691e8]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 669134895 [6.691e8])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.14ms (679.62µs CPU time)
+
+Ran 1 test suite in 2.35s (1.14ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000916a17c5, 154, 148)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000916a17c5)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(154)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000916a17c5)
+    ├─ emit TraceUint(label: "depositAmount", val: 154)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000916a17c5) [staticcall]
+    │   └─ ← [Return] 154
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 154)
+    ├─ [790] Bank::withdraw(148)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 148)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000916a17c5) [staticcall]
+    │   └─ ← [Return] 6
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 6)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.02ms (632.38µs CPU time)
+
+Ran 1 test suite in 5.30s (1.02ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000b0464fDd, 107477464 [1.074e8], 240)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000b0464fDd)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(107477464 [1.074e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000b0464fDd)
+    ├─ emit TraceUint(label: "depositAmount", val: 107477464 [1.074e8])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000b0464fDd) [staticcall]
+    │   └─ ← [Return] 107477464 [1.074e8]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 107477464 [1.074e8])
+    ├─ [790] Bank::withdraw(240)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 240)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000b0464fDd) [staticcall]
+    │   └─ ← [Return] 107477224 [1.074e8]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 107477224 [1.074e8])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.15ms (595.83µs CPU time)
+
+Ran 1 test suite in 1.15s (1.15ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 31373, ~: 31373)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca, 3, 3)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca)
+    ├─ emit TraceUint(label: "depositAmount", val: 3)
+    ├─ [512] Bank::balanceOf(0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca) [staticcall]
+    │   └─ ← [Return] 3
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3)
+    ├─ [790] Bank::withdraw(3)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3)
+    ├─ [512] Bank::balanceOf(0x327346A9ffFeCC23AC9b3C9F3713AfD030Ea1aca) [staticcall]
+    │   └─ ← [Return] 0
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 0)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.05ms (600.19µs CPU time)
+
+Ran 1 test suite in 1.31s (1.05ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 3041954473 [3.041e9], 325)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D])
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3041954473 [3.041e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D])
+    ├─ emit TraceUint(label: "depositAmount", val: 3041954473 [3.041e9])
+    ├─ [512] Bank::balanceOf(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D]) [staticcall]
+    │   └─ ← [Return] 3041954473 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3041954473 [3.041e9])
+    ├─ [790] Bank::withdraw(325)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 325)
+    ├─ [512] Bank::balanceOf(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D]) [staticcall]
+    │   └─ ← [Return] 3041954148 [3.041e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3041954148 [3.041e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 920.76µs (523.09µs CPU time)
+
+Ran 1 test suite in 1.31s (920.76µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000671, 3065339685 [3.065e9], 98)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000671)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3065339685 [3.065e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000671)
+    ├─ emit TraceUint(label: "depositAmount", val: 3065339685 [3.065e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000671) [staticcall]
+    │   └─ ← [Return] 3065339685 [3.065e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3065339685 [3.065e9])
+    ├─ [790] Bank::withdraw(98)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 98)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000671) [staticcall]
+    │   └─ ← [Return] 3065339587 [3.065e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3065339587 [3.065e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 919.77µs (538.01µs CPU time)
+
+Ran 1 test suite in 2.91s (919.77µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00, 3605, 1594)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3605)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00)
+    ├─ emit TraceUint(label: "depositAmount", val: 3605)
+    ├─ [512] Bank::balanceOf(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00) [staticcall]
+    │   └─ ← [Return] 3605
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3605)
+    ├─ [790] Bank::withdraw(1594)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1594)
+    ├─ [512] Bank::balanceOf(0x15deb798Bb3E4dfA0139dfa1B3d433cc23b72f00) [staticcall]
+    │   └─ ← [Return] 2011
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2011)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.12ms (433.53µs CPU time)
+
+Ran 1 test suite in 2.43s (1.12ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000012A8, 1281615202 [1.281e9], 3557)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000012A8)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1281615202 [1.281e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000012A8)
+    ├─ emit TraceUint(label: "depositAmount", val: 1281615202 [1.281e9])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012A8) [staticcall]
+    │   └─ ← [Return] 1281615202 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1281615202 [1.281e9])
+    ├─ [790] Bank::withdraw(3557)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3557)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000012A8) [staticcall]
+    │   └─ ← [Return] 1281611645 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1281611645 [1.281e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.58ms (838.14µs CPU time)
+
+Ran 1 test suite in 1.08s (1.58ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001167, 4300, 4243)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001167)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4300)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001167)
+    ├─ emit TraceUint(label: "depositAmount", val: 4300)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001167) [staticcall]
+    │   └─ ← [Return] 4300
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4300)
+    ├─ [790] Bank::withdraw(4243)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4243)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001167) [staticcall]
+    │   └─ ← [Return] 57
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 57)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.14ms (441.13µs CPU time)
+
+Ran 1 test suite in 3.62s (1.14ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000063, 3124842406 [3.124e9], 4205)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000063)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3124842406 [3.124e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000063)
+    ├─ emit TraceUint(label: "depositAmount", val: 3124842406 [3.124e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000063) [staticcall]
+    │   └─ ← [Return] 3124842406 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3124842406 [3.124e9])
+    ├─ [790] Bank::withdraw(4205)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4205)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000063) [staticcall]
+    │   └─ ← [Return] 3124838201 [3.124e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3124838201 [3.124e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.23ms (581.94µs CPU time)
+
+Ran 1 test suite in 2.80s (1.23ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000000, 105151831 [1.051e8], 686)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000000)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(105151831 [1.051e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000000)
+    ├─ emit TraceUint(label: "depositAmount", val: 105151831 [1.051e8])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] 105151831 [1.051e8]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 105151831 [1.051e8])
+    ├─ [790] Bank::withdraw(686)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 686)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000000) [staticcall]
+    │   └─ ← [Return] 105151145 [1.051e8]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 105151145 [1.051e8])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 890.85µs (448.93µs CPU time)
+
+Ran 1 test suite in 2.70s (890.85µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000006C, 4241, 1226)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000006C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4241)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000006C)
+    ├─ emit TraceUint(label: "depositAmount", val: 4241)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000006C) [staticcall]
+    │   └─ ← [Return] 4241
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4241)
+    ├─ [790] Bank::withdraw(1226)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1226)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000006C) [staticcall]
+    │   └─ ← [Return] 3015
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 3015)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.14ms (547.76µs CPU time)
+
+Ran 1 test suite in 1.30s (1.14ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000001c3, 2951, 160)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000001c3)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2951)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000001c3)
+    ├─ emit TraceUint(label: "depositAmount", val: 2951)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001c3) [staticcall]
+    │   └─ ← [Return] 2951
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2951)
+    ├─ [790] Bank::withdraw(160)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 160)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001c3) [staticcall]
+    │   └─ ← [Return] 2791
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2791)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.11ms (512.36µs CPU time)
+
+Ran 1 test suite in 1.70s (1.11ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x862d56C5278f19f473CB65483a005C6464336f0D, 739347983090 [7.393e11], 1)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x862d56C5278f19f473CB65483a005C6464336f0D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(739347983090 [7.393e11])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x862d56C5278f19f473CB65483a005C6464336f0D)
+    ├─ emit TraceUint(label: "depositAmount", val: 739347983090 [7.393e11])
+    ├─ [512] Bank::balanceOf(0x862d56C5278f19f473CB65483a005C6464336f0D) [staticcall]
+    │   └─ ← [Return] 739347983090 [7.393e11]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 739347983090 [7.393e11])
+    ├─ [790] Bank::withdraw(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0x862d56C5278f19f473CB65483a005C6464336f0D) [staticcall]
+    │   └─ ← [Return] 739347983089 [7.393e11]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 739347983089 [7.393e11])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.09ms (466.40µs CPU time)
+
+Ran 1 test suite in 3.64s (1.09ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000Eba, 591, 549)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000Eba)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(591)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000Eba)
+    ├─ emit TraceUint(label: "depositAmount", val: 591)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000Eba) [staticcall]
+    │   └─ ← [Return] 591
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 591)
+    ├─ [790] Bank::withdraw(549)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 549)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000Eba) [staticcall]
+    │   └─ ← [Return] 42
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 42)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.09ms (568.85µs CPU time)
+
+Ran 1 test suite in 1.79s (1.09ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000120D, 108, 100)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000120D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(108)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000120D)
+    ├─ emit TraceUint(label: "depositAmount", val: 108)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000120D) [staticcall]
+    │   └─ ← [Return] 108
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 108)
+    ├─ [790] Bank::withdraw(100)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 100)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000120D) [staticcall]
+    │   └─ ← [Return] 8
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 8)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.23ms (587.72µs CPU time)
+
+Ran 1 test suite in 1.15s (1.23ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000Aed, 1667, 1393)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000Aed)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1667)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000Aed)
+    ├─ emit TraceUint(label: "depositAmount", val: 1667)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000Aed) [staticcall]
+    │   └─ ← [Return] 1667
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1667)
+    ├─ [790] Bank::withdraw(1393)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1393)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000Aed) [staticcall]
+    │   └─ ← [Return] 274
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 274)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.49ms (781.93µs CPU time)
+
+Ran 1 test suite in 1.79s (1.49ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000398, 1281615202 [1.281e9], 4534)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000398)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1281615202 [1.281e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000398)
+    ├─ emit TraceUint(label: "depositAmount", val: 1281615202 [1.281e9])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000398) [staticcall]
+    │   └─ ← [Return] 1281615202 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1281615202 [1.281e9])
+    ├─ [790] Bank::withdraw(4534)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4534)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000398) [staticcall]
+    │   └─ ← [Return] 1281610668 [1.281e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1281610668 [1.281e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 915.51µs (541.42µs CPU time)
+
+Ran 1 test suite in 1.14s (915.51µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000005B5, 1850, 490)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000005B5)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1850)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000005B5)
+    ├─ emit TraceUint(label: "depositAmount", val: 1850)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000005B5) [staticcall]
+    │   └─ ← [Return] 1850
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1850)
+    ├─ [790] Bank::withdraw(490)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 490)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000005B5) [staticcall]
+    │   └─ ← [Return] 1360
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1360)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 859.86µs (443.12µs CPU time)
+
+Ran 1 test suite in 1.15s (859.86µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001291, 3994, 1189)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001291)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3994)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001291)
+    ├─ emit TraceUint(label: "depositAmount", val: 3994)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001291) [staticcall]
+    │   └─ ← [Return] 3994
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3994)
+    ├─ [790] Bank::withdraw(1189)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1189)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001291) [staticcall]
+    │   └─ ← [Return] 2805
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2805)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.04ms (661.33µs CPU time)
+
+Ran 1 test suite in 1.15s (1.04ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000005f2, 1272, 96)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000005f2)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1272)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000005f2)
+    ├─ emit TraceUint(label: "depositAmount", val: 1272)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000005f2) [staticcall]
+    │   └─ ← [Return] 1272
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1272)
+    ├─ [790] Bank::withdraw(96)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 96)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000005f2) [staticcall]
+    │   └─ ← [Return] 1176
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1176)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 884.36µs (519.60µs CPU time)
+
+Ran 1 test suite in 3.26s (884.36µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1, 30923626087259 [3.092e13], 1)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(30923626087259 [3.092e13])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1)
+    ├─ emit TraceUint(label: "depositAmount", val: 30923626087259 [3.092e13])
+    ├─ [512] Bank::balanceOf(0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1) [staticcall]
+    │   └─ ← [Return] 30923626087259 [3.092e13]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 30923626087259 [3.092e13])
+    ├─ [790] Bank::withdraw(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0x457c5DF605Fbbc891CCcD58e5D8b585e0B2b12d1) [staticcall]
+    │   └─ ← [Return] 30923626087258 [3.092e13]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 30923626087258 [3.092e13])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.06ms (665.95µs CPU time)
+
+Ran 1 test suite in 1.59s (1.06ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7, 2, 0)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7)
+    ├─ emit TraceUint(label: "depositAmount", val: 2)
+    ├─ [512] Bank::balanceOf(0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7) [staticcall]
+    │   └─ ← [Return] 2
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2)
+    ├─ [790] Bank::withdraw(0)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 0)
+    ├─ [512] Bank::balanceOf(0x16D445a0010AC98FAb94f225DcBd9a4B19EfcdA7) [staticcall]
+    │   └─ ← [Return] 2
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.13ms (447.20µs CPU time)
+
+Ran 1 test suite in 1.30s (1.13ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000e44, 589, 20)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000e44)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(589)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000e44)
+    ├─ emit TraceUint(label: "depositAmount", val: 589)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000e44) [staticcall]
+    │   └─ ← [Return] 589
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 589)
+    ├─ [790] Bank::withdraw(20)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 20)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000e44) [staticcall]
+    │   └─ ← [Return] 569
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 569)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.13ms (555.87µs CPU time)
+
+Ran 1 test suite in 7.33s (1.13ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000014f, 2428830012 [2.428e9], 476)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000014f)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2428830012 [2.428e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000014f)
+    ├─ emit TraceUint(label: "depositAmount", val: 2428830012 [2.428e9])
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000014f) [staticcall]
+    │   └─ ← [Return] 2428830012 [2.428e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2428830012 [2.428e9])
+    ├─ [790] Bank::withdraw(476)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 476)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000014f) [staticcall]
+    │   └─ ← [Return] 2428829536 [2.428e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2428829536 [2.428e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.22ms (590.26µs CPU time)
+
+Ran 1 test suite in 1.20s (1.22ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000191, 4229, 207)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000191)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4229)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000191)
+    ├─ emit TraceUint(label: "depositAmount", val: 4229)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000191) [staticcall]
+    │   └─ ← [Return] 4229
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4229)
+    ├─ [790] Bank::withdraw(207)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 207)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000191) [staticcall]
+    │   └─ ← [Return] 4022
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 4022)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 923.74µs (535.48µs CPU time)
+
+Ran 1 test suite in 1.62s (923.74µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000003Db70BeAF97164736F6C634300081D, 1665, 7)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000003Db70BeAF97164736F6C634300081D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1665)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000003Db70BeAF97164736F6C634300081D)
+    ├─ emit TraceUint(label: "depositAmount", val: 1665)
+    ├─ [512] Bank::balanceOf(0x00000000003Db70BeAF97164736F6C634300081D) [staticcall]
+    │   └─ ← [Return] 1665
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1665)
+    ├─ [790] Bank::withdraw(7)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 7)
+    ├─ [512] Bank::balanceOf(0x00000000003Db70BeAF97164736F6C634300081D) [staticcall]
+    │   └─ ← [Return] 1658
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1658)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.28ms (631.11µs CPU time)
+
+Ran 1 test suite in 1.62s (1.28ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000D79, 4723, 4583)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000D79)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4723)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000D79)
+    ├─ emit TraceUint(label: "depositAmount", val: 4723)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000D79) [staticcall]
+    │   └─ ← [Return] 4723
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4723)
+    ├─ [790] Bank::withdraw(4583)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4583)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000D79) [staticcall]
+    │   └─ ← [Return] 140
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 140)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.30ms (457.82µs CPU time)
+
+Ran 1 test suite in 1.31s (1.30ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000002ADe3880, 645, 367)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000002ADe3880)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(645)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000002ADe3880)
+    ├─ emit TraceUint(label: "depositAmount", val: 645)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000002ADe3880) [staticcall]
+    │   └─ ← [Return] 645
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 645)
+    ├─ [790] Bank::withdraw(367)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 367)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000002ADe3880) [staticcall]
+    │   └─ ← [Return] 278
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 278)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 796.29µs (424.10µs CPU time)
+
+Ran 1 test suite in 2.58s (796.29µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xBe117241E92AF57FEE3ce918937Dc057f73946E1, 873925434937072529 [8.739e17], 20326599539 [2.032e10])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xBe117241E92AF57FEE3ce918937Dc057f73946E1)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(873925434937072529 [8.739e17])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xBe117241E92AF57FEE3ce918937Dc057f73946E1)
+    ├─ emit TraceUint(label: "depositAmount", val: 873925434937072529 [8.739e17])
+    ├─ [512] Bank::balanceOf(0xBe117241E92AF57FEE3ce918937Dc057f73946E1) [staticcall]
+    │   └─ ← [Return] 873925434937072529 [8.739e17]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 873925434937072529 [8.739e17])
+    ├─ [790] Bank::withdraw(20326599539 [2.032e10])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 20326599539 [2.032e10])
+    ├─ [512] Bank::balanceOf(0xBe117241E92AF57FEE3ce918937Dc057f73946E1) [staticcall]
+    │   └─ ← [Return] 873925414610472990 [8.739e17]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 873925414610472990 [8.739e17])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.57ms (833.88µs CPU time)
+
+Ran 1 test suite in 1.15s (1.57ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000001248, 3945, 1545)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000001248)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3945)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000001248)
+    ├─ emit TraceUint(label: "depositAmount", val: 3945)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001248) [staticcall]
+    │   └─ ← [Return] 3945
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3945)
+    ├─ [790] Bank::withdraw(1545)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1545)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000001248) [staticcall]
+    │   └─ ← [Return] 2400
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2400)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.24ms (605.57µs CPU time)
+
+Ran 1 test suite in 2.68s (1.24ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000019195C1bdcDa5d105b5BDd5b9C, 525, 326)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000019195C1bdcDa5d105b5BDd5b9C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(525)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000019195C1bdcDa5d105b5BDd5b9C)
+    ├─ emit TraceUint(label: "depositAmount", val: 525)
+    ├─ [512] Bank::balanceOf(0x0000000000000019195C1bdcDa5d105b5BDd5b9C) [staticcall]
+    │   └─ ← [Return] 525
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 525)
+    ├─ [790] Bank::withdraw(326)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 326)
+    ├─ [512] Bank::balanceOf(0x0000000000000019195C1bdcDa5d105b5BDd5b9C) [staticcall]
+    │   └─ ← [Return] 199
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 199)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 915.80µs (433.30µs CPU time)
+
+Ran 1 test suite in 6.82s (915.80µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000C99, 4776, 3908)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000C99)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4776)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000C99)
+    ├─ emit TraceUint(label: "depositAmount", val: 4776)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000C99) [staticcall]
+    │   └─ ← [Return] 4776
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4776)
+    ├─ [790] Bank::withdraw(3908)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3908)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000C99) [staticcall]
+    │   └─ ← [Return] 868
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 868)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.20ms (677.47µs CPU time)
+
+Ran 1 test suite in 1.08s (1.20ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E, 42931470839029 [4.293e13], 5793272389 [5.793e9])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(42931470839029 [4.293e13])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E)
+    ├─ emit TraceUint(label: "depositAmount", val: 42931470839029 [4.293e13])
+    ├─ [512] Bank::balanceOf(0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E) [staticcall]
+    │   └─ ← [Return] 42931470839029 [4.293e13]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 42931470839029 [4.293e13])
+    ├─ [790] Bank::withdraw(5793272389 [5.793e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 5793272389 [5.793e9])
+    ├─ [512] Bank::balanceOf(0xD3FBF325419533BBA81F79ACE8Ee2720daeAEe3E) [staticcall]
+    │   └─ ← [Return] 42925677566640 [4.292e13]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 42925677566640 [4.292e13])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.04ms (433.05µs CPU time)
+
+Ran 1 test suite in 2.81s (1.04ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000795, 495790613315 [4.957e11], 253)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000795)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(495790613315 [4.957e11])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000795)
+    ├─ emit TraceUint(label: "depositAmount", val: 495790613315 [4.957e11])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000795) [staticcall]
+    │   └─ ← [Return] 495790613315 [4.957e11]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 495790613315 [4.957e11])
+    ├─ [790] Bank::withdraw(253)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 253)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000795) [staticcall]
+    │   └─ ← [Return] 495790613062 [4.957e11]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 495790613062 [4.957e11])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.22ms (490.33µs CPU time)
+
+Ran 1 test suite in 1.15s (1.22ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000001a, 1867, 1002)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000001a)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1867)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000001a)
+    ├─ emit TraceUint(label: "depositAmount", val: 1867)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001a) [staticcall]
+    │   └─ ← [Return] 1867
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1867)
+    ├─ [790] Bank::withdraw(1002)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1002)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001a) [staticcall]
+    │   └─ ← [Return] 865
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 865)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.08ms (430.16µs CPU time)
+
+Ran 1 test suite in 1.79s (1.08ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000123, 3603, 3450)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000123)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(3603)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000123)
+    ├─ emit TraceUint(label: "depositAmount", val: 3603)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000123) [staticcall]
+    │   └─ ← [Return] 3603
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 3603)
+    ├─ [790] Bank::withdraw(3450)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 3450)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000123) [staticcall]
+    │   └─ ← [Return] 153
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 153)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.11ms (504.04µs CPU time)
+
+Ran 1 test suite in 3.07s (1.11ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000117C, 4437, 4387)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000117C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(4437)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000117C)
+    ├─ emit TraceUint(label: "depositAmount", val: 4437)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000117C) [staticcall]
+    │   └─ ← [Return] 4437
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 4437)
+    ├─ [790] Bank::withdraw(4387)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4387)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000117C) [staticcall]
+    │   └─ ← [Return] 50
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 50)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.69ms (945.76µs CPU time)
+
+Ran 1 test suite in 1.15s (1.69ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000aE3, 1746, 189)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000aE3)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1746)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000aE3)
+    ├─ emit TraceUint(label: "depositAmount", val: 1746)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000aE3) [staticcall]
+    │   └─ ← [Return] 1746
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1746)
+    ├─ [790] Bank::withdraw(189)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 189)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000aE3) [staticcall]
+    │   └─ ← [Return] 1557
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1557)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.32ms (534.94µs CPU time)
+
+Ran 1 test suite in 3.38s (1.32ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000A9254e4, 1391, 253)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000A9254e4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1391)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000A9254e4)
+    ├─ emit TraceUint(label: "depositAmount", val: 1391)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000A9254e4) [staticcall]
+    │   └─ ← [Return] 1391
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1391)
+    ├─ [790] Bank::withdraw(253)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 253)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000A9254e4) [staticcall]
+    │   └─ ← [Return] 1138
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1138)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.24ms (539.70µs CPU time)
+
+Ran 1 test suite in 990.64ms (1.24ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C, 29515170545166319 [2.951e16], 15716628956169879 [1.571e16])
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(29515170545166319 [2.951e16])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C)
+    ├─ emit TraceUint(label: "depositAmount", val: 29515170545166319 [2.951e16])
+    ├─ [512] Bank::balanceOf(0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C) [staticcall]
+    │   └─ ← [Return] 29515170545166319 [2.951e16]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 29515170545166319 [2.951e16])
+    ├─ [790] Bank::withdraw(15716628956169879 [1.571e16])
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 15716628956169879 [1.571e16])
+    ├─ [512] Bank::balanceOf(0xc2bd08060683A7cD7a9BA954cbF859FFF86e2b5C) [staticcall]
+    │   └─ ← [Return] 13798541588996440 [1.379e16]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 13798541588996440 [1.379e16])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 974.69µs (500.35µs CPU time)
+
+Ran 1 test suite in 1.14s (974.69µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000085226C80, 1226, 875)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000085226C80)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1226)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000085226C80)
+    ├─ emit TraceUint(label: "depositAmount", val: 1226)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000085226C80) [staticcall]
+    │   └─ ← [Return] 1226
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1226)
+    ├─ [790] Bank::withdraw(875)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 875)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000085226C80) [staticcall]
+    │   └─ ← [Return] 351
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 351)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.34ms (554.55µs CPU time)
+
+Ran 1 test suite in 2.43s (1.34ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000AeE, 910, 106)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000AeE)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(910)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000AeE)
+    ├─ emit TraceUint(label: "depositAmount", val: 910)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000AeE) [staticcall]
+    │   └─ ← [Return] 910
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 910)
+    ├─ [790] Bank::withdraw(106)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 106)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000AeE) [staticcall]
+    │   └─ ← [Return] 804
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 804)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.54ms (822.09µs CPU time)
+
+Ran 1 test suite in 2.27s (1.54ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000010a4, 333, 75)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000010a4)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(333)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000010a4)
+    ├─ emit TraceUint(label: "depositAmount", val: 333)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010a4) [staticcall]
+    │   └─ ← [Return] 333
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 333)
+    ├─ [790] Bank::withdraw(75)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 75)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010a4) [staticcall]
+    │   └─ ← [Return] 258
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 258)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 902.71µs (451.47µs CPU time)
+
+Ran 1 test suite in 990.44ms (902.71µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 31373, ~: 31373)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD, 1, 1)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD)
+    ├─ emit TraceUint(label: "depositAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD) [staticcall]
+    │   └─ ← [Return] 1
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1)
+    ├─ [790] Bank::withdraw(1)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 1)
+    ├─ [512] Bank::balanceOf(0xf9fFA4d3eC44600dEAB156d9Ce55368fcb8Ed3dD) [staticcall]
+    │   └─ ← [Return] 0
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 0)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 945.22µs (494.00µs CPU time)
+
+Ran 1 test suite in 957.77ms (945.22µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x000000000000000000000000000000000000001D, 2233625728 [2.233e9], 229)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x000000000000000000000000000000000000001D)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(2233625728 [2.233e9])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x000000000000000000000000000000000000001D)
+    ├─ emit TraceUint(label: "depositAmount", val: 2233625728 [2.233e9])
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001D) [staticcall]
+    │   └─ ← [Return] 2233625728 [2.233e9]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 2233625728 [2.233e9])
+    ├─ [790] Bank::withdraw(229)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 229)
+    ├─ [512] Bank::balanceOf(0x000000000000000000000000000000000000001D) [staticcall]
+    │   └─ ← [Return] 2233625499 [2.233e9]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 2233625499 [2.233e9])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.08ms (532.99µs CPU time)
+
+Ran 1 test suite in 1.04s (1.08ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000224, 5360, 4347)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000224)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(5360)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000224)
+    ├─ emit TraceUint(label: "depositAmount", val: 5360)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000224) [staticcall]
+    │   └─ ← [Return] 5360
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 5360)
+    ├─ [790] Bank::withdraw(4347)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4347)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000224) [staticcall]
+    │   └─ ← [Return] 1013
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1013)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.22ms (510.28µs CPU time)
+
+Ran 1 test suite in 2.23s (1.22ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC, 76636043565 [7.663e10], 64)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(76636043565 [7.663e10])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC)
+    ├─ emit TraceUint(label: "depositAmount", val: 76636043565 [7.663e10])
+    ├─ [512] Bank::balanceOf(0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC) [staticcall]
+    │   └─ ← [Return] 76636043565 [7.663e10]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 76636043565 [7.663e10])
+    ├─ [790] Bank::withdraw(64)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 64)
+    ├─ [512] Bank::balanceOf(0x3B90AFD0BB8840558B58aF07D63A8bd0267d7FCC) [staticcall]
+    │   └─ ← [Return] 76636043501 [7.663e10]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 76636043501 [7.663e10])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 986.75µs (517.37µs CPU time)
+
+Ran 1 test suite in 2.27s (986.75µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000F6A, 257, 203)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000F6A)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(257)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000F6A)
+    ├─ emit TraceUint(label: "depositAmount", val: 257)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000F6A) [staticcall]
+    │   └─ ← [Return] 257
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 257)
+    ├─ [790] Bank::withdraw(203)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 203)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000F6A) [staticcall]
+    │   └─ ← [Return] 54
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 54)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.21ms (486.37µs CPU time)
+
+Ran 1 test suite in 3.39s (1.21ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000010cc, 773487950 [7.734e8], 305)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000010cc)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(773487950 [7.734e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000010cc)
+    ├─ emit TraceUint(label: "depositAmount", val: 773487950 [7.734e8])
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010cc) [staticcall]
+    │   └─ ← [Return] 773487950 [7.734e8]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 773487950 [7.734e8])
+    ├─ [790] Bank::withdraw(305)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 305)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000010cc) [staticcall]
+    │   └─ ← [Return] 773487645 [7.734e8]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 773487645 [7.734e8])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 923.75µs (547.94µs CPU time)
+
+Ran 1 test suite in 2.26s (923.75µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x00000000000000000000000000000000000001cA, 1745, 491)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x00000000000000000000000000000000000001cA)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(1745)
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x00000000000000000000000000000000000001cA)
+    ├─ emit TraceUint(label: "depositAmount", val: 1745)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001cA) [staticcall]
+    │   └─ ← [Return] 1745
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 1745)
+    ├─ [790] Bank::withdraw(491)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 491)
+    ├─ [512] Bank::balanceOf(0x00000000000000000000000000000000000001cA) [staticcall]
+    │   └─ ← [Return] 1254
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 1254)
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 822.13µs (436.12µs CPU time)
+
+Ran 1 test suite in 1.61s (822.13µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)
+Traces:
+  [44644] BankTest::testFuzz_DepositWithdraw(0x0000000000000000000000000000000000000d9d, 177362147 [1.773e8], 4476)
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::assume(true) [staticcall]
+    │   └─ ← [Return] 
+    ├─ [0] VM::startPrank(0x0000000000000000000000000000000000000d9d)
+    │   └─ ← [Return] 
+    ├─ [22538] Bank::deposit(177362147 [1.773e8])
+    │   └─ ← [Stop] 
+    ├─ emit TraceAddress(label: "user", addr: 0x0000000000000000000000000000000000000d9d)
+    ├─ emit TraceUint(label: "depositAmount", val: 177362147 [1.773e8])
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000d9d) [staticcall]
+    │   └─ ← [Return] 177362147 [1.773e8]
+    ├─ emit TraceUint(label: "balanceAfterDeposit", val: 177362147 [1.773e8])
+    ├─ [790] Bank::withdraw(4476)
+    │   └─ ← [Stop] 
+    ├─ emit TraceUint(label: "withdrawAmount", val: 4476)
+    ├─ [512] Bank::balanceOf(0x0000000000000000000000000000000000000d9d) [staticcall]
+    │   └─ ← [Return] 177357671 [1.773e8]
+    ├─ emit TraceUint(label: "balanceAfterWithdraw", val: 177357671 [1.773e8])
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    └─ ← [Stop] 
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 996.08µs (622.54µs CPU time)
+
+Ran 1 test suite in 1.50s (996.08µs CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+No files changed, compilation skipped
+
+Ran 1 test for test/Bank.t.sol:BankTest
+[PASS] testFuzz_DepositWithdraw(address,uint256,uint256) (runs: 1, μ: 44644, ~: 44644)

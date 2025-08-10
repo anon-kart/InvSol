@@ -1,0 +1,2829 @@
+// Declarations for DataStructures.LinkedList
+// Declarations written 2020-11-18T07:33:53.314 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt DataStructures.LinkedList:::CLASS
+ppt-type class
+
+ppt DataStructures.LinkedList:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.LinkedList():::ENTER
+ppt-type enter
+
+ppt DataStructures.LinkedList.LinkedList():::EXIT37
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.isEmpty():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.isEmpty():::EXIT45
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 2
+
+ppt DataStructures.LinkedList.makeEmpty():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.makeEmpty():::EXIT54
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.zeroth():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.zeroth():::EXIT62
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 7
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return
+  var-kind return
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  comparability 2
+variable return.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable return.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable return.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.first():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.first():::EXIT71
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return
+  var-kind return
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  comparability 2
+variable return.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable return.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable return.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.insert(java.lang.Object, DataStructures.LinkedListItr):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 4
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+variable p
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable p.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable p.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable p.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args p.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable p.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.insert(java.lang.Object, DataStructures.LinkedListItr):::EXIT83
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 4
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+variable p
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable p.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable p.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable p.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args p.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable p.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.find(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 5
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.find(java.lang.Object):::EXIT97
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 4
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  comparability 2
+variable return.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable return.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable return.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.findPrevious(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 5
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.findPrevious(java.lang.Object):::EXIT113
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 4
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  comparability 2
+variable return.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable return.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable return.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable return.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+
+ppt DataStructures.LinkedList.remove(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 5
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.remove(java.lang.Object):::EXIT126
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable x
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 5
+variable x.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args x
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.printList(DataStructures.LinkedList):::ENTER
+ppt-type enter
+variable theList
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theList.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable theList.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable theList.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theList.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable theList.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.LinkedList.printList(DataStructures.LinkedList):::EXIT141
+ppt-type subexit
+variable theList
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theList.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable theList.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable theList.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theList.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable theList.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.LinkedList.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 7
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt DataStructures.LinkedList.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedList.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedList
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.header
+  var-kind field header
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.header.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.header.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.header.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 7
+variable this.header.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.header.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.header.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt DataStructures.ListNode:::CLASS
+ppt-type class
+
+ppt DataStructures.ListNode:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.ListNode.ListNode(java.lang.Object):::ENTER
+ppt-type enter
+variable theElement
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theElement.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theElement
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.ListNode.ListNode(java.lang.Object):::EXIT13
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable theElement
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theElement.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theElement
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.ListNode.ListNode(java.lang.Object, DataStructures.ListNode):::ENTER
+ppt-type enter
+variable theElement
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable theElement.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theElement
+  flags synthetic classname non_null
+  comparability 1
+variable n
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable n.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable n.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n.element
+  flags synthetic classname non_null
+  comparability 1
+variable n.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable n.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable n.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable n.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.ListNode.ListNode(java.lang.Object, DataStructures.ListNode):::EXIT19
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 6
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 2
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable theElement
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable theElement.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theElement
+  flags synthetic classname non_null
+  comparability 1
+variable n
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable n.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable n.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n.element
+  flags synthetic classname non_null
+  comparability 1
+variable n.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable n.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable n.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args n.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable n.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.ListNode.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.ListNode.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt DataStructures.ListNode.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.ListNode.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable this.next.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.next.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.next.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.next.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt DataStructures.LinkedListItr:::CLASS
+ppt-type class
+
+ppt DataStructures.LinkedListItr:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.LinkedListItr.LinkedListItr(DataStructures.ListNode):::ENTER
+ppt-type enter
+variable theNode
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theNode.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable theNode.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theNode.element
+  flags synthetic classname non_null
+  comparability 1
+variable theNode.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable theNode.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable theNode.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theNode.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable theNode.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.LinkedListItr.LinkedListItr(DataStructures.ListNode):::EXIT27
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 6
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 2
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable theNode
+  var-kind variable
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable theNode.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable theNode.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theNode.element
+  flags synthetic classname non_null
+  comparability 1
+variable theNode.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable theNode.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 3
+variable theNode.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args theNode.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable theNode.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+
+ppt DataStructures.LinkedListItr.isPastEnd():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.LinkedListItr.isPastEnd():::EXIT35
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 2
+
+ppt DataStructures.LinkedListItr.retrieve():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.LinkedListItr.retrieve():::EXIT45
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 2
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 2
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable return
+  var-kind return
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 2
+variable return.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args return
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedListItr.advance():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.LinkedListItr.advance():::EXIT56
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 3
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 4
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+
+ppt DataStructures.LinkedListItr.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedListItr.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt DataStructures.LinkedListItr.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 4
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 6
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 5
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt DataStructures.LinkedListItr.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type DataStructures.LinkedListItr
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.current
+  var-kind field current
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 5
+variable this.current.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.current.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 7
+variable this.current.next.element
+  var-kind field element
+  dec-type java.lang.Object
+  rep-type hashcode
+  comparability 6
+variable this.current.next.element.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args this.current.next.element
+  flags synthetic classname non_null
+  comparability 1
+variable this.current.next.next
+  var-kind field next
+  dec-type DataStructures.ListNode
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

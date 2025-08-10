@@ -1,0 +1,124 @@
+===========================================================================
+PolyCalc.RatTermVec:::OBJECT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+this.wrapped != null
+this.wrapped.containsNull == false
+this.wrapped.elementType == \type(PolyCalc.RatTerm)
+===========================================================================
+PolyCalc.RatTermVec.RatTermVec():::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.OneOfSequence.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] == []
+warning: method daikon.inv.unary.stringsequence.OneOfStringSequence.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[].getClass().getName() == []
+===========================================================================
+PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+t != null
+===========================================================================
+PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) orig(t) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Modified variables: this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+      Unmodified variables: this this.wrapped t
+modifies this.wrapped[*]
+warning: method daikon.inv.binary.twoScalar.IntEqual.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[])-1 == orig(size(this.wrapped[]))
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+warning: method daikon.inv.binary.twoSequence.SuperSequence.format(OutputFormat:ESC/Java) needs to be implemented: orig(this.wrapped[]) is a subsequence of this.wrapped[]
+warning: method daikon.inv.binary.twoSequence.SuperSet.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] is a superset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.copy():::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+===========================================================================
+PolyCalc.RatTermVec.copy():::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() return return.wrapped return.wrapped[] return.wrapped[].getClass().getName() orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) size(this.wrapped[]) size(this.wrapped[])-1 size(return.wrapped[]) size(return.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Unmodified variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+\result != null
+\result.wrapped != null
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: return.wrapped[] contains no duplicates
+\result.wrapped.containsNull == false
+\result.wrapped.elementType == \type(PolyCalc.RatTerm)
+===========================================================================
+PolyCalc.RatTermVec.get(int):::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() index size(this.wrapped[]) size(this.wrapped[])-1
+index >= 0
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+===========================================================================
+PolyCalc.RatTermVec.get(int):::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() index return orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) orig(index) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Unmodified variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() index size(this.wrapped[])
+\result != null
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+===========================================================================
+PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t index size(this.wrapped[]) size(this.wrapped[])-1
+t != null
+index >= 0
+===========================================================================
+PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t index orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) orig(t) orig(index) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Modified variables: this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+      Unmodified variables: this this.wrapped t index
+modifies this.wrapped[*]
+warning: method daikon.inv.binary.twoScalar.IntEqual.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[])-1 == orig(size(this.wrapped[]))
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+warning: method daikon.inv.binary.twoSequence.SuperSet.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] is a superset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.printDebug():::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+===========================================================================
+PolyCalc.RatTermVec.printDebug():::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() return return.toString orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Unmodified variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+\result != null
+warning: method daikon.inv.unary.string.PrintableString.format(OutputFormat:ESC/Java) needs to be implemented: return.toString is printable
+===========================================================================
+PolyCalc.RatTermVec.remove(int):::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() index size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+index >= 0
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+===========================================================================
+PolyCalc.RatTermVec.remove(int):::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() index orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) orig(index) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Modified variables: this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+      Unmodified variables: this this.wrapped index
+modifies this.wrapped[*]
+warning: method daikon.inv.binary.twoScalar.IntEqual.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) == orig(size(this.wrapped[]))-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+warning: method daikon.inv.binary.twoSequence.SubSet.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] is a subset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t index size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+t != null
+index >= 0
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+===========================================================================
+PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() t index orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) orig(t) orig(index) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Modified variables: this.wrapped[]
+      Unmodified variables: this this.wrapped this.wrapped[].getClass().getName() t index size(this.wrapped[])
+modifies this.wrapped[*]
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+warning: method daikon.inv.unary.scalar.LowerBound.format(OutputFormat:ESC/Java) needs to be implemented: size(this.wrapped[]) >= 1
+===========================================================================
+PolyCalc.RatTermVec.size():::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+===========================================================================
+PolyCalc.RatTermVec.size():::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() return orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Unmodified variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+warning: method daikon.inv.unary.sequence.NoDuplicates.format(OutputFormat:ESC/Java) needs to be implemented: this.wrapped[] contains no duplicates
+\result >= 0
+===========================================================================
+PolyCalc.RatTermVec.toString():::ENTER
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[]) size(this.wrapped[])-1
+===========================================================================
+PolyCalc.RatTermVec.toString():::EXIT
+    Variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() return return.toString orig(this) orig(this.wrapped) orig(this.wrapped[]) orig(this.wrapped[].getClass().getName()) size(this.wrapped[]) size(this.wrapped[])-1 orig(size(this.wrapped[])) orig(size(this.wrapped[]))-1
+      Unmodified variables: this this.wrapped this.wrapped[] this.wrapped[].getClass().getName() size(this.wrapped[])
+\result != null
+warning: method daikon.inv.unary.string.PrintableString.format(OutputFormat:ESC/Java) needs to be implemented: return.toString is printable

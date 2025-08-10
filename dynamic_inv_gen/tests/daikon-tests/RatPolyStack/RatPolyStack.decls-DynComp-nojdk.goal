@@ -1,0 +1,1686 @@
+// Declarations for PolyCalc.RatPolyStack
+// Declarations written 2020-11-18T07:17:52.095 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt PolyCalc.RatPolyStack:::CLASS
+ppt-type class
+
+ppt PolyCalc.RatPolyStack:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.RatPolyStack():::ENTER
+ppt-type enter
+
+ppt PolyCalc.RatPolyStack.RatPolyStack():::EXIT74
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.push(PolyCalc.RatPoly):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+variable p
+  var-kind variable
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.push(PolyCalc.RatPoly):::EXIT83
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+variable p
+  var-kind variable
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.pop():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.pop():::EXIT99
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+variable return
+  var-kind return
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.dup():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.dup():::EXIT115
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.swap():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.swap():::EXIT133
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.clear():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.clear():::EXIT143
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.get(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 2
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.get(int):::EXIT156
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 2
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+
+ppt PolyCalc.RatPolyStack.add():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.add():::EXIT173
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.sub():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.sub():::EXIT189
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.mul():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.mul():::EXIT205
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.div():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.div():::EXIT221
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.size():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 5
+
+ppt PolyCalc.RatPolyStack.size():::EXIT228
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 2
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.getCons(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 2
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatPolyStack.getCons(int):::EXIT252
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 2
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable return.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable return.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable return.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable return.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+
+ppt PolyCalc.RatPolyStack.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 6
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.RatPolyStack.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 6
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 6
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt PolyCalc.RatPolyStack.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 6
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.RatPolyStack.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatPolyStack
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.polys
+  var-kind field polys
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 6
+variable this.polys.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.polys.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 6
+variable this.polys.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.size
+  var-kind field size
+  dec-type int
+  rep-type int
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt PolyCalc.Cons:::CLASS
+ppt-type class
+
+ppt PolyCalc.Cons:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 3
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 6
+
+ppt PolyCalc.Cons.Cons(PolyCalc.RatPoly, PolyCalc.Cons):::ENTER
+ppt-type enter
+variable h
+  var-kind variable
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable t
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable t.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable t.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable t.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable t.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+
+ppt PolyCalc.Cons.Cons(PolyCalc.RatPoly, PolyCalc.Cons):::EXIT11
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 6
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 3
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable h
+  var-kind variable
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable t
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable t.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable t.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 4
+variable t.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 2
+variable t.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+
+ppt PolyCalc.Cons.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 6
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.Cons.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 6
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 7
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt PolyCalc.Cons.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 5
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 6
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 4
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 7
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.Cons.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 6
+variable this.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 7
+variable this.tail.tail.head
+  var-kind field head
+  dec-type PolyCalc.RatPoly
+  rep-type hashcode
+  comparability 5
+variable this.tail.tail.tail
+  var-kind field tail
+  dec-type PolyCalc.Cons
+  rep-type hashcode
+  comparability 8
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

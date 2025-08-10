@@ -1,0 +1,820 @@
+// Declarations for PolyCalc.RatTermVec
+// Declarations written 2020-11-18T09:16:17.011 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt PolyCalc.RatTermVec:::CLASS
+ppt-type class
+
+ppt PolyCalc.RatTermVec:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+
+ppt PolyCalc.RatTermVec.RatTermVec():::ENTER
+ppt-type enter
+
+ppt PolyCalc.RatTermVec.RatTermVec():::EXIT27
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+
+ppt PolyCalc.RatTermVec.size():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+
+ppt PolyCalc.RatTermVec.size():::EXIT30
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt PolyCalc.RatTermVec.get(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.get(int):::EXIT39
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 3[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  comparability 3
+
+ppt PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 2[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::EXIT50
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 2[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 3[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::EXIT64
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 3[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.remove(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.remove(int):::EXIT78
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 3[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::EXIT89
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 3[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable t
+  var-kind variable
+  dec-type PolyCalc.RatTerm
+  rep-type hashcode
+  flags is_param
+  comparability 3
+variable index
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt PolyCalc.RatTermVec.copy():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+
+ppt PolyCalc.RatTermVec.copy():::EXIT101
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 5
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable return
+  var-kind return
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  comparability 2
+variable return.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable return.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[8]
+variable return.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args return.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[9]
+
+ppt PolyCalc.RatTermVec.printDebug():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 3
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 4[5]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[6]
+
+ppt PolyCalc.RatTermVec.printDebug():::EXIT106
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 6[7]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[8]
+variable return
+  var-kind return
+  dec-type java.lang.String
+  rep-type hashcode
+  comparability 2
+variable return.toString
+  var-kind function toString()
+  dec-type java.lang.String
+  rep-type java.lang.String
+  function-args return
+  flags synthetic to_string
+  comparability 3
+
+ppt PolyCalc.RatTermVec.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.RatTermVec.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 6[7]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[8]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt PolyCalc.RatTermVec.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 4
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 5[6]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[7]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt PolyCalc.RatTermVec.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type PolyCalc.RatTermVec
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.wrapped
+  var-kind field wrapped
+  dec-type java.util.ArrayList
+  rep-type hashcode
+  comparability 5
+variable this.wrapped[..]
+  var-kind array
+  array 1
+  dec-type java.util.ArrayList
+  rep-type hashcode[]
+  comparability 6[7]
+variable this.wrapped[..].getClass().getName()
+  var-kind function getClass().getName()
+  array 1
+  dec-type java.lang.Class[]
+  rep-type java.lang.String[]
+  function-args this.wrapped[]
+  flags synthetic classname non_null
+  comparability 1[8]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

@@ -1,0 +1,32 @@
+SArrays.nonnull(arr, start, mid);
+SArrays.nonnull(arr, mid, end);
+SArrays.sorted(arr, start, mid);
+SArrays.sorted(arr, mid, end);
+start < mid ==> SArrays.lesseq(dest, start, mid, arr[start]);
+mid < end ==> SArrays.lesseq(dest, start, end, arr[mid]);
+SArrays.sorted(dest, start, mid);
+SArrays.sorted(dest, start, end);
+SArrays.sorted(storageArray, low, high);
+
+SMapping.nonnull(mappingVar);
+SMapping.keyExists(mappingVar, key) ==> SMapping.get(mappingVar, key) != 0;
+SMapping.sorted(mappingVar, key1, key2);
+SMapping.ordered(mappingVar, key1, key2) ==> SMapping.lesseq(mappingVar, key1, key2);
+
+SArrays.nonnull(storageArray, p, mid);
+SArrays.nonnull(storageArray, q, high);
+SArrays.sorted(storageArray, p, mid);
+SArrays.sorted(storageArray, q, high);
+p < mid ==> SArrays.lesseq(storageArray, p, mid, storageArray[p]);
+q < high ==> SArrays.lesseq(storageArray, p, high, storageArray[q]);
+SArrays.sorted(storageArray, p, high);
+
+val != address(0) ==> SArrays.nonnull(balanceArray, 0, n);
+val != address(0) ==> SArrays.eq(balanceArray, 0, n, val);
+val == address(0) ==> SArrays.eqnull(balanceArray, 0, n);
+
+SLoopInv.maintains(balanceArray, 0, n, loopVar);
+SLoopInv.ensures(sortedArray, 0, n);
+SLoopInv.preserve(mappingVar, keySet);
+SLoopInv.ensuresUnique(storageArray, 0, n);
+

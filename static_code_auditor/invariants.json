@@ -1,0 +1,52 @@
+[
+  {
+    "expr": "balances[msg_sender] >= 0",
+    "vars": {
+      "balances": "mapping(address=>uint)",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  },
+  {
+    "expr": "Implies(msg_value > 0, balances[msg_sender] == balances[msg_sender] + msg_value)",
+    "vars": {
+      "balances": "mapping(address=>uint)",
+      "msg_value": "uint",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  },
+  {
+    "expr": "balances[msg_sender] >= amount",
+    "vars": {
+      "balances": "mapping(address=>uint)",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  },
+  {
+    "expr": "balances[msg_sender] == balances[msg_sender] - amount",
+    "vars": {
+      "balances": "mapping(address=>uint)",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  },
+  {
+    "expr": "Implies(msg_sender == owner, msg_sender == owner)",
+    "vars": {
+      "owner": "address",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  },
+  {
+    "expr": "Implies(msg_sender == owner, balances[msg_sender] == balances[msg_sender])",
+    "vars": {
+      "balances": "mapping(address=>uint)",
+      "owner": "address",
+      "msg_sender": "address"
+    },
+    "trusted": false
+  }
+]

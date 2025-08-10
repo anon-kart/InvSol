@@ -1,0 +1,102 @@
+===========================================================================
+PolyCalc.RatTermVec:::OBJECT
+(NEQ (hash (select |wrapped| |this|)) null)
+(FORALL (|i|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1))) (NEQ (select (select elems (select |wrapped| |this|)) |i|) null)))
+(FORALL (|i|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1))) (EQ (typeof (select (select elems (select |wrapped| |this|)) |i|)) |T_PolyCalc.RatTerm|)))
+===========================================================================
+PolyCalc.RatTermVec.RatTermVec():::EXIT
+(AND (EQ (arrayLength (select |wrapped| |this|)) 0) (FORALL (|i|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1))) (NEQ (select (select elems (select |wrapped| |this|)) |i|)  null))))
+(EQ (arrayLength (select |wrapped| |this|)) 0)
+===========================================================================
+PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::ENTER
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(NEQ (hash |t|) null)
+===========================================================================
+PolyCalc.RatTermVec.addElement(PolyCalc.RatTerm):::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(EQ (- (arrayLength (select |wrapped| |this|)) 1) (arrayLength (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(>= (arrayLength (select |wrapped| |this|)) 1)
+format_simplify disabled
+SuperSet.format_simplify_explicit(this.wrapped[] is a superset of orig(this.wrapped[])): sub_name=null, super_name=[(select |wrapped| |this|), 0, (- (arrayLength (select |wrapped| |this|)) 1)], for this.wrapped[] is a superset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.copy():::ENTER
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+===========================================================================
+PolyCalc.RatTermVec.copy():::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |__orig__this|)) 1)) (EQ |i| |j|)) (EQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |__orig__this|)) |j|))))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(NEQ (hash |return|) null)
+(NEQ (hash (select |wrapped| |return|)) null)
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |return|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |return|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |return|)) |i|) (select (select elems (select |wrapped| |return|)) |j|))))
+(FORALL (|i|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |return|)) 1))) (NEQ (select (select elems (select |wrapped| |return|)) |i|) null)))
+(FORALL (|i|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |return|)) 1))) (EQ (typeof (select (select elems (select |wrapped| |return|)) |i|)) |T_PolyCalc.RatTerm|)))
+===========================================================================
+PolyCalc.RatTermVec.get(int):::ENTER
+(>= |index| 0)
+(>= (arrayLength (select |wrapped| |this|)) 1)
+===========================================================================
+PolyCalc.RatTermVec.get(int):::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |__orig__this|)) 1)) (EQ |i| |j|)) (EQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |__orig__this|)) |j|))))
+(NEQ (hash |return|) null)
+(>= (arrayLength (select |wrapped| |this|)) 1)
+===========================================================================
+PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::ENTER
+(NEQ (hash |t|) null)
+(>= |index| 0)
+===========================================================================
+PolyCalc.RatTermVec.insert(PolyCalc.RatTerm, int):::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(EQ (- (arrayLength (select |wrapped| |this|)) 1) (arrayLength (select |wrapped| |__orig__this|)))
+(>= (arrayLength (select |wrapped| |this|)) 1)
+SuperSet.format_simplify_explicit(this.wrapped[] is a superset of orig(this.wrapped[])): sub_name=null, super_name=[(select |wrapped| |this|), 0, (- (arrayLength (select |wrapped| |this|)) 1)], for this.wrapped[] is a superset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.printDebug():::ENTER
+===========================================================================
+PolyCalc.RatTermVec.printDebug():::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |__orig__this|)) 1)) (EQ |i| |j|)) (EQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |__orig__this|)) |j|))))
+(NEQ (hash |return|) null)
+warning: method daikon.inv.unary.string.PrintableString.format(OutputFormat:Simplify) needs to be implemented: return.toString is printable
+===========================================================================
+PolyCalc.RatTermVec.remove(int):::ENTER
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(>= |index| 0)
+(>= (arrayLength (select |wrapped| |this|)) 1)
+===========================================================================
+PolyCalc.RatTermVec.remove(int):::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(EQ (arrayLength (select |wrapped| |this|)) (- (arrayLength (select |wrapped| |__orig__this|)) 1))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+SubSet.format_simplify_explicit(this.wrapped[] is a subset of orig(this.wrapped[])): sub_name=[(select |wrapped| |this|), 0, (- (arrayLength (select |wrapped| |this|)) 1)], super_name=null, for this.wrapped[] is a subset of orig(this.wrapped[])
+===========================================================================
+PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::ENTER
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(NEQ (hash |t|) null)
+(>= |index| 0)
+(>= (arrayLength (select |wrapped| |this|)) 1)
+===========================================================================
+PolyCalc.RatTermVec.set(PolyCalc.RatTerm, int):::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(EQ (arrayLength (select |wrapped| |this|)) (arrayLength (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(>= (arrayLength (select |wrapped| |this|)) 1)
+===========================================================================
+PolyCalc.RatTermVec.size():::ENTER
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+===========================================================================
+PolyCalc.RatTermVec.size():::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |__orig__this|)) 1)) (EQ |i| |j|)) (EQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |__orig__this|)) |j|))))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |this|)) 1)) (NEQ |i| |j|)) (NEQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |this|)) |j|))))
+(>= |return| 0)
+===========================================================================
+PolyCalc.RatTermVec.toString():::ENTER
+===========================================================================
+PolyCalc.RatTermVec.toString():::EXIT
+(EQ (hash (select |wrapped| |this|)) (hash (select |wrapped| |__orig__this|)))
+(FORALL (|i| |j|) (IMPLIES (AND (<= 0 |i|) (<= |i| (- (arrayLength (select |wrapped| |this|)) 1)) (<= 0 |j|) (<= |j| (- (arrayLength (select |wrapped| |__orig__this|)) 1)) (EQ |i| |j|)) (EQ (select (select elems (select |wrapped| |this|)) |i|) (select (select elems (select |wrapped| |__orig__this|)) |j|))))
+(NEQ (hash |return|) null)
+warning: method daikon.inv.unary.string.PrintableString.format(OutputFormat:Simplify) needs to be implemented: return.toString is printable

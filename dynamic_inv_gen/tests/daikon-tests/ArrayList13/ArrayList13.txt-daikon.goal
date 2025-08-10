@@ -1,0 +1,29 @@
+===========================================================================
+javautil.AbstractList13:::OBJECT
+this has only one value
+this.getClass().getName() == javautil.ArrayList13.class
+this.modCount == 0
+===========================================================================
+javautil.AbstractList13.AbstractList13():::EXIT
+===========================================================================
+javautil.ArrayList13:::OBJECT
+this has only one value
+this.elementData has only one value
+this.elementData.getClass().getName() == java.lang.Object[].class
+this.elementData[] contains only nulls and has only one value, of length 10
+this.elementData[] elements == null
+this.elementData[].getClass().getName() == [null, null, null, null, null, null, null, null, null, null]
+this.elementData[].getClass().getName() elements == null
+this.size == 0
+this.modCount == 0
+size(this.elementData[]) == 10
+===========================================================================
+javautil.ArrayList13.ArrayList13():::EXIT
+===========================================================================
+javautil.ArrayList13.ArrayList13(int):::ENTER
+initialCapacity == 10
+===========================================================================
+javautil.ArrayList13.ArrayList13(int):::EXIT
+orig(initialCapacity) == size(this.elementData[])
+this.elementData[orig(initialCapacity)..] == []
+this.elementData[] elements == this.elementData[orig(initialCapacity)-1]

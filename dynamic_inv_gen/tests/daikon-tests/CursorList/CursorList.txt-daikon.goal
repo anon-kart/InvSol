@@ -1,0 +1,233 @@
+===========================================================================
+DataStructures.CursorList:::CLASS
+DataStructures.CursorList.cursorSpace has only one value
+DataStructures.CursorList.cursorSpace != null
+DataStructures.CursorList.cursorSpace.getClass().getName() == DataStructures.CursorNode[].class
+DataStructures.CursorList.cursorSpace[] contains no nulls and has only one value, of length 100
+DataStructures.CursorList.cursorSpace[] contains no duplicates
+DataStructures.CursorList.cursorSpace[] elements != null
+DataStructures.CursorList.cursorSpace[].getClass().getName() == [DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode, DataStructures.CursorNode]
+DataStructures.CursorList.cursorSpace[].getClass().getName() elements == DataStructures.CursorNode.class
+DataStructures.CursorList.cursorSpace[].next elements >= 0
+size(DataStructures.CursorList.cursorSpace[]) == 100
+===========================================================================
+DataStructures.CursorList:::OBJECT
+this.header < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.CursorList():::EXIT
+DataStructures.CursorList.cursorSpace[].element.getClass().getName() one of { [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], [null, null, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] }
+===========================================================================
+DataStructures.CursorList.alloc():::ENTER
+===========================================================================
+DataStructures.CursorList.alloc():::EXIT
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next is a subset of orig(DataStructures.CursorList.cursorSpace[].next)
+return < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.find(java.lang.Object):::ENTER
+this.header one of { 1, 4, 20 }
+x != null
+x.getClass().getName() is printable
+DataStructures.CursorList.cursorSpace.getClass().getName() != x.getClass().getName()
+===========================================================================
+DataStructures.CursorList.find(java.lang.Object):::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+this.header one of { 1, 4, 20 }
+return != null
+return.current >= 0
+this.header != return.current
+DataStructures.CursorList.cursorSpace.getClass().getName() != orig(x.getClass().getName())
+return.current < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.findPrevious(java.lang.Object):::ENTER
+x != null
+x.getClass().getName() is printable
+DataStructures.CursorList.cursorSpace.getClass().getName() != x.getClass().getName()
+===========================================================================
+DataStructures.CursorList.findPrevious(java.lang.Object):::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+return != null
+DataStructures.CursorList.cursorSpace.getClass().getName() != orig(x.getClass().getName())
+return.current < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.first():::ENTER
+===========================================================================
+DataStructures.CursorList.first():::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+return != null
+this.header != return.current
+return.current < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.free(int):::ENTER
+p < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.free(int):::EXIT
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element is a subset of orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next is a superset of orig(DataStructures.CursorList.cursorSpace[].next)
+orig(p) < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.insert(java.lang.Object, DataStructures.CursorListItr):::ENTER
+this.header one of { 1, 4, 20 }
+x != null
+x.getClass().getName() is printable
+p != null
+DataStructures.CursorList.cursorSpace.getClass().getName() != x.getClass().getName()
+p.current < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.insert(java.lang.Object, DataStructures.CursorListItr):::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+p.current == orig(p.current)
+this.header one of { 1, 4, 20 }
+DataStructures.CursorList.cursorSpace.getClass().getName() != orig(x.getClass().getName())
+DataStructures.CursorList.cursorSpace[].element is a superset of orig(DataStructures.CursorList.cursorSpace[].element)
+orig(x.getClass().getName()) in DataStructures.CursorList.cursorSpace[].element.getClass().getName()
+DataStructures.CursorList.cursorSpace[].next is a subset of orig(DataStructures.CursorList.cursorSpace[].next)
+DataStructures.CursorList.cursorSpace[].next is a superset of orig(DataStructures.CursorList.cursorSpace[].next)
+p.current < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.isEmpty():::ENTER
+===========================================================================
+DataStructures.CursorList.isEmpty():::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+(return == false)  ==>  (this.header one of { 1, 4, 20 })
+(return == false)  ==>  ({2, 3, 12, 5, 0, 7, 9, 11, 13, 14, 15, 16, 17, 18, 19, 22, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99} subset of DataStructures.CursorList.cursorSpace[].next)
+(return == true)  ==>  (DataStructures.CursorList.cursorSpace[].element.getClass().getName() one of { [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], [null, null, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] })
+===========================================================================
+DataStructures.CursorList.isEmpty():::EXIT;condition="return == true"
+DataStructures.CursorList.cursorSpace[].element.getClass().getName() one of { [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], [null, null, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] }
+return == true
+===========================================================================
+DataStructures.CursorList.isEmpty():::EXIT;condition="not(return == true)"
+this.header one of { 1, 4, 20 }
+return == false
+===========================================================================
+DataStructures.CursorList.makeEmpty():::ENTER
+this.header one of { 4, 20 }
+===========================================================================
+DataStructures.CursorList.makeEmpty():::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+this.header one of { 4, 20 }
+DataStructures.CursorList.cursorSpace[].element has only one value, of length 100
+DataStructures.CursorList.cursorSpace[].element.getClass().getName() == [null, null, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, DataStructures.MyInteger, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+DataStructures.CursorList.cursorSpace[].next one of { [20, 3, 21, 5, 0, 7, 0, 9, 0, 11, 0, 0, 2, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 0], [21, 3, 12, 5, 0, 7, 0, 9, 0, 11, 0, 0, 13, 14, 15, 16, 17, 18, 19, 22, 0, 2, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 0] }
+DataStructures.CursorList.cursorSpace[].element is a subset of orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next is a subset of orig(DataStructures.CursorList.cursorSpace[].next)
+DataStructures.CursorList.cursorSpace[].next is a superset of orig(DataStructures.CursorList.cursorSpace[].next)
+===========================================================================
+DataStructures.CursorList.printList(DataStructures.CursorList):::ENTER
+theList != null
+theList.header < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.printList(DataStructures.CursorList):::EXIT
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+theList.header == orig(theList.header)
+theList.header < size(DataStructures.CursorList.cursorSpace[])-1
+===========================================================================
+DataStructures.CursorList.remove(java.lang.Object):::ENTER
+this.header one of { 1, 4, 20 }
+x != null
+x.getClass().getName() is printable
+DataStructures.CursorList.cursorSpace.getClass().getName() != x.getClass().getName()
+x.getClass().getName() in DataStructures.CursorList.cursorSpace[].element.getClass().getName()
+===========================================================================
+DataStructures.CursorList.remove(java.lang.Object):::EXIT
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+this.header one of { 1, 4, 20 }
+DataStructures.CursorList.cursorSpace.getClass().getName() != orig(x.getClass().getName())
+DataStructures.CursorList.cursorSpace[].element is a subset of orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next is a subset of orig(DataStructures.CursorList.cursorSpace[].next)
+DataStructures.CursorList.cursorSpace[].next is a superset of orig(DataStructures.CursorList.cursorSpace[].next)
+===========================================================================
+DataStructures.CursorList.zeroth():::ENTER
+===========================================================================
+DataStructures.CursorList.zeroth():::EXIT
+this.header == return.current
+this.header == orig(this.header)
+DataStructures.CursorList.cursorSpace == orig(DataStructures.CursorList.cursorSpace)
+DataStructures.CursorList.cursorSpace.getClass().getName() == orig(DataStructures.CursorList.cursorSpace.getClass().getName())
+DataStructures.CursorList.cursorSpace[] == orig(DataStructures.CursorList.cursorSpace[])
+DataStructures.CursorList.cursorSpace[].element == orig(DataStructures.CursorList.cursorSpace[].element)
+DataStructures.CursorList.cursorSpace[].next == orig(DataStructures.CursorList.cursorSpace[].next)
+return != null
+===========================================================================
+DataStructures.CursorListItr:::OBJECT
+this.current >= 0
+===========================================================================
+DataStructures.CursorListItr.CursorListItr(int):::ENTER
+theNode >= 0
+===========================================================================
+DataStructures.CursorListItr.CursorListItr(int):::EXIT
+this.current == orig(theNode)
+===========================================================================
+DataStructures.CursorListItr.advance():::ENTER
+===========================================================================
+DataStructures.CursorListItr.advance():::EXIT
+this.current != orig(this.current)
+===========================================================================
+DataStructures.CursorListItr.isPastEnd():::ENTER
+===========================================================================
+DataStructures.CursorListItr.isPastEnd():::EXIT
+this.current == orig(this.current)
+(this.current == 0)  <==>  (return == true)
+(this.current == 0)  ==>  (this.current is a pointer)
+===========================================================================
+DataStructures.CursorListItr.isPastEnd():::EXIT;condition="return == true"
+this.current == 0
+return == true
+===========================================================================
+DataStructures.CursorListItr.isPastEnd():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+DataStructures.CursorListItr.retrieve():::ENTER
+===========================================================================
+DataStructures.CursorListItr.retrieve():::EXIT
+this.current == orig(this.current)
+return.getClass().getName() is printable
+===========================================================================
+DataStructures.CursorNode:::OBJECT
+this.element == null
+===========================================================================
+DataStructures.CursorNode.CursorNode(java.lang.Object, int):::ENTER
+theElement == null
+===========================================================================
+DataStructures.CursorNode.CursorNode(java.lang.Object, int):::EXIT
+this.next == orig(n)

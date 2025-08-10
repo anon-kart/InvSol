@@ -1,0 +1,1728 @@
+// Declarations for MapQuick1.StreetNumberSet
+// Declarations written 2020-11-18T07:37:28.750 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt MapQuick1.StreetNumberSet:::CLASS
+ppt-type class
+
+ppt MapQuick1.StreetNumberSet:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.StreetNumberSet(java.lang.String):::ENTER
+ppt-type enter
+variable numbers
+  var-kind variable
+  dec-type java.lang.String
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable numbers.toString
+  var-kind function toString()
+  dec-type java.lang.String
+  rep-type java.lang.String
+  function-args numbers
+  flags synthetic to_string
+  comparability 3
+
+ppt MapQuick1.StreetNumberSet.StreetNumberSet(java.lang.String):::EXIT68
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[7]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[8]
+variable numbers
+  var-kind variable
+  dec-type java.lang.String
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable numbers.toString
+  var-kind function toString()
+  dec-type java.lang.String
+  rep-type java.lang.String
+  function-args numbers
+  flags synthetic to_string
+  comparability 3
+
+ppt MapQuick1.StreetNumberSet.parityOf(int):::ENTER
+ppt-type enter
+variable i
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.parityOf(int):::EXIT72
+ppt-type subexit
+variable i
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.checkRep():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.checkRep():::EXIT104
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.contains(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.contains(int):::EXIT118
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[7]
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt MapQuick1.StreetNumberSet.contains(int):::EXIT123
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[7]
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt MapQuick1.StreetNumberSet.orderStatistic(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.orderStatistic(int):::EXIT162
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.size():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.size():::EXIT181
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.isEmpty():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.isEmpty():::EXIT190
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[7]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.min():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.min():::EXIT210
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.max():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.max():::EXIT230
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 2[6]
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.intersects(MapQuick1.StreetNumberSet):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+
+ppt MapQuick1.StreetNumberSet.intersects(MapQuick1.StreetNumberSet):::EXIT239
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.intersects(MapQuick1.StreetNumberSet):::EXIT240
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.intersects(MapQuick1.StreetNumberSet):::EXIT253
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.intersects(MapQuick1.StreetNumberSet):::EXIT257
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable o
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable o.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args o
+  flags synthetic classname non_null
+  comparability 1
+
+ppt MapQuick1.StreetNumberSet.equals(java.lang.Object):::EXIT266
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[7]
+variable o
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable o.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args o
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT271
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT272
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT275
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT281
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT282
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT286
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.equals(MapQuick1.StreetNumberSet):::EXIT290
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[7]
+variable other
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable other.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[8]
+variable other.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable other.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[9]
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 5
+
+ppt MapQuick1.StreetNumberSet.hashCode():::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[5]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 3
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[6]
+
+ppt MapQuick1.StreetNumberSet.hashCode():::EXIT295
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[7]
+variable return
+  var-kind return
+  dec-type int
+  rep-type int
+  comparability 2
+
+ppt MapQuick1.StreetNumberSet.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[6]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 4
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[7]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt MapQuick1.StreetNumberSet.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type MapQuick1.StreetNumberSet
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.begins
+  var-kind field begins
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.begins[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[7]
+variable this.ends
+  var-kind field ends
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.ends[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[8]
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+

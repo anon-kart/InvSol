@@ -1,0 +1,14 @@
+Invariant 1: CAN FAIL
+  Counterexample: [msg_value = 0, balances = K(Int, -1)]
+
+Invariant 2: CAN FAIL
+  Counterexample: [msg_value = 1]
+
+Invariant 3: TRUSTED (skipped)
+
+Invariant 4: TRUSTED (skipped)
+
+Invariant 5: ALWAYS HOLDS
+
+Invariant 6: ALWAYS HOLDS
+

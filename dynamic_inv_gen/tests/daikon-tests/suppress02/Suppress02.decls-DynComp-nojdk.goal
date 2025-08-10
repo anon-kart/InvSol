@@ -1,0 +1,386 @@
+// Declarations for misc.Suppress02
+// Declarations written 2020-11-18T07:26:24.013 by daikon.DynComp
+
+decl-version 2.0
+var-comparability implicit
+
+ppt misc.Suppress02:::CLASS
+ppt-type class
+
+ppt misc.Suppress02:::OBJECT
+ppt-type object
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[4]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 3
+
+ppt misc.Suppress02.main(java.lang.String[]):::ENTER
+ppt-type enter
+variable args
+  var-kind variable
+  dec-type java.lang.String[]
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable args.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args args
+  flags synthetic classname non_null
+  comparability 1
+variable args[..]
+  var-kind array
+  array 1
+  dec-type java.lang.String[]
+  rep-type hashcode[]
+  comparability 3[5]
+variable args[..].toString
+  var-kind function toString()
+  array 1
+  dec-type java.lang.String[]
+  rep-type java.lang.String[]
+  function-args args[]
+  flags synthetic to_string
+  comparability 4[6]
+
+ppt misc.Suppress02.main(java.lang.String[]):::EXIT22
+ppt-type subexit
+variable args
+  var-kind variable
+  dec-type java.lang.String[]
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable args.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args args
+  flags synthetic classname non_null
+  comparability 1
+variable args[..]
+  var-kind array
+  array 1
+  dec-type java.lang.String[]
+  rep-type hashcode[]
+  comparability 3[5]
+variable args[..].toString
+  var-kind function toString()
+  array 1
+  dec-type java.lang.String[]
+  rep-type java.lang.String[]
+  function-args args[]
+  flags synthetic to_string
+  comparability 4[6]
+
+ppt misc.Suppress02.f(int):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[4]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 2
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt misc.Suppress02.f(int):::EXIT27
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[4]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 2
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 2
+variable n
+  var-kind variable
+  dec-type int
+  rep-type int
+  flags is_param
+  comparability 2
+
+ppt misc.Suppress02.Suppress02():::ENTER
+ppt-type enter
+
+ppt misc.Suppress02.Suppress02():::EXIT37
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 2
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 5
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 4[4]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 3
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 3
+
+ppt misc.Suppress02.equals(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 6
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[5]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 4
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Suppress02.equals(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 7
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[6]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 5
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 5
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
+ppt misc.Suppress02.equals_dcomp_instrumented(java.lang.Object):::ENTER
+ppt-type enter
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 3
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 6
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 5[5]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 4
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 4
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+
+ppt misc.Suppress02.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+ppt-type subexit
+variable this
+  var-kind variable
+  dec-type misc.Suppress02
+  rep-type hashcode
+  flags is_param non_null
+  comparability 4
+variable this.theArray
+  var-kind field theArray
+  dec-type int[]
+  rep-type hashcode
+  comparability 7
+variable this.theArray[..]
+  var-kind array
+  array 1
+  dec-type int[]
+  rep-type int[]
+  comparability 6[6]
+variable this.i
+  var-kind field i
+  dec-type int
+  rep-type int
+  comparability 5
+variable this.j
+  var-kind field j
+  dec-type int
+  rep-type int
+  comparability 5
+variable obj
+  var-kind variable
+  dec-type java.lang.Object
+  rep-type hashcode
+  flags is_param
+  comparability 2
+variable obj.getClass().getName()
+  var-kind function getClass().getName()
+  dec-type java.lang.Class
+  rep-type java.lang.String
+  function-args obj
+  flags synthetic classname non_null
+  comparability 1
+variable return
+  var-kind return
+  dec-type boolean
+  rep-type boolean
+  comparability 3
+
