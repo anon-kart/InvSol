@@ -1,0 +1,3 @@
+[submodule "LoopSynth/dynamate-sol/ginpink-sol/antlr3"]
+	path = LoopSynth/dynamate-sol/ginpink-sol/antlr3
+	url = https://github.com/antlr/antlr3.git
