@@ -1,0 +1,18 @@
+;;; -*- Mode: LISP; Syntax: Common-Lisp; Package: LKB; Coding: utf-8 -*-
+
+;;;
+;;; First, load a number of LKB-specific settings
+;;;
+(lkb-load-lisp (parent-directory) "Version.lsp" t)
+(setf *grammar-directory* (parent-directory))
+(lkb-load-lisp (this-directory) "globals.lsp")
+(lkb-load-lisp (this-directory) "user-fns.lsp")
+(load-lkb-preferences (this-directory) "user-prefs.lsp")
+
+;;;
+;;; Now the core grammar
+;;;
+(read-tdl-type-files-aux
+(list
+(lkb-pathname (parent-directory) "turing.tdl")
+))
