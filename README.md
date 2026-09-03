@@ -78,25 +78,6 @@ for d in invsol_ast_analyzer testcrafter-mini invsol_postcond_scaffold invsol_au
 done
 ```
 
-## Known limitations
-
-- The cross-function check does frame reasoning rather than full functional
-  verification. It establishes an invariant over state a function cannot
-  touch; where the function writes that state it reports `unknown`, because
-  the IR records that a write happens and not what value is stored.
-- Mapping contents are only what an execution touched. The probes walk the key
-  array a contract keeps for its own iteration, capped at eight entries per
-  snapshot. Nothing is claimed about unobserved keys.
-- Shape-directed seeding is additive: a call that appends five elements makes
-  an array five longer, not five long, because the current length is not
-  knowable statically.
-- Postconditions containing aggregate terms such as `sum(...)` are dropped by
-  the invariant parser before reaching the mutation engine, so synthesised
-  loop invariants are comparisons over plain terms.
-- Loop-run counts vary between runs because Foundry fuzzes with a fresh seed.
-  Distinct-loop and relation counts are stable; candidate counts move a few
-  percent.
-
 ## Layout
 
 | Directory | Component |
