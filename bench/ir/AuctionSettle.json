@@ -1,0 +1,628 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "AuctionSettle",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "AuctionSettle",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "seller"
+        ],
+        "writes": [
+          "seller"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "seller",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "bid",
+        "visibility": "external",
+        "mutability": "payable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(!settled)",
+          "(msg.value > 0)"
+        ],
+        "reads": [
+          "bidders",
+          "bids",
+          "highestBid",
+          "highestBidder",
+          "settled"
+        ],
+        "writes": [
+          "bids",
+          "highestBid",
+          "highestBidder"
+        ],
+        "member_accesses": [
+          "push",
+          "sender",
+          "value"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "bids",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "bids",
+            "key": "msg.sender"
+          },
+          {
+            "var": "highestBid",
+            "key": null
+          },
+          {
+            "var": "highestBidder",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "settle",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlySeller"
+        ],
+        "params": [],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < bidders.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "refunds"
+              ],
+              "mapping_updates": [
+                "bids"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": true,
+              "accumulator_facts": [
+                {
+                  "var": "refunds",
+                  "expr": "refunds",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "amount",
+                    "base": "amount",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "transfer",
+                  "callee": "transfer",
+                  "receiver": "bidders",
+                  "external": true
+                }
+              ],
+              "mapping_update_facts": [
+                {
+                  "var": "bids",
+                  "expr": "bids[bidders[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "bidders[i]",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "bids",
+                  "expr": "bids[bidders[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "bidders[i]",
+                  "op": "="
+                },
+                {
+                  "var": "refunds",
+                  "expr": "refunds",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "transfer",
+                  "callee": "transfer",
+                  "receiver": "bidders",
+                  "external": true
+                }
+              ],
+              "carried_vars": [
+                "refunds"
+              ],
+              "external_call_kinds": [
+                "transfer"
+              ],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:bidders"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "bidders.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "AuctionSettle.settle#loop0",
+            "loop_index": 0,
+            "node_id": 174,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(!settled)",
+          "(msg.sender == seller)"
+        ],
+        "reads": [
+          "bidders",
+          "bids",
+          "highestBid",
+          "highestBidder",
+          "settled"
+        ],
+        "writes": [
+          "bids",
+          "settled"
+        ],
+        "member_accesses": [
+          "length",
+          "transfer"
+        ],
+        "internal_calls": [
+          "Settled",
+          "require"
+        ],
+        "external_calls": [
+          "transfer"
+        ],
+        "events_emitted": [
+          "Settled"
+        ],
+        "storage_reads": [
+          {
+            "var": "bidders",
+            "key": "i"
+          },
+          {
+            "var": "bids",
+            "key": "bidders[i]"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "bids",
+            "key": "bidders[i]"
+          },
+          {
+            "var": "settled",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "totalBids",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < bidders.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "bids[bidders[i]]",
+                    "base": "bids",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "bidders[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:bidders"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "bidders.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "AuctionSettle.totalBids#loop0",
+            "loop_index": 0,
+            "node_id": 207,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "bidders",
+          "bids"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "bidders",
+            "key": "i"
+          },
+          {
+            "var": "bids",
+            "key": "bidders[i]"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "receive",
+        "visibility": "external",
+        "mutability": "payable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "seller",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "bidders",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "bids",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "highestBidder",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "highestBid",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "AuctionSettle",
+        "name": "settled",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "AuctionSettle",
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "contract": "AuctionSettle",
+          "name": "bidders",
+          "type": "address[]"
+        },
+        {
+          "contract": "AuctionSettle",
+          "name": "bids",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "AuctionSettle",
+          "name": "highestBidder",
+          "type": "address"
+        },
+        {
+          "contract": "AuctionSettle",
+          "name": "highestBid",
+          "type": "uint256"
+        },
+        {
+          "contract": "AuctionSettle",
+          "name": "settled",
+          "type": "bool"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "AuctionSettle",
+          "name": "bids",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "AuctionSettle",
+        "function": "settle",
+        "modifier": "onlySeller",
+        "role": "unknown"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "settle",
+        "source": "modifier:onlySeller",
+        "condition": "(msg.sender == seller)",
+        "role": "unknown"
+      },
+      {
+        "function": "settle",
+        "source": "require",
+        "condition": "(msg.sender == seller)",
+        "role": null
+      }
+    ]
+  }
+}

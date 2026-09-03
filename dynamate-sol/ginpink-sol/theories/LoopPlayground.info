@@ -1,0 +1,992 @@
+== Package ==
+LoopPlayground
+== Method ==
+_requireBound
+== Static ==
+N
+== Integer expressions ==
+#
+maxN
+n
+x
+y
+1
+-1
+2
+-2
+100
+maxN + n
+maxN * n
+maxN - n
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+(n <= maxN)
+== Preconditions ==
+n <= maxN;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+constructor
+== Static ==
+N
+== Integer expressions ==
+#
+i
+seed
+x
+y
+1
+-1
+2
+-2
+100
+i + seed
+i * seed
+i - seed
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < seed.length
+Guard((i < seed.length))
+== Preconditions ==
+0 <= i;
+i < seed.length;
+== Postconditions ==
+NoStateWrites();
+HasExternalCalls();
+0 <= i;
+i < seed.length;
+HasExternalCallsInLoop();
+Guard((i < seed.length));
+Update((i++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < seed.length; i++) { /* loop body */ }
+
+== Package ==
+LoopPlayground
+== Method ==
+sumNumbersBounded
+== Static ==
+N
+== Integer expressions ==
+#
+i
+limit
+n
+s
+x
+y
+1
+-1
+2
+-2
+100
+i + limit
+i * limit
+i - limit
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+== Preconditions ==
+0 <= i;
+i < n;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(SumResult);
+0 <= i;
+i < n;
+NoExternalCallsInLoop();
+Accumulator(sum:s);
+Guard((i < n));
+Update((i++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { s += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+sumUnchecked
+== Static ==
+N
+== Integer expressions ==
+#
+i
+limit
+n
+s
+x
+y
+1
+-1
+2
+-2
+100
+i + limit
+i * limit
+i - limit
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+== Preconditions ==
+0 <= i;
+i < n;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(SumResult);
+0 <= i;
+i < n;
+NoExternalCallsInLoop();
+Accumulator(sum:s);
+Guard((i < n));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { s += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+firstGreaterThan
+== Static ==
+N
+== Integer expressions ==
+#
+i
+x
+y
+1
+-1
+2
+-2
+100
+i + x
+i * x
+i - x
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < numbers.length
+Guard((i < numbers.length))
+== Preconditions ==
+0 <= i;
+i < numbers.length;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(FoundAt);
+0 <= i;
+i < numbers.length;
+NoExternalCallsInLoop();
+Guard((i < numbers.length));
+Update((i++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < numbers.length; i++) { /* loop body */ }
+
+== Package ==
+LoopPlayground
+== Method ==
+bubbleSortLocal
+== Static ==
+N
+== Integer expressions ==
+#
+i
+j
+maxN
+n
+x
+y
+1
+-1
+2
+-2
+100
+i + j
+i * j
+i - j
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+i < (n - 1)
+Guard((i < (n - 1)))
+0 <= j
+j < ((n - 1) - i)
+Guard((j < ((n - 1) - i)))
+== Preconditions ==
+0 <= i;
+i < n;
+i < (n - 1);
+0 <= j;
+j < ((n - 1) - i);
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(Sorted);
+0 <= i;
+i < n;
+NoExternalCallsInLoop();
+Guard((i < n));
+Update((i++));
+i < (n - 1);
+Guard((i < (n - 1)));
+0 <= j;
+j < ((n - 1) - i);
+Guard((j < ((n - 1) - i)));
+Update((j++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { /* loop body */ }
+for (uint i = 0; i < (n - 1); i++) { /* loop body */ }
+for (uint j = 0; j < ((n - 1) - i); j++) { /* loop body */ }
+
+== Package ==
+LoopPlayground
+== Method ==
+sumGridDots
+== Static ==
+N
+== Integer expressions ==
+#
+c
+r
+total
+x
+y
+1
+-1
+2
+-2
+100
+c + r
+c * r
+c - r
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= r
+r < grid.length
+Guard((r < grid.length))
+0 <= c
+c < row.length
+Guard((c < row.length))
+== Preconditions ==
+0 <= r;
+r < grid.length;
+0 <= c;
+c < row.length;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(MatrixDot);
+Emits(SumResult);
+0 <= r;
+r < grid.length;
+NoExternalCallsInLoop();
+Accumulator(sum:total);
+Guard((r < grid.length));
+Update((r++));
+0 <= c;
+c < row.length;
+Guard((c < row.length));
+Update((c++));
+== Invariants ==
+;
+== Commands ==
+for (uint r = 0; r < grid.length; r++) { total += ...; }
+for (uint c = 0; c < row.length; c++) { total += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+fillSequence
+== Static ==
+N
+== Integer expressions ==
+#
+cur
+i
+maxN
+n
+numbers
+start
+step
+x
+y
+1
+-1
+2
+-2
+100
+cur + i
+cur * i
+cur - i
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+== Preconditions ==
+0 <= i;
+i < n;
+== Postconditions ==
+NoExternalCalls();
+Emits(Filled);
+0 <= i;
+i < n;
+NoExternalCallsInLoop();
+Accumulator(cur:cur);
+UpdatesArray(numbers);
+Guard((i < n));
+Update((i++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { cur += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+appendMany
+== Static ==
+N
+== Integer expressions ==
+#
+base
+i
+maxN
+n
+x
+y
+1
+-1
+2
+-2
+100
+base + i
+base * i
+base - i
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+== Preconditions ==
+0 <= i;
+i < n;
+== Postconditions ==
+NoStateWrites();
+HasExternalCalls();
+Emits(Filled);
+0 <= i;
+i < n;
+HasExternalCallsInLoop();
+Guard((i < n));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { /* loop body */ }
+
+== Package ==
+LoopPlayground
+== Method ==
+deposit
+== Static ==
+N
+== Integer expressions ==
+#
+x
+y
+1
+-1
+2
+-2
+100
+x + y
+x * y
+x - y
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+HasExternalCalls();
+Emits(UpdatedDeposit);
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+accumulateDeposits
+== Static ==
+N
+== Integer expressions ==
+#
+i
+limit
+n
+total
+x
+y
+1
+-1
+2
+-2
+100
+i + limit
+i * limit
+i - limit
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= i
+i < n
+Guard((i < n))
+== Preconditions ==
+0 <= i;
+i < n;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+Emits(Accumulated);
+0 <= i;
+i < n;
+NoExternalCallsInLoop();
+Accumulator(sum:total);
+Guard((i < n));
+Update((i++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 0; i < n; i++) { total += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+triangularAccumulate
+== Static ==
+N
+== Integer expressions ==
+#
+i
+j
+maxN
+n
+total
+x
+y
+1
+-1
+2
+-2
+100
+i + j
+i * j
+i - j
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+(n <= maxN)
+1 <= i
+i <= n
+Guard((i <= n))
+1 <= j
+j <= i
+Guard((j <= i))
+== Preconditions ==
+n <= maxN;
+1 <= i;
+i <= n;
+1 <= j;
+j <= i;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+1 <= i;
+i <= n;
+NoExternalCallsInLoop();
+Accumulator(sum:total);
+Guard((i <= n));
+Update((i++));
+1 <= j;
+j <= i;
+Guard((j <= i));
+Update((j++));
+== Invariants ==
+;
+== Commands ==
+for (uint i = 1; i <= n; i++) { total += ...; }
+for (uint j = 1; j <= i; j++) { total += ...; }
+
+== Package ==
+LoopPlayground
+== Method ==
+scaledAddToGrid
+== Static ==
+N
+== Integer expressions ==
+#
+c
+grid
+maxCells
+r
+scale
+x
+y
+1
+-1
+2
+-2
+100
+c + grid
+c * grid
+c - grid
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+0 <= r
+r < grid.length
+Guard((r < grid.length))
+0 <= c
+c < row.length
+Guard((c < row.length))
+== Preconditions ==
+0 <= r;
+r < grid.length;
+0 <= c;
+c < row.length;
+== Postconditions ==
+NoExternalCalls();
+Emits(SumResult);
+0 <= r;
+r < grid.length;
+NoExternalCallsInLoop();
+UpdatesArray(grid);
+Guard((r < grid.length));
+Update((r++));
+0 <= c;
+c < row.length;
+Guard((c < row.length));
+Update((c++));
+== Invariants ==
+;
+== Commands ==
+for (uint r = 0; r < grid.length; r++) { /* loop body */ }
+for (uint c = 0; c < row.length; c++) { /* loop body */ }
+
+== Package ==
+LoopPlayground
+== Method ==
+pushRow
+== Static ==
+N
+== Integer expressions ==
+#
+maxCols
+row
+x
+y
+1
+-1
+2
+-2
+100
+maxCols + row
+maxCols * row
+maxCols - row
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+HasExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+numbersLen
+== Static ==
+N
+== Integer expressions ==
+#
+x
+y
+1
+-1
+2
+-2
+100
+x + y
+x * y
+x - y
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+gridDims
+== Static ==
+N
+== Integer expressions ==
+#
+x
+y
+1
+-1
+2
+-2
+100
+x + y
+x * y
+x - y
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+numbers
+== Static ==
+N
+== Integer expressions ==
+#
+index
+x
+y
+1
+-1
+2
+-2
+100
+index + x
+index * x
+index - x
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+grid
+== Static ==
+N
+== Integer expressions ==
+#
+index
+x
+y
+1
+-1
+2
+-2
+100
+index + x
+index * x
+index - x
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+deposits
+== Static ==
+N
+== Integer expressions ==
+#
+account
+x
+y
+1
+-1
+2
+-2
+100
+account + x
+account * x
+account - x
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)
+
+== Package ==
+LoopPlayground
+== Method ==
+depositorKeys
+== Static ==
+N
+== Integer expressions ==
+#
+index
+x
+y
+1
+-1
+2
+-2
+100
+index + x
+index * x
+index - x
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+== Preconditions ==
+;
+== Postconditions ==
+NoStateWrites();
+NoExternalCalls();
+== Invariants ==
+;
+== Commands ==
+// (no commands reconstructed)

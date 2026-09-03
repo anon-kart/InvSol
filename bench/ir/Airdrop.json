@@ -1,0 +1,653 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "Airdrop",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "Airdrop",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "cap",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "maxSupply",
+          "owner"
+        ],
+        "writes": [
+          "maxSupply",
+          "owner"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "maxSupply",
+            "key": null
+          },
+          {
+            "var": "owner",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "batchMint",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "to",
+            "type": "address[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < to.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "claimed",
+                "minted"
+              ],
+              "mapping_updates": [
+                "claimed",
+                "ownerOf"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "claimed",
+                  "expr": "claimed[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "minted",
+                  "expr": "minted",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "require",
+                  "receiver": "",
+                  "external": false
+                },
+                {
+                  "kind": "internal",
+                  "callee": "Minted",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [
+                {
+                  "var": "ownerOf",
+                  "expr": "ownerOf[minted]",
+                  "scope": "state",
+                  "type": "address",
+                  "container": "mapping",
+                  "key": "minted",
+                  "op": "="
+                },
+                {
+                  "var": "claimed",
+                  "expr": "claimed[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "ownerOf",
+                  "expr": "ownerOf[minted]",
+                  "scope": "state",
+                  "type": "address",
+                  "container": "mapping",
+                  "key": "minted",
+                  "op": "="
+                },
+                {
+                  "var": "claimed",
+                  "expr": "claimed[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                },
+                {
+                  "var": "minted",
+                  "expr": "minted",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "require",
+                  "receiver": "",
+                  "external": false
+                },
+                {
+                  "kind": "internal",
+                  "callee": "Minted",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "claimed",
+                "minted"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "to.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "Airdrop.batchMint#loop0",
+            "loop_index": 0,
+            "node_id": 102,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(minted < maxSupply)",
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "claimed",
+          "maxSupply",
+          "minted",
+          "ownerOf"
+        ],
+        "writes": [
+          "claimed",
+          "minted",
+          "ownerOf"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "Minted",
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "Minted"
+        ],
+        "storage_reads": [
+          {
+            "var": "claimed",
+            "key": "to[i]"
+          },
+          {
+            "var": "ownerOf",
+            "key": "minted"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "claimed",
+            "key": "to[i]"
+          },
+          {
+            "var": "minted",
+            "key": null
+          },
+          {
+            "var": "ownerOf",
+            "key": "minted"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "mintRun",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < quantity)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [
+                "ownerOf"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "ownerOf",
+                  "expr": "ownerOf[(minted + i)]",
+                  "scope": "state",
+                  "type": "address",
+                  "container": "mapping",
+                  "key": "(minted + i)",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "ownerOf",
+                  "expr": "ownerOf[(minted + i)]",
+                  "scope": "state",
+                  "type": "address",
+                  "container": "mapping",
+                  "key": "(minted + i)",
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "quantity",
+              "inclusive_upper": false
+            },
+            "loop_id": "Airdrop.mintRun#loop0",
+            "loop_index": 0,
+            "node_id": 141,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "((minted + quantity) <= maxSupply)",
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "claimed",
+          "maxSupply",
+          "minted",
+          "ownerOf"
+        ],
+        "writes": [
+          "claimed",
+          "minted",
+          "ownerOf"
+        ],
+        "member_accesses": [],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "claimed",
+            "key": "to"
+          },
+          {
+            "var": "ownerOf",
+            "key": "(minted + i)"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "claimed",
+            "key": "to"
+          },
+          {
+            "var": "minted",
+            "key": null
+          },
+          {
+            "var": "ownerOf",
+            "key": "(minted + i)"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "remaining",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "maxSupply",
+          "minted"
+        ],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "maxSupply",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "minted",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "claimed",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Airdrop",
+        "name": "ownerOf",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "Airdrop",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "Airdrop",
+          "name": "maxSupply",
+          "type": "uint256"
+        },
+        {
+          "contract": "Airdrop",
+          "name": "minted",
+          "type": "uint256"
+        },
+        {
+          "contract": "Airdrop",
+          "name": "claimed",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "Airdrop",
+          "name": "ownerOf",
+          "type": "mapping(uint256 => address)"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "Airdrop",
+          "name": "claimed",
+          "key": "address",
+          "value": "uint256"
+        },
+        {
+          "contract": "Airdrop",
+          "name": "ownerOf",
+          "key": "uint256",
+          "value": "address"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "Airdrop",
+        "function": "batchMint",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      },
+      {
+        "contract": "Airdrop",
+        "function": "mintRun",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "batchMint",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "batchMint",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      },
+      {
+        "function": "mintRun",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "mintRun",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "BatchTransfer",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "BatchTransfer",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "supply",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "balances",
+          "owner",
+          "totalSupply"
+        ],
+        "writes": [
+          "balances",
+          "owner",
+          "totalSupply"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "balances",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "balances",
+            "key": "msg.sender"
+          },
+          {
+            "var": "owner",
+            "key": null
+          },
+          {
+            "var": "totalSupply",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BatchTransfer",
+        "name": "batchSend",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "to",
+            "type": "address[]"
+          },
+          {
+            "name": "amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < to.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "balances",
+                "moved"
+              ],
+              "mapping_updates": [
+                "balances"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "balances",
+                  "expr": "balances[msg.sender]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "msg.sender",
+                  "op": "-=",
+                  "kind": "difference",
+                  "source": {
+                    "expr": "amounts[i]",
+                    "base": "amounts",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "amounts[i]",
+                    "base": "amounts",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "moved",
+                  "expr": "moved",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "amounts[i]",
+                    "base": "amounts",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "require",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [
+                {
+                  "var": "balances",
+                  "expr": "balances[msg.sender]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "msg.sender",
+                  "op": "-="
+                },
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "balances",
+                  "expr": "balances[msg.sender]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "msg.sender",
+                  "op": "-="
+                },
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                },
+                {
+                  "var": "moved",
+                  "expr": "moved",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "require",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "balances",
+                "moved"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "to.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "BatchTransfer.batchSend#loop0",
+            "loop_index": 0,
+            "node_id": 122,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == owner)",
+          "(to.length == amounts.length)",
+          "(to[i] != ElementaryTypeNameExpression(0))"
+        ],
+        "reads": [
+          "balances"
+        ],
+        "writes": [
+          "balances"
+        ],
+        "member_accesses": [
+          "length",
+          "sender"
+        ],
+        "internal_calls": [
+          "BatchSent",
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "BatchSent"
+        ],
+        "storage_reads": [
+          {
+            "var": "balances",
+            "key": "msg.sender"
+          },
+          {
+            "var": "balances",
+            "key": "to[i]"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "balances",
+            "key": "msg.sender"
+          },
+          {
+            "var": "balances",
+            "key": "to[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BatchTransfer",
+        "name": "airdropEqual",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "to",
+            "type": "address[]"
+          },
+          {
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < to.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "balances",
+                "totalSupply"
+              ],
+              "mapping_updates": [
+                "balances"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "amount",
+                    "base": "amount",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "totalSupply",
+                  "expr": "totalSupply",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "amount",
+                    "base": "amount",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "balances",
+                  "expr": "balances[to[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "to[i]",
+                  "op": "+="
+                },
+                {
+                  "var": "totalSupply",
+                  "expr": "totalSupply",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "balances",
+                "totalSupply"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "to.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "BatchTransfer.airdropEqual#loop0",
+            "loop_index": 0,
+            "node_id": 164,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "balances",
+          "totalSupply"
+        ],
+        "writes": [
+          "balances",
+          "totalSupply"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "balances",
+            "key": "to[i]"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "balances",
+            "key": "to[i]"
+          },
+          {
+            "var": "totalSupply",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BatchTransfer",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BatchTransfer",
+        "name": "totalSupply",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BatchTransfer",
+        "name": "balances",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "BatchTransfer",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "BatchTransfer",
+          "name": "totalSupply",
+          "type": "uint256"
+        },
+        {
+          "contract": "BatchTransfer",
+          "name": "balances",
+          "type": "mapping(address => uint256)"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "BatchTransfer",
+          "name": "balances",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "BatchTransfer",
+        "function": "batchSend",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      },
+      {
+        "contract": "BatchTransfer",
+        "function": "airdropEqual",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "batchSend",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "batchSend",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      },
+      {
+        "function": "airdropEqual",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "airdropEqual",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

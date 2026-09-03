@@ -1,0 +1,681 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "RoleRegistry",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "RoleRegistry",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "admin",
+          "operatorCount",
+          "operators"
+        ],
+        "writes": [
+          "admin",
+          "operatorCount",
+          "operators"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "operators",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "admin",
+            "key": null
+          },
+          {
+            "var": "operatorCount",
+            "key": null
+          },
+          {
+            "var": "operators",
+            "key": "msg.sender"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "grantOperator",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyAdmin"
+        ],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(account != ElementaryTypeNameExpression(0))",
+          "(msg.sender == admin)"
+        ],
+        "reads": [
+          "members",
+          "operatorCount",
+          "operators"
+        ],
+        "writes": [
+          "operatorCount",
+          "operators"
+        ],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "operators",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "operatorCount",
+            "key": null
+          },
+          {
+            "var": "operators",
+            "key": "account"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "grantAuditor",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyAdmin"
+        ],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(msg.sender == admin)"
+        ],
+        "reads": [
+          "auditors"
+        ],
+        "writes": [
+          "auditors"
+        ],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "auditors",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "auditors",
+            "key": "account"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "revokeAll",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyAdmin"
+        ],
+        "params": [
+          {
+            "name": "accounts",
+            "type": "address[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < accounts.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "removed"
+              ],
+              "mapping_updates": [
+                "operators"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "operators",
+                  "expr": "operators[accounts[i]]",
+                  "scope": "state",
+                  "type": "bool",
+                  "container": "mapping",
+                  "key": "accounts[i]",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "operators",
+                  "expr": "operators[accounts[i]]",
+                  "scope": "state",
+                  "type": "bool",
+                  "container": "mapping",
+                  "key": "accounts[i]",
+                  "op": "="
+                },
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "removed"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "accounts.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "RoleRegistry.revokeAll#loop0",
+            "loop_index": 0,
+            "node_id": 161,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == admin)"
+        ],
+        "reads": [
+          "operatorCount",
+          "operators"
+        ],
+        "writes": [
+          "operatorCount",
+          "operators"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "MembersPurged"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "MembersPurged"
+        ],
+        "storage_reads": [
+          {
+            "var": "operators",
+            "key": "accounts[i]"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "operatorCount",
+            "key": null
+          },
+          {
+            "var": "operators",
+            "key": "accounts[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "countOperators",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [
+          "onlyOperator"
+        ],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < members.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "c"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "c"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:members"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "members.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "RoleRegistry.countOperators#loop0",
+            "loop_index": 0,
+            "node_id": 201,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "operators[msg.sender]"
+        ],
+        "reads": [
+          "members",
+          "operators"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "members",
+            "key": "i"
+          },
+          {
+            "var": "operators",
+            "key": "members[i]"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "admin",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "operators",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "auditors",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "members",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "RoleRegistry",
+        "name": "operatorCount",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "RoleRegistry",
+          "name": "admin",
+          "type": "address"
+        },
+        {
+          "contract": "RoleRegistry",
+          "name": "operators",
+          "type": "mapping(address => bool)"
+        },
+        {
+          "contract": "RoleRegistry",
+          "name": "auditors",
+          "type": "mapping(address => bool)"
+        },
+        {
+          "contract": "RoleRegistry",
+          "name": "members",
+          "type": "address[]"
+        },
+        {
+          "contract": "RoleRegistry",
+          "name": "operatorCount",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "RoleRegistry",
+          "name": "operators",
+          "key": "address",
+          "value": "bool"
+        },
+        {
+          "contract": "RoleRegistry",
+          "name": "auditors",
+          "key": "address",
+          "value": "bool"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "RoleRegistry",
+        "function": "grantOperator",
+        "modifier": "onlyAdmin",
+        "role": "admin"
+      },
+      {
+        "contract": "RoleRegistry",
+        "function": "grantAuditor",
+        "modifier": "onlyAdmin",
+        "role": "admin"
+      },
+      {
+        "contract": "RoleRegistry",
+        "function": "revokeAll",
+        "modifier": "onlyAdmin",
+        "role": "admin"
+      },
+      {
+        "contract": "RoleRegistry",
+        "function": "countOperators",
+        "modifier": "onlyOperator",
+        "role": "unknown"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "grantOperator",
+        "source": "modifier:onlyAdmin",
+        "condition": "(msg.sender == admin)",
+        "role": "admin"
+      },
+      {
+        "function": "grantOperator",
+        "source": "require",
+        "condition": "(msg.sender == admin)",
+        "role": null
+      },
+      {
+        "function": "grantAuditor",
+        "source": "modifier:onlyAdmin",
+        "condition": "(msg.sender == admin)",
+        "role": "admin"
+      },
+      {
+        "function": "grantAuditor",
+        "source": "require",
+        "condition": "(msg.sender == admin)",
+        "role": null
+      },
+      {
+        "function": "revokeAll",
+        "source": "modifier:onlyAdmin",
+        "condition": "(msg.sender == admin)",
+        "role": "admin"
+      },
+      {
+        "function": "revokeAll",
+        "source": "require",
+        "condition": "(msg.sender == admin)",
+        "role": null
+      },
+      {
+        "function": "countOperators",
+        "source": "modifier:onlyOperator",
+        "condition": "operators[msg.sender]",
+        "role": "unknown"
+      },
+      {
+        "function": "countOperators",
+        "source": "require",
+        "condition": "operators[msg.sender]",
+        "role": null
+      }
+    ]
+  }
+}

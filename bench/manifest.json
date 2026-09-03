@@ -1,0 +1,516 @@
+{
+ "name": "InvSol loop benchmark",
+ "purpose": "Validation corpus for the AST analyzer, TestCrafter instrumentation, postcondition inference and LoopSynth. Each entry records the loop patterns the contract is meant to exercise and the properties a correct run should recover.",
+ "contracts": [
+  {
+   "file": "SumArray.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Indexed Traversal",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "simple",
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "acc += values[i]",
+    "c += 1"
+   ],
+   "expected_postconditions": [
+    "acc == sum(values)",
+    "c == values.length"
+   ],
+   "notes": "Baseline. totalBounded has a require-derived bound n <= maxN."
+  },
+  {
+   "file": "PaymentSplitter.sol",
+   "pragma": "0.8.19",
+   "patterns": [
+    "Proportional Split",
+    "External Calls",
+    "Mapping Update"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "sumShares += shares[payees[i]]"
+   ],
+   "expected_postconditions": [
+    "sumShares <= 100",
+    "sum(shares) <= 100"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Figure 1 of the paper. transfer() inside the loop, so external-call classification and reentrancy-safe state preservation both apply. Pinned pragma exercises solc resolution."
+  },
+  {
+   "file": "BatchTransfer.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Mapping Update",
+    "Accumulator"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "moved += amounts[i]",
+    "totalSupply += amount"
+   ],
+   "expected_postconditions": [
+    "sum(balances) <= totalSupply"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Requires vm.startPrank as owner or every call reverts."
+  },
+  {
+   "file": "VoteTally.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Counter Logic",
+    "Accumulator",
+    "Indexed Traversal"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "sum += proposals[i].voteCount",
+    "counted += proposals[i].voteCount"
+   ],
+   "expected_postconditions": [
+    "sum == totalVotes",
+    "counted <= totalVotes"
+   ],
+   "notes": "Struct array traversal. Exercises struct field flattening for the Daikon bridge."
+  },
+  {
+   "file": "MatrixOps.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Indexed Traversal"
+   ],
+   "loop_categories": [
+    "nested"
+   ],
+   "expected_accumulators": [
+    "total += grid[i][j]",
+    "touched += 1"
+   ],
+   "expected_postconditions": [
+    "touched <= rows * cols"
+   ],
+   "notes": "Two-level nesting over a jagged 2D array. init() has a loop that pushes inside a loop."
+  },
+  {
+   "file": "TripleNest.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "nested"
+   ],
+   "expected_accumulators": [
+    "total += i * j + k",
+    "total += j",
+    "total += 1"
+   ],
+   "expected_postconditions": [
+    "total <= a * b * c"
+   ],
+   "notes": "Three-level nesting, plus the triangular pattern where the inner bound depends on the outer index."
+  },
+  {
+   "file": "DynamicSearch.sol",
+   "pragma": ">=0.8.0 <0.9.0",
+   "patterns": [
+    "Indexed Traversal",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "consumed += data[i]",
+    "spent += data[i]",
+    "taken += 1"
+   ],
+   "expected_postconditions": [
+    "spent <= budget",
+    "taken <= data.length"
+   ],
+   "notes": "While loops with compound and early-exit conditions. Range pragma exercises solc resolution."
+  },
+  {
+   "file": "OffByOne.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Indexed Traversal",
+    "Accumulator"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "acc += items[i]"
+   ],
+   "expected_postconditions": [
+    "i <= items.length"
+   ],
+   "seeded_bugs": [
+    "sumInclusiveBug uses i <= items.length and reverts on the last iteration",
+    "copyShiftedBug uses i <= n and writes past the end of out",
+    "lastWindow underflows when k > items.length is bypassed"
+   ],
+   "notes": "Target for RQ4 off-by-one detection. sumCorrect is the control."
+  },
+  {
+   "file": "RoleRegistry.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Counter Logic",
+    "Mapping Update"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "removed += 1",
+    "c += 1"
+   ],
+   "expected_postconditions": [
+    "c <= members.length",
+    "operatorCount >= 0"
+   ],
+   "access_control": [
+    "onlyAdmin",
+    "onlyOperator"
+   ],
+   "notes": "Two distinct modifiers on different functions. Needed to test role-aware prank setup."
+  },
+  {
+   "file": "Airdrop.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Counter Logic",
+    "Mapping Update"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "minted += 1",
+    "claimed[to[i]] += 1"
+   ],
+   "expected_postconditions": [
+    "minted <= maxSupply"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Cap check inside the loop versus before the loop. Classic bounded counter."
+  },
+  {
+   "file": "StakingRewards.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Mapping Update",
+    "Accumulator",
+    "Proportional Split"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "issued += reward",
+    "sum += stakeOf[stakers[i]]"
+   ],
+   "expected_postconditions": [
+    "sum == totalStaked"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Mapping sum should reconcile against a tracked total. Direct target for SumMappingBound."
+  },
+  {
+   "file": "Crowdsale.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "sum += contributions[contributors[i]]",
+    "added += step"
+   ],
+   "expected_postconditions": [
+    "sum == raised",
+    "raised <= cap"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Uses block.timestamp, so the guard is context dependent. extendWhileUnderCap is a while loop bounded by state."
+  },
+  {
+   "file": "Escrow.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "External Calls",
+    "Mapping Update",
+    "Accumulator"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "paid += amount"
+   ],
+   "expected_postconditions": [
+    "paid <= totalOwed"
+   ],
+   "access_control": [
+    "onlyArbiter"
+   ],
+   "seeded_bugs": [
+    "releaseUnsafe uses a raw call and zeroes state after the call, so it is reentrancy exposed"
+   ],
+   "notes": "releaseAll follows checks-effects-interactions; releaseUnsafe does not. Distinguishes transfer from low-level call."
+  },
+  {
+   "file": "ArrayCompact.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Indexed Traversal",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "removed += 1",
+    "write += 1"
+   ],
+   "expected_postconditions": [
+    "write <= read",
+    "write <= items.length"
+   ],
+   "notes": "Two cursors advancing at different rates, plus a while loop whose bound shrinks as elements are popped."
+  },
+  {
+   "file": "ReverseLoop.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "simple",
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "acc += buffer[i - 1]",
+    "steps += 1",
+    "iterations += 1"
+   ],
+   "expected_postconditions": [
+    "steps == n",
+    "i >= 0"
+   ],
+   "notes": "Decreasing index direction. halve() has a logarithmic trip count."
+  },
+  {
+   "file": "DoWhileAccumulate.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "simple",
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "acc += i",
+    "count += 1"
+   ],
+   "expected_postconditions": [
+    "i >= 1"
+   ],
+   "notes": "do-while bodies always run once, so the invariant differs from the equivalent while loop."
+  },
+  {
+   "file": "BoundedQueue.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Accumulator",
+    "Counter Logic",
+    "Indexed Traversal"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "acc += slots[(head + i) % CAPACITY]",
+    "written += 1"
+   ],
+   "expected_postconditions": [
+    "size <= CAPACITY",
+    "head < CAPACITY",
+    "written <= CAPACITY"
+   ],
+   "notes": "Fixed-size array with modular indexing. Compound loop guard in fill()."
+  },
+  {
+   "file": "HashChain.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Indexed Traversal",
+    "Counter Logic"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "steps += 1"
+   ],
+   "expected_postconditions": [
+    "steps == rounds",
+    "i <= proof.length"
+   ],
+   "notes": "Non-arithmetic loop carrying a bytes32 value. Tests that non-numeric carried state does not break inference."
+  },
+  {
+   "file": "AuctionSettle.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "External Calls",
+    "Accumulator",
+    "Mapping Update"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "refunds += amount",
+    "sum += bids[bidders[i]]"
+   ],
+   "expected_postconditions": [
+    "refunds <= sum",
+    "highestBid <= sum"
+   ],
+   "access_control": [
+    "onlySeller"
+   ],
+   "notes": "Refund loop with transfer and a conditional skip, so control-flow dependent invariants apply."
+  },
+  {
+   "file": "TokenVesting.sol",
+   "pragma": "0.8.19",
+   "patterns": [
+    "Counter Logic",
+    "Accumulator"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "vested += s.amountPerInterval",
+    "sum += vestedFor(grantees[i])",
+    "claimedNow += s.amountPerInterval"
+   ],
+   "expected_postconditions": [
+    "s.claimedIntervals <= s.intervals"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Guard reads block.timestamp and a storage struct. A loop calls another function that itself loops, so interprocedural effects apply. Pinned pragma."
+  },
+  {
+   "file": "GasBounded.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Counter Logic",
+    "Mapping Update",
+    "Accumulator"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "processed += 1",
+    "sum += pending[queue[i]]"
+   ],
+   "expected_postconditions": [
+    "cursor <= queue.length",
+    "processed <= batchSize"
+   ],
+   "seeded_bugs": [
+    "processAllUnbounded iterates the whole queue and can exhaust gas as the queue grows"
+   ],
+   "notes": "Batched versus unbounded traversal of the same data. Target for denial-of-service reasoning."
+  },
+  {
+   "file": "ProportionalSplit.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Proportional Split",
+    "Accumulator",
+    "Mapping Update"
+   ],
+   "loop_categories": [
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "assigned += share",
+    "sum += weight[holders[i]]",
+    "running += weight[holders[i]]"
+   ],
+   "expected_postconditions": [
+    "sum <= SCALE",
+    "assigned <= pool",
+    "running <= SCALE"
+   ],
+   "access_control": [
+    "onlyOwner"
+   ],
+   "notes": "Cumulative bound enforced across iterations, which is the inductive property the paper motivates."
+  },
+  {
+   "file": "CappedLedger.sol",
+   "pragma": "^0.8.19",
+   "patterns": [
+    "Indexed Traversal",
+    "Accumulator",
+    "Bounded Element"
+   ],
+   "loop_categories": [
+    "simple",
+    "dynamic"
+   ],
+   "expected_accumulators": [
+    "total += clamped",
+    "amounts.push(clamped)"
+   ],
+   "expected_postconditions": [
+    "total >= old(total)",
+    "\\forall k : uint256 ; k < amounts.length ==> amounts[k] <= cap"
+   ],
+   "notes": "Added so the corpus exercises quantifier instantiation. Every element is clamped against the stored cap before it is written, so a claim over all elements holds without being implied by the element type. rescale and trimTo only ever lower an element, so the bound is preserved."
+  }
+ ]
+}

@@ -1,0 +1,678 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "Crowdsale",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "Crowdsale",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "cap_",
+            "type": "uint256"
+          },
+          {
+            "name": "duration",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "cap",
+          "deadline",
+          "owner"
+        ],
+        "writes": [
+          "cap",
+          "deadline",
+          "owner"
+        ],
+        "member_accesses": [
+          "sender",
+          "timestamp"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "cap",
+            "key": null
+          },
+          {
+            "var": "deadline",
+            "key": null
+          },
+          {
+            "var": "owner",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "contribute",
+        "visibility": "external",
+        "mutability": "payable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "((raised + msg.value) <= cap)",
+          "(block.timestamp < deadline)"
+        ],
+        "reads": [
+          "cap",
+          "contributions",
+          "contributors",
+          "deadline",
+          "raised"
+        ],
+        "writes": [
+          "contributions",
+          "raised"
+        ],
+        "member_accesses": [
+          "push",
+          "sender",
+          "timestamp",
+          "value"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "contributions",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "contributions",
+            "key": "msg.sender"
+          },
+          {
+            "var": "raised",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "totalContributed",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < contributors.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "contributions[contributors[i]]",
+                    "base": "contributions",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "contributors[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:contributors"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "contributors.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "Crowdsale.totalContributed#loop0",
+            "loop_index": 0,
+            "node_id": 133,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "contributions",
+          "contributors"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "contributions",
+            "key": "contributors[i]"
+          },
+          {
+            "var": "contributors",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "backersAbove",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "minimum",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < contributors.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "c"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "c"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:contributors"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "contributors.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "Crowdsale.backersAbove#loop0",
+            "loop_index": 0,
+            "node_id": 167,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "contributions",
+          "contributors"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "contributions",
+            "key": "contributors[i]"
+          },
+          {
+            "var": "contributors",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "extendWhileUnderCap",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "step",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(((raised + added) + step) <= cap)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "added"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "added",
+                  "expr": "added",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "step",
+                    "base": "step",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "added",
+                  "expr": "added",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "added"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:cap",
+                "state:raised"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": null,
+            "loop_id": "Crowdsale.extendWhileUnderCap#loop0",
+            "loop_index": 0,
+            "node_id": 190,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "cap",
+          "raised"
+        ],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "cap",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "raised",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "deadline",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "contributors",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "Crowdsale",
+        "name": "contributions",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "Crowdsale",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "Crowdsale",
+          "name": "cap",
+          "type": "uint256"
+        },
+        {
+          "contract": "Crowdsale",
+          "name": "raised",
+          "type": "uint256"
+        },
+        {
+          "contract": "Crowdsale",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "contract": "Crowdsale",
+          "name": "contributors",
+          "type": "address[]"
+        },
+        {
+          "contract": "Crowdsale",
+          "name": "contributions",
+          "type": "mapping(address => uint256)"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "Crowdsale",
+          "name": "contributions",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "Crowdsale",
+        "function": "extendWhileUnderCap",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "extendWhileUnderCap",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "extendWhileUnderCap",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

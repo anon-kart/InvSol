@@ -1,0 +1,592 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "ReverseLoop",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "ReverseLoop",
+        "name": "seed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < xs.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "buffer"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "buffer",
+                  "expr": "buffer.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "buffer",
+                  "expr": "buffer.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ReverseLoop.seed#loop0",
+            "loop_index": 0,
+            "node_id": 33,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "buffer"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ReverseLoop",
+        "name": "sumBackwards",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = buffer.length",
+            "guard": "(i > 0)",
+            "update": "(i--)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "buffer[(i - 1)]",
+                    "base": "buffer",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "(i - 1)",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "decreasing"
+            },
+            "bounds": null,
+            "loop_id": "ReverseLoop.sumBackwards#loop0",
+            "loop_index": 0,
+            "node_id": 60,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "decreasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "buffer"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "buffer",
+            "key": "(i - 1)"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ReverseLoop",
+        "name": "countdown",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "n",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = n",
+            "guard": "(i > 0)",
+            "update": "(i--)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "steps"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "steps",
+                  "expr": "steps",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "steps",
+                  "expr": "steps",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "steps"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "decreasing"
+            },
+            "bounds": null,
+            "loop_id": "ReverseLoop.countdown#loop0",
+            "loop_index": 0,
+            "node_id": 84,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "decreasing"
+          }
+        ],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ReverseLoop",
+        "name": "reversed",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256[]"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < n)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "out"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "out",
+                  "expr": "out[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "out",
+                  "expr": "out[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "out"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "n",
+              "inclusive_upper": false
+            },
+            "loop_id": "ReverseLoop.reversed#loop0",
+            "loop_index": 0,
+            "node_id": 128,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "buffer"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "buffer",
+            "key": "((n - 1) - i)"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ReverseLoop",
+        "name": "halve",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "start",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(v > 1)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "iterations",
+                "v"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "v",
+                  "expr": "v",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "/=",
+                  "kind": "quotient",
+                  "source": {
+                    "expr": "2",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "iterations",
+                  "expr": "iterations",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "v",
+                  "expr": "v",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                },
+                {
+                  "var": "iterations",
+                  "expr": "iterations",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "iterations",
+                "v"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "unknown"
+            },
+            "bounds": null,
+            "loop_id": "ReverseLoop.halve#loop0",
+            "loop_index": 0,
+            "node_id": 155,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "unknown"
+          }
+        ],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ReverseLoop",
+        "name": "buffer",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "ReverseLoop",
+          "name": "buffer",
+          "type": "uint256[]"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

@@ -1,0 +1,612 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "OffByOne",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "OffByOne",
+        "name": "seed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < xs.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "items"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "items",
+                  "expr": "items.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "items",
+                  "expr": "items.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "OffByOne.seed#loop0",
+            "loop_index": 0,
+            "node_id": 33,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "OffByOne",
+        "name": "sumCorrect",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < items.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "items[i]",
+                    "base": "items",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "items.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "OffByOne.sumCorrect#loop0",
+            "loop_index": 0,
+            "node_id": 58,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "OffByOne",
+        "name": "sumInclusiveBug",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i <= items.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "items[i]",
+                    "base": "items",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "items.length",
+              "inclusive_upper": true
+            },
+            "loop_id": "OffByOne.sumInclusiveBug#loop0",
+            "loop_index": 0,
+            "node_id": 83,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "OffByOne",
+        "name": "copyShiftedBug",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "n",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256[]"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i <= n)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "out"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "out",
+                  "expr": "out[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "out",
+                  "expr": "out[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "out"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "n",
+              "inclusive_upper": true
+            },
+            "loop_id": "OffByOne.copyShiftedBug#loop0",
+            "loop_index": 0,
+            "node_id": 128,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(n <= items.length)"
+        ],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "OffByOne",
+        "name": "lastWindow",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "k",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = (items.length - k)",
+            "guard": "(i < items.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "items[i]",
+                    "base": "items",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "items.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "OffByOne.lastWindow#loop0",
+            "loop_index": 0,
+            "node_id": 166,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(k <= items.length)"
+        ],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "OffByOne",
+        "name": "items",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "OffByOne",
+          "name": "items",
+          "type": "uint256[]"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

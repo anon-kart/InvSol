@@ -1,0 +1,906 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "MatrixOps",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "MatrixOps",
+        "name": "init",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "r",
+            "type": "uint256"
+          },
+          {
+            "name": "c",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < r)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "grid"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "grid",
+                  "expr": "grid.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": null
+                }
+              ],
+              "writes": [
+                {
+                  "var": "grid",
+                  "expr": "grid.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": null
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "r",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.init#loop0",
+            "loop_index": 0,
+            "node_id": 77,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "(j < c)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "grid"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "grid",
+                  "expr": "grid.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "((i * c) + j)",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "grid",
+                  "expr": "grid.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "((i * c) + j)",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "c",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.init#loop1",
+            "loop_index": 1,
+            "node_id": 75,
+            "parent_node_id": 77,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "((r <= 32) && (c <= 32))"
+        ],
+        "reads": [
+          "cols",
+          "grid",
+          "rows"
+        ],
+        "writes": [
+          "cols",
+          "rows"
+        ],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "grid",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "cols",
+            "key": null
+          },
+          {
+            "var": "rows",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "sumAll",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < grid.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "grid[i][j]",
+                    "base": "grid",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "j",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [
+                "state:grid"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "grid.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.sumAll#loop0",
+            "loop_index": 0,
+            "node_id": 119,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "(j < grid[i].length)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [
+                "total"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "grid[i][j]",
+                    "base": "grid",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "j",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "total"
+              ],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:grid"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "grid[i].length",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.sumAll#loop1",
+            "loop_index": 1,
+            "node_id": 117,
+            "parent_node_id": 119,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "grid"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "grid",
+            "key": "i"
+          },
+          {
+            "var": "grid",
+            "key": "j"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "scaleRegion",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "r",
+            "type": "uint256"
+          },
+          {
+            "name": "c",
+            "type": "uint256"
+          },
+          {
+            "name": "factor",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < r)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "grid",
+                  "expr": "grid[i][j]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "j",
+                  "op": "*=",
+                  "kind": "product",
+                  "source": {
+                    "expr": "factor",
+                    "base": "factor",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "touched",
+                  "expr": "touched",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "r",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.scaleRegion#loop0",
+            "loop_index": 0,
+            "node_id": 188,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "((j < c) && (j < grid[i].length))",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [
+                "grid",
+                "touched"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "grid"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "grid",
+                  "expr": "grid[i][j]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "j",
+                  "op": "*=",
+                  "kind": "product",
+                  "source": {
+                    "expr": "factor",
+                    "base": "factor",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "touched",
+                  "expr": "touched",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "grid",
+                  "expr": "grid[i][j]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "j",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "grid",
+                  "expr": "grid[i][j]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "j",
+                  "op": "="
+                },
+                {
+                  "var": "touched",
+                  "expr": "touched",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "grid",
+                "touched"
+              ],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:grid"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "c",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.scaleRegion#loop1",
+            "loop_index": 1,
+            "node_id": 186,
+            "parent_node_id": 188,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(r <= grid.length)"
+        ],
+        "reads": [
+          "grid"
+        ],
+        "writes": [
+          "grid"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "grid",
+            "key": "i"
+          },
+          {
+            "var": "grid",
+            "key": "j"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "grid",
+            "key": "j"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "rowMax",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "r",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "(j < grid[r].length)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "best",
+                  "expr": "best",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "best"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:grid"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "grid[r].length",
+              "inclusive_upper": false
+            },
+            "loop_id": "MatrixOps.rowMax#loop0",
+            "loop_index": 0,
+            "node_id": 236,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(r < grid.length)"
+        ],
+        "reads": [
+          "grid"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "grid",
+            "key": "j"
+          },
+          {
+            "var": "grid",
+            "key": "r"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "grid",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256[]"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "rows",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "MatrixOps",
+        "name": "cols",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "MatrixOps",
+          "name": "grid",
+          "type": "uint256[][]"
+        },
+        {
+          "contract": "MatrixOps",
+          "name": "rows",
+          "type": "uint256"
+        },
+        {
+          "contract": "MatrixOps",
+          "name": "cols",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

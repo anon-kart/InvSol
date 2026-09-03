@@ -1,0 +1,723 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "ProportionalSplit",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "ProportionalSplit",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "owner"
+        ],
+        "writes": [
+          "owner"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "owner",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "setWeight",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "name": "w",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(account != ElementaryTypeNameExpression(0))",
+          "(msg.sender == owner)",
+          "(totalWeight <= SCALE)"
+        ],
+        "reads": [
+          "SCALE",
+          "holders",
+          "totalWeight",
+          "weight"
+        ],
+        "writes": [
+          "totalWeight",
+          "weight"
+        ],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "weight",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "totalWeight",
+            "key": null
+          },
+          {
+            "var": "weight",
+            "key": "account"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "allocate",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "pool",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256[]"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < holders.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "assigned"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "shares"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "assigned",
+                  "expr": "assigned",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "share",
+                    "base": "share",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "shares",
+                  "expr": "shares[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "shares",
+                  "expr": "shares[i]",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                },
+                {
+                  "var": "assigned",
+                  "expr": "assigned",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "assigned",
+                "shares"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:holders"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "holders.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ProportionalSplit.allocate#loop0",
+            "loop_index": 0,
+            "node_id": 148,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "SCALE",
+          "holders",
+          "weight"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "holders",
+            "key": "i"
+          },
+          {
+            "var": "weight",
+            "key": "holders[i]"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "weightSum",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < holders.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "weight[holders[i]]",
+                    "base": "weight",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "holders[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:holders"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "holders.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ProportionalSplit.weightSum#loop0",
+            "loop_index": 0,
+            "node_id": 175,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "holders",
+          "weight"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "holders",
+            "key": "i"
+          },
+          {
+            "var": "weight",
+            "key": "holders[i]"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "normalise",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < holders.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "running"
+              ],
+              "mapping_updates": [
+                "weight"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "running",
+                  "expr": "running",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "weight[holders[i]]",
+                    "base": "weight",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "holders[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "weight",
+                  "expr": "weight[holders[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "holders[i]",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "running",
+                  "expr": "running",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                },
+                {
+                  "var": "weight",
+                  "expr": "weight[holders[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "holders[i]",
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "running"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:holders"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "holders.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ProportionalSplit.normalise#loop0",
+            "loop_index": 0,
+            "node_id": 221,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "SCALE",
+          "holders",
+          "totalWeight",
+          "weight"
+        ],
+        "writes": [
+          "totalWeight",
+          "weight"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "holders",
+            "key": "i"
+          },
+          {
+            "var": "weight",
+            "key": "holders[i]"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "totalWeight",
+            "key": null
+          },
+          {
+            "var": "weight",
+            "key": "holders[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "holders",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "weight",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "totalWeight",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ProportionalSplit",
+        "name": "SCALE",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "ProportionalSplit",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "ProportionalSplit",
+          "name": "holders",
+          "type": "address[]"
+        },
+        {
+          "contract": "ProportionalSplit",
+          "name": "weight",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "ProportionalSplit",
+          "name": "totalWeight",
+          "type": "uint256"
+        },
+        {
+          "contract": "ProportionalSplit",
+          "name": "SCALE",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "ProportionalSplit",
+          "name": "weight",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "ProportionalSplit",
+        "function": "setWeight",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      },
+      {
+        "contract": "ProportionalSplit",
+        "function": "normalise",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "setWeight",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "setWeight",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      },
+      {
+        "function": "normalise",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "normalise",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

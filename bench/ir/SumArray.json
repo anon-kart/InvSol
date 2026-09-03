@@ -1,0 +1,542 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "SumArray",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "SumArray",
+        "name": "seed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < xs.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "values"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "values",
+                  "expr": "values.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "values",
+                  "expr": "values.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "SumArray.seed#loop0",
+            "loop_index": 0,
+            "node_id": 41,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "values"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "SumArray",
+        "name": "total",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < values.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "values[i]",
+                    "base": "values",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:values"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "values.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "SumArray.total#loop0",
+            "loop_index": 0,
+            "node_id": 66,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "lastTotal",
+          "values"
+        ],
+        "writes": [
+          "lastTotal"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "Summed"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "Summed"
+        ],
+        "storage_reads": [
+          {
+            "var": "values",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "lastTotal",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "SumArray",
+        "name": "totalBounded",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "name": "maxN",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < n)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "values[i]",
+                    "base": "values",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "n",
+              "inclusive_upper": false
+            },
+            "loop_id": "SumArray.totalBounded#loop0",
+            "loop_index": 0,
+            "node_id": 119,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(n <= maxN)",
+          "(n <= values.length)"
+        ],
+        "reads": [
+          "values"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "values",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "SumArray",
+        "name": "count",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < values.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "c"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "c",
+                  "expr": "c",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "c"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:values"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "values.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "SumArray.count#loop0",
+            "loop_index": 0,
+            "node_id": 142,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "values"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "SumArray",
+        "name": "values",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "SumArray",
+        "name": "lastTotal",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "SumArray",
+          "name": "values",
+          "type": "uint256[]"
+        },
+        {
+          "contract": "SumArray",
+          "name": "lastTotal",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

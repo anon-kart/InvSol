@@ -1,0 +1,446 @@
+No files changed, compilation skipped
+
+Ran 14 tests for test/LoopPlayground_Harness.t.sol:LoopPlayground_Harness
+[PASS] test_accumulateDeposits_basic() (gas: 24458)
+Logs:
+  :::ENTER - test_accumulateDeposits_basic
+  limit: (uint256)
+  100
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_accumulateDeposits_basic
+
+Traces:
+  [24458] LoopPlayground_Harness::test_accumulateDeposits_basic()
+    ├─ emit log_string(val: ":::ENTER - test_accumulateDeposits_basic")
+    ├─ emit log_string(val: "limit: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [3583] LoopPlayground::accumulateDeposits(100)
+    │   ├─ emit Accumulated(total: 0)
+    │   └─ ← [Return] 0, 0
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_accumulateDeposits_basic")
+    └─ ← [Stop] 
+
+[PASS] test_appendMany_basic() (gas: 2281495)
+Logs:
+  :::ENTER - test_appendMany_basic
+  n: (uint256)
+  100
+  base: (uint256)
+  200
+  maxN: (uint256)
+  300
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_appendMany_basic
+
+Traces:
+  [2281495] LoopPlayground_Harness::test_appendMany_basic()
+    ├─ emit log_string(val: ":::ENTER - test_appendMany_basic")
+    ├─ emit log_string(val: "n: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "base: (uint256)")
+    ├─ emit log_uint(val: 200)
+    ├─ emit log_string(val: "maxN: (uint256)")
+    ├─ emit log_uint(val: 300)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [2255742] LoopPlayground::appendMany(100, 200, 300)
+    │   ├─ emit Filled(n: 102)
+    │   └─ ← [Stop] 
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_appendMany_basic")
+    └─ ← [Stop] 
+
+[PASS] test_bubbleSortLocal_basic() (gas: 32006)
+Logs:
+  :::ENTER - test_bubbleSortLocal_basic
+  maxN: (uint256)
+  100
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_bubbleSortLocal_basic
+
+Traces:
+  [32006] LoopPlayground_Harness::test_bubbleSortLocal_basic()
+    ├─ emit log_string(val: ":::ENTER - test_bubbleSortLocal_basic")
+    ├─ emit log_string(val: "maxN: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [10697] LoopPlayground::bubbleSortLocal(100)
+    │   ├─ emit Sorted(arr: [0, 0])
+    │   └─ ← [Return] [0, 0]
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_bubbleSortLocal_basic")
+    └─ ← [Stop] 
+
+[PASS] test_deposit_basic() (gas: 66132)
+Logs:
+  :::ENTER - test_deposit_basic
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_deposit_basic
+
+Traces:
+  [66132] LoopPlayground_Harness::test_deposit_basic()
+    ├─ emit log_string(val: ":::ENTER - test_deposit_basic")
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [48522] LoopPlayground::deposit()
+    │   ├─ emit UpdatedDeposit(who: LoopPlayground_Harness: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], amount: 0)
+    │   └─ ← [Stop] 
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_deposit_basic")
+    └─ ← [Stop] 
+
+[PASS] test_fillSequence_basic() (gas: 2295520)
+Logs:
+  :::ENTER - test_fillSequence_basic
+  n: (uint256)
+  100
+  start: (uint256)
+  200
+  step: (uint256)
+  300
+  maxN: (uint256)
+  400
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_fillSequence_basic
+
+Traces:
+  [2295520] LoopPlayground_Harness::test_fillSequence_basic()
+    ├─ emit log_string(val: ":::ENTER - test_fillSequence_basic")
+    ├─ emit log_string(val: "n: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "start: (uint256)")
+    ├─ emit log_uint(val: 200)
+    ├─ emit log_string(val: "step: (uint256)")
+    ├─ emit log_uint(val: 300)
+    ├─ emit log_string(val: "maxN: (uint256)")
+    ├─ emit log_uint(val: 400)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [2266486] LoopPlayground::fillSequence(100, 200, 300, 400)
+    │   ├─ emit Filled(n: 100)
+    │   └─ ← [Stop] 
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_fillSequence_basic")
+    └─ ← [Stop] 
+
+[PASS] test_firstGreaterThan_basic() (gas: 28289)
+Logs:
+  :::ENTER - test_firstGreaterThan_basic
+  x: (uint256)
+  100
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_firstGreaterThan_basic
+
+Traces:
+  [28289] LoopPlayground_Harness::test_firstGreaterThan_basic()
+    ├─ emit log_string(val: ":::ENTER - test_firstGreaterThan_basic")
+    ├─ emit log_string(val: "x: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [7459] LoopPlayground::firstGreaterThan(100)
+    │   └─ ← [Return] -1
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_firstGreaterThan_basic")
+    └─ ← [Stop] 
+
+[PASS] test_gridDims_basic() (gas: 22306)
+Logs:
+  :::ENTER - test_gridDims_basic
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_gridDims_basic
+
+Traces:
+  [22306] LoopPlayground_Harness::test_gridDims_basic()
+    ├─ emit log_string(val: ":::ENTER - test_gridDims_basic")
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [4703] LoopPlayground::gridDims() [staticcall]
+    │   └─ ← [Return] 3, 3
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_gridDims_basic")
+    └─ ← [Stop] 
+
+[PASS] test_numbersLen_basic() (gas: 19904)
+Logs:
+  :::ENTER - test_numbersLen_basic
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_numbersLen_basic
+
+Traces:
+  [19904] LoopPlayground_Harness::test_numbersLen_basic()
+    ├─ emit log_string(val: ":::ENTER - test_numbersLen_basic")
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [2292] LoopPlayground::numbersLen() [staticcall]
+    │   └─ ← [Return] 2
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_numbersLen_basic")
+    └─ ← [Stop] 
+
+[PASS] test_pushRow_basic() (gas: 56460)
+Logs:
+  :::ENTER - test_pushRow_basic
+  row: (uint256[])
+  new uint256[](2)
+  maxCols: (uint256)
+  200
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_pushRow_basic
+
+Traces:
+  [56460] LoopPlayground_Harness::test_pushRow_basic()
+    ├─ emit log_string(val: ":::ENTER - test_pushRow_basic")
+    ├─ emit log_string(val: "row: (uint256[])")
+    ├─ emit log_string(val: "new uint256[](2)")
+    ├─ emit log_string(val: "maxCols: (uint256)")
+    ├─ emit log_uint(val: 200)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [32494] LoopPlayground::pushRow([0, 0], 200)
+    │   └─ ← [Stop] 
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_pushRow_basic")
+    └─ ← [Stop] 
+
+[PASS] test_scaledAddToGrid_basic() (gas: 87376)
+Logs:
+  :::ENTER - test_scaledAddToGrid_basic
+  scale: (uint256)
+  100
+  maxCells: (uint256)
+  200
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_scaledAddToGrid_basic
+
+Traces:
+  [87376] LoopPlayground_Harness::test_scaledAddToGrid_basic()
+    ├─ emit log_string(val: ":::ENTER - test_scaledAddToGrid_basic")
+    ├─ emit log_string(val: "scale: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "maxCells: (uint256)")
+    ├─ emit log_uint(val: 200)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [63783] LoopPlayground::scaledAddToGrid(100, 200)
+    │   ├─ emit SumResult(sum: 9)
+    │   └─ ← [Return] 9
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_scaledAddToGrid_basic")
+    └─ ← [Stop] 
+
+[PASS] test_sumGridDots_basic() (gas: 68839)
+Logs:
+  :::ENTER - test_sumGridDots_basic
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_sumGridDots_basic
+
+Traces:
+  [68839] LoopPlayground_Harness::test_sumGridDots_basic()
+    ├─ emit log_string(val: ":::ENTER - test_sumGridDots_basic")
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [50950] LoopPlayground::sumGridDots()
+    │   ├─ emit MatrixDot(row: 0, col: 0, val: 1)
+    │   ├─ emit MatrixDot(row: 0, col: 1, val: 4)
+    │   ├─ emit MatrixDot(row: 0, col: 2, val: 9)
+    │   ├─ emit MatrixDot(row: 1, col: 0, val: 8)
+    │   ├─ emit MatrixDot(row: 1, col: 1, val: 20)
+    │   ├─ emit MatrixDot(row: 1, col: 2, val: 36)
+    │   ├─ emit MatrixDot(row: 2, col: 0, val: 21)
+    │   ├─ emit MatrixDot(row: 2, col: 1, val: 48)
+    │   ├─ emit MatrixDot(row: 2, col: 2, val: 81)
+    │   ├─ emit SumResult(sum: 228)
+    │   └─ ← [Return] 228
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_sumGridDots_basic")
+    └─ ← [Stop] 
+
+[PASS] test_sumNumbersBounded_basic() (gas: 29280)
+Logs:
+  :::ENTER - test_sumNumbersBounded_basic
+  limit: (uint256)
+  100
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_sumNumbersBounded_basic
+
+Traces:
+  [29280] LoopPlayground_Harness::test_sumNumbersBounded_basic()
+    ├─ emit log_string(val: ":::ENTER - test_sumNumbersBounded_basic")
+    ├─ emit log_string(val: "limit: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [8451] LoopPlayground::sumNumbersBounded(100)
+    │   ├─ emit SumResult(sum: 0)
+    │   └─ ← [Return] 0
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_sumNumbersBounded_basic")
+    └─ ← [Stop] 
+
+[PASS] test_sumUnchecked_basic() (gas: 29163)
+Logs:
+  :::ENTER - test_sumUnchecked_basic
+  limit: (uint256)
+  100
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_sumUnchecked_basic
+
+Traces:
+  [29163] LoopPlayground_Harness::test_sumUnchecked_basic()
+    ├─ emit log_string(val: ":::ENTER - test_sumUnchecked_basic")
+    ├─ emit log_string(val: "limit: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [8364] LoopPlayground::sumUnchecked(100)
+    │   ├─ emit SumResult(sum: 0)
+    │   └─ ← [Return] 0
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_sumUnchecked_basic")
+    └─ ← [Stop] 
+
+[PASS] test_triangularAccumulate_basic() (gas: 981921)
+Logs:
+  :::ENTER - test_triangularAccumulate_basic
+  n: (uint256)
+  100
+  maxN: (uint256)
+  200
+  Context Info:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  Final State:
+  Address of Contract: (address)
+  0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042
+  :::EXIT - test_triangularAccumulate_basic
+
+Traces:
+  [981921] LoopPlayground_Harness::test_triangularAccumulate_basic()
+    ├─ emit log_string(val: ":::ENTER - test_triangularAccumulate_basic")
+    ├─ emit log_string(val: "n: (uint256)")
+    ├─ emit log_uint(val: 100)
+    ├─ emit log_string(val: "maxN: (uint256)")
+    ├─ emit log_uint(val: 200)
+    ├─ emit log_string(val: "Context Info:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ [958372] LoopPlayground::triangularAccumulate(100, 200) [staticcall]
+    │   └─ ← [Return] 171700 [1.717e5]
+    ├─ emit log_string(val: "Final State:")
+    ├─ emit log_string(val: "Address of Contract: (address)")
+    ├─ emit log_address(val: LoopPlayground: [0x6b182f1488E8EfEb2Eb298155ed5Bd7FF8A14042])
+    ├─ emit log_string(val: ":::EXIT - test_triangularAccumulate_basic")
+    └─ ← [Stop] 
+
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 13.66ms (26.29ms CPU time)
+
+Ran 1 test suite in 3.39s (13.66ms CPU time): 14 tests passed, 0 failed, 0 skipped (14 total tests)

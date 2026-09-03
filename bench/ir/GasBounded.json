@@ -1,0 +1,652 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "GasBounded",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "GasBounded",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "batchSize_",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(batchSize_ > 0)"
+        ],
+        "reads": [
+          "batchSize"
+        ],
+        "writes": [
+          "batchSize"
+        ],
+        "member_accesses": [],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "batchSize",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "enqueue",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "pending",
+          "queue"
+        ],
+        "writes": [
+          "pending"
+        ],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "pending",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "pending",
+            "key": "account"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "processBatch",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = cursor",
+            "guard": "(i < end)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "processed"
+              ],
+              "mapping_updates": [
+                "pending"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "processed",
+                  "expr": "processed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "pending",
+                  "expr": "pending[queue[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "queue[i]",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "pending",
+                  "expr": "pending[queue[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "queue[i]",
+                  "op": "="
+                },
+                {
+                  "var": "processed",
+                  "expr": "processed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "processed"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "end",
+              "inclusive_upper": false
+            },
+            "loop_id": "GasBounded.processBatch#loop0",
+            "loop_index": 0,
+            "node_id": 107,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "batchSize",
+          "cursor",
+          "pending",
+          "queue"
+        ],
+        "writes": [
+          "cursor",
+          "pending"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "BatchProcessed"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "BatchProcessed"
+        ],
+        "storage_reads": [
+          {
+            "var": "pending",
+            "key": "queue[i]"
+          },
+          {
+            "var": "queue",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "cursor",
+            "key": null
+          },
+          {
+            "var": "pending",
+            "key": "queue[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "processAllUnbounded",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < queue.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "processed"
+              ],
+              "mapping_updates": [
+                "pending"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "processed",
+                  "expr": "processed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "pending",
+                  "expr": "pending[queue[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "queue[i]",
+                  "op": "="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "pending",
+                  "expr": "pending[queue[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "queue[i]",
+                  "op": "="
+                },
+                {
+                  "var": "processed",
+                  "expr": "processed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "processed"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:queue"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "queue.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "GasBounded.processAllUnbounded#loop0",
+            "loop_index": 0,
+            "node_id": 147,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "cursor",
+          "pending",
+          "queue"
+        ],
+        "writes": [
+          "cursor",
+          "pending"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "pending",
+            "key": "queue[i]"
+          },
+          {
+            "var": "queue",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "cursor",
+            "key": null
+          },
+          {
+            "var": "pending",
+            "key": "queue[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "totalPending",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < queue.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "pending[queue[i]]",
+                    "base": "pending",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "queue[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:queue"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "queue.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "GasBounded.totalPending#loop0",
+            "loop_index": 0,
+            "node_id": 179,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "pending",
+          "queue"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "pending",
+            "key": "queue[i]"
+          },
+          {
+            "var": "queue",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "queue",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "pending",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "cursor",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "GasBounded",
+        "name": "batchSize",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "GasBounded",
+          "name": "queue",
+          "type": "address[]"
+        },
+        {
+          "contract": "GasBounded",
+          "name": "pending",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "GasBounded",
+          "name": "cursor",
+          "type": "uint256"
+        },
+        {
+          "contract": "GasBounded",
+          "name": "batchSize",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "GasBounded",
+          "name": "pending",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

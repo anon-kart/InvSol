@@ -1,0 +1,652 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "TokenVesting",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "TokenVesting",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "owner"
+        ],
+        "writes": [
+          "owner"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "owner",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "grant",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "name": "interval",
+            "type": "uint256"
+          },
+          {
+            "name": "amountPerInterval",
+            "type": "uint256"
+          },
+          {
+            "name": "intervals",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(account != ElementaryTypeNameExpression(0))",
+          "(intervals <= 120)",
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "grantees",
+          "schedules"
+        ],
+        "writes": [
+          "schedules"
+        ],
+        "member_accesses": [
+          "push",
+          "timestamp"
+        ],
+        "internal_calls": [
+          "Schedule",
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "schedules",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "schedules",
+            "key": "account"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "vestedFor",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < s.intervals)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "vested"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "vested",
+                  "expr": "vested",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "s.amountPerInterval",
+                    "base": "s",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "vested",
+                  "expr": "vested",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "vested"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "s.intervals",
+              "inclusive_upper": false
+            },
+            "loop_id": "TokenVesting.vestedFor#loop0",
+            "loop_index": 0,
+            "node_id": 141,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "schedules"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "amountPerInterval",
+          "interval",
+          "intervals",
+          "start",
+          "timestamp"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "schedules",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "totalOutstanding",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < grantees.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "vestedFor(grantees[i])",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "vestedFor",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "vestedFor",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:grantees"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "grantees.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "TokenVesting.totalOutstanding#loop0",
+            "loop_index": 0,
+            "node_id": 168,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "grantees"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [
+          "vestedFor"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "grantees",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "claimElapsed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "((i < s.intervals) && (block.timestamp >= (s.start + (((i + 1)) * s.interval))))",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "claimedNow",
+                "i"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "claimedNow",
+                  "expr": "claimedNow",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "s.amountPerInterval",
+                    "base": "s",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "i",
+                  "expr": "i",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "claimedNow",
+                  "expr": "claimedNow",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "claimedNow",
+                "i"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "context:block.timestamp"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "s.intervals",
+              "inclusive_upper": false
+            },
+            "loop_id": "TokenVesting.claimElapsed#loop0",
+            "loop_index": 0,
+            "node_id": 215,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "schedules",
+          "totalVested"
+        ],
+        "writes": [
+          "totalVested"
+        ],
+        "member_accesses": [
+          "amountPerInterval",
+          "claimedIntervals",
+          "interval",
+          "intervals",
+          "sender",
+          "start",
+          "timestamp"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "schedules",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "totalVested",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "grantees",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "schedules",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "struct TokenVesting.Schedule"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TokenVesting",
+        "name": "totalVested",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "TokenVesting",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "TokenVesting",
+          "name": "grantees",
+          "type": "address[]"
+        },
+        {
+          "contract": "TokenVesting",
+          "name": "schedules",
+          "type": "mapping(address => struct TokenVesting.Schedule)"
+        },
+        {
+          "contract": "TokenVesting",
+          "name": "totalVested",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "TokenVesting",
+          "name": "schedules",
+          "key": "address",
+          "value": "struct TokenVesting.Schedule"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "TokenVesting",
+        "function": "grant",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "grant",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "grant",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

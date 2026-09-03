@@ -1,0 +1,578 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "DynamicSearch",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "DynamicSearch",
+        "name": "seed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          },
+          {
+            "name": "t",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < xs.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "data"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "data",
+                  "expr": "data.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "data",
+                  "expr": "data.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "DynamicSearch.seed#loop0",
+            "loop_index": 0,
+            "node_id": 37,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "data",
+          "threshold"
+        ],
+        "writes": [
+          "threshold"
+        ],
+        "member_accesses": [
+          "length",
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "threshold",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "DynamicSearch",
+        "name": "firstAbove",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          },
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < data.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:data"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "data.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "DynamicSearch.firstAbove#loop0",
+            "loop_index": 0,
+            "node_id": 73,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "data",
+          "threshold"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "data",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "DynamicSearch",
+        "name": "drainWhile",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "((i < data.length) && (data[i] < threshold))",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "consumed",
+                "i"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "consumed",
+                  "expr": "consumed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "data[i]",
+                    "base": "data",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "i",
+                  "expr": "i",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "consumed",
+                  "expr": "consumed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "consumed",
+                "i"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:data",
+                "state:threshold"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "data.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "DynamicSearch.drainWhile#loop0",
+            "loop_index": 0,
+            "node_id": 108,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "data",
+          "threshold"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "data",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "DynamicSearch",
+        "name": "collectUntilBudget",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "budget",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(i < data.length)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "i",
+                "spent",
+                "taken"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "spent",
+                  "expr": "spent",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "data[i]",
+                    "base": "data",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "taken",
+                  "expr": "taken",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "i",
+                  "expr": "i",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "spent",
+                  "expr": "spent",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                },
+                {
+                  "var": "taken",
+                  "expr": "taken",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "i",
+                "spent",
+                "taken"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:data"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "data.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "DynamicSearch.collectUntilBudget#loop0",
+            "loop_index": 0,
+            "node_id": 153,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "data"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "data",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "DynamicSearch",
+        "name": "data",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "DynamicSearch",
+        "name": "threshold",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "DynamicSearch",
+          "name": "data",
+          "type": "uint256[]"
+        },
+        {
+          "contract": "DynamicSearch",
+          "name": "threshold",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

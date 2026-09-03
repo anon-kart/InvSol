@@ -1,0 +1,54 @@
+== Package ==
+ComplexMathPackage
+== Method ==
+updateTotal
+== Static ==
+N
+== Integer expressions ==
+#
+x
+y
+i
+total
+threshold
+1
+-1
+2
+-2
+100
+x + y
+x * y
+x - y
+total + #
+total - #
+threshold + #
+threshold - #
+# + 1
+# - 1
+# * #
+# / #
+== Boolean expressions ==
+# > 0
+# < #
+# >= #
+# <= #
+# == #
+# != #
+total == x * y
+i < y
+total >= threshold
+threshold < total
+x + y > total
+x * y >= threshold
+== Preconditions ==
+x > 0;
+y > 0;
+x < 100;
+== Postconditions ==
+total >= x * y;
+total >= threshold;
+== Invariants ==
+total >= 0;
+== Commands ==
+for (uint i = 0; i < y; i++) { total += x; }
+

@@ -1,0 +1,44 @@
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "forge-std/Test.sol";
+
+{% if inline_uut %}
+// Inline demo UUT
+contract {{ contract_name }} {
+    address public owner;
+    constructor() { owner = msg.sender; }
+    modifier onlyOwner() { require(msg.sender == owner, "Only owner"); _; }
+    function transferOwnership(address newOwner) public onlyOwner { owner = newOwner; }
+}
+{% else %}
+import "{{ contract_import_path }}";
+{% endif %}
+
+contract {{ contract_name }}_Harness is Test {
+    {{ contract_name }} internal uut;
+    address internal OWNER = address(0xA11CE);
+    address internal BOB   = address(0xB0B);
+
+    function setUp() public {
+        vm.prank(OWNER);
+        uut = new {{ contract_name }}();
+    }
+
+    function test_constructor_setsOwner() public {
+        assertEq(uut.owner(), OWNER);
+    }
+
+    function test_transferOwnership_byOwner_succeeds() public {
+        vm.prank(OWNER);
+        uut.transferOwnership(address(0xC0FFEE));
+        assertEq(uut.owner(), address(0xC0FFEE));
+    }
+
+    function test_transferOwnership_byNonOwner_reverts() public {
+        vm.prank(BOB);
+        vm.expectRevert();
+        uut.transferOwnership(address(0xC0FFEE));
+    }
+}

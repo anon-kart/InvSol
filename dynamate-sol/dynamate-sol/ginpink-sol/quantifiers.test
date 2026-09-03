@@ -1,0 +1,53 @@
+// Ensures that elements before `destPos` remain unchanged
+(\forall uint i; 0 <= i && i < destPos ==> dest[i] == \old(dest[i]));
+
+// Ensures that the copied elements are correctly transferred
+(\forall uint i; 0 <= i && i < length ==> dest[destPos + i] == \old(src[srcPos + i]));
+
+// Ensures that elements after the modified section remain unchanged
+(\forall uint i; destPos + length <= i && i < dest.length ==> dest[i] == \old(dest[i]));
+
+// Ensures `src` remains unchanged when `src != dest`
+src != dest ==> (\forall uint i; 0 <= i && i < src.length ==> src[i] == \old(src[i]));
+
+// Ensures that a mapping remains unchanged if it is not modified
+(\forall address addr; !modifiedAddresses[addr] ==> balances[addr] == \old(balances[addr]));
+
+// Ensures correct transfer of values in a mapping
+(\forall address addr; modifiedAddresses[addr] ==> balances[addr] == \old(balances[addr]) + transferAmount[addr]);
+
+// Ensures loop-invariant properties for iterating over an array
+(\forall uint i; 0 <= i && i < transactions.length ==> transactions[i] == \old(transactions[i]));
+
+// Ensures elements in a storage array remain unchanged if not modified
+(\forall uint i; !updatedIndices[i] ==> contractStorage[i] == \old(contractStorage[i]));
+
+// Ensures loop invariant holds for sorting an array
+(\forall uint j; 0 <= j && j < sortedArray.length - 1 ==> sortedArray[j] <= sortedArray[j + 1]);
+
+// Ensures swap correctness in sorting algorithms
+(\forall uint j; 0 <= j && j < sortedArray.length - 1 ==> 
+    (sortedArray[j] > sortedArray[j + 1] ==> swapOccurred));
+
+// Ensures correct processing of queue operations
+(\forall uint i; 0 <= i && i < queue.length ==> queue[i] == \old(queue[i]));
+(\forall uint i; queue.length <= i && i < maxQueueSize ==> queue[i] == 0);
+
+// Ensures list reversal is correctly implemented
+(\forall uint j; 0 <= j && j < list.length ==> list[j] == \old(list[list.length - 1 - j]));
+
+// Ensures a shifting operation correctly moves elements
+(\forall uint j; shiftAmount <= j && j < list.length ==> list[j - shiftAmount] == \old(list[j]));
+
+// Ensures array size remains unchanged if not explicitly modified
+(\forall uint i; 0 <= i && i < array.length ==> array[i] == \old(array[i]));
+
+// Ensures loop invariant properties when updating elements in an array
+(\forall uint i; updatedIndices[i] ==> array[i] == newValues[i]);
+
+// Ensures elements in a contract's mapping remain unchanged if not modified
+(\forall address user; !updatedUsers[user] ==> userBalances[user] == \old(userBalances[user]));
+
+// Ensures function call results are correctly assigned
+(\forall uint i; functionCalled ==> results[i] == \old(results[i]) + functionReturnValue);
+

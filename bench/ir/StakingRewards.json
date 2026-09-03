@@ -1,0 +1,728 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "StakingRewards",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "StakingRewards",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "rate",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "owner",
+          "rewardRate"
+        ],
+        "writes": [
+          "owner",
+          "rewardRate"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "owner",
+            "key": null
+          },
+          {
+            "var": "rewardRate",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "stake",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(amount > 0)"
+        ],
+        "reads": [
+          "stakeOf",
+          "stakers",
+          "totalStaked"
+        ],
+        "writes": [
+          "stakeOf",
+          "totalStaked"
+        ],
+        "member_accesses": [
+          "push",
+          "sender"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "stakeOf",
+            "key": "msg.sender"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "stakeOf",
+            "key": "msg.sender"
+          },
+          {
+            "var": "totalStaked",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "accrueAll",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < stakers.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "issued",
+                "rewardOf"
+              ],
+              "mapping_updates": [
+                "rewardOf"
+              ],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "rewardOf",
+                  "expr": "rewardOf[stakers[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "stakers[i]",
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "reward",
+                    "base": "reward",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "issued",
+                  "expr": "issued",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "reward",
+                    "base": "reward",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [
+                {
+                  "var": "rewardOf",
+                  "expr": "rewardOf[stakers[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "stakers[i]",
+                  "op": "+="
+                }
+              ],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "rewardOf",
+                  "expr": "rewardOf[stakers[i]]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "mapping",
+                  "key": "stakers[i]",
+                  "op": "+="
+                },
+                {
+                  "var": "issued",
+                  "expr": "issued",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "issued",
+                "rewardOf"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:stakers"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "stakers.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "StakingRewards.accrueAll#loop0",
+            "loop_index": 0,
+            "node_id": 128,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "rewardOf",
+          "rewardRate",
+          "stakeOf",
+          "stakers"
+        ],
+        "writes": [
+          "rewardOf"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "rewardOf",
+            "key": "stakers[i]"
+          },
+          {
+            "var": "stakeOf",
+            "key": "stakers[i]"
+          },
+          {
+            "var": "stakers",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "rewardOf",
+            "key": "stakers[i]"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "totalStakedComputed",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < stakers.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "stakeOf[stakers[i]]",
+                    "base": "stakeOf",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "stakers[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:stakers"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "stakers.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "StakingRewards.totalStakedComputed#loop0",
+            "loop_index": 0,
+            "node_id": 155,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "stakeOf",
+          "stakers"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "stakeOf",
+            "key": "stakers[i]"
+          },
+          {
+            "var": "stakers",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "topStaker",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < stakers.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "highest",
+                  "expr": "highest",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                },
+                {
+                  "var": "best",
+                  "expr": "best",
+                  "scope": "local",
+                  "type": "address",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "best",
+                "highest"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:stakers"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "stakers.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "StakingRewards.topStaker#loop0",
+            "loop_index": 0,
+            "node_id": 201,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "stakeOf",
+          "stakers"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "stakeOf",
+            "key": "stakers[i]"
+          },
+          {
+            "var": "stakers",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "stakers",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "stakeOf",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "rewardOf",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "totalStaked",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "StakingRewards",
+        "name": "rewardRate",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "StakingRewards",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "stakers",
+          "type": "address[]"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "stakeOf",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "rewardOf",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "totalStaked",
+          "type": "uint256"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "rewardRate",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "StakingRewards",
+          "name": "stakeOf",
+          "key": "address",
+          "value": "uint256"
+        },
+        {
+          "contract": "StakingRewards",
+          "name": "rewardOf",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "StakingRewards",
+        "function": "accrueAll",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "accrueAll",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "accrueAll",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

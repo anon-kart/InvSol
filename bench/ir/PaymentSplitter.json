@@ -1,0 +1,416 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "PaymentSplitter",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "PaymentSplitter",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "owner"
+        ],
+        "writes": [
+          "owner"
+        ],
+        "member_accesses": [
+          "sender"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "owner",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "addPayee",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [
+          "onlyOwner"
+        ],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "name": "share",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "((totalShares + share) <= 100)",
+          "(account != ElementaryTypeNameExpression(0))",
+          "(msg.sender == owner)"
+        ],
+        "reads": [
+          "payees",
+          "shares",
+          "totalShares"
+        ],
+        "writes": [
+          "shares",
+          "totalShares"
+        ],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "shares",
+            "key": "account"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "shares",
+            "key": "account"
+          },
+          {
+            "var": "totalShares",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "distribute",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < payees.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sumShares"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": true,
+              "accumulator_facts": [
+                {
+                  "var": "sumShares",
+                  "expr": "sumShares",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "shares[payees[i]]",
+                    "base": "shares",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "payees[i]",
+                    "container": "mapping"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "transfer",
+                  "callee": "transfer",
+                  "receiver": "payees",
+                  "external": true
+                }
+              ],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sumShares",
+                  "expr": "sumShares",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "transfer",
+                  "callee": "transfer",
+                  "receiver": "payees",
+                  "external": true
+                }
+              ],
+              "carried_vars": [
+                "sumShares"
+              ],
+              "external_call_kinds": [
+                "transfer"
+              ],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:payees"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "payees.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "PaymentSplitter.distribute#loop0",
+            "loop_index": 0,
+            "node_id": 142,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "payees",
+          "shares"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "balance",
+          "length",
+          "transfer"
+        ],
+        "internal_calls": [
+          "Distributed"
+        ],
+        "external_calls": [
+          "transfer"
+        ],
+        "events_emitted": [
+          "Distributed"
+        ],
+        "storage_reads": [
+          {
+            "var": "payees",
+            "key": "i"
+          },
+          {
+            "var": "shares",
+            "key": "payees[i]"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "receive",
+        "visibility": "external",
+        "mutability": "payable",
+        "modifiers": [],
+        "params": [],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "owner",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "payees",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "address"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "shares",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "PaymentSplitter",
+        "name": "totalShares",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "PaymentSplitter",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "contract": "PaymentSplitter",
+          "name": "payees",
+          "type": "address[]"
+        },
+        {
+          "contract": "PaymentSplitter",
+          "name": "shares",
+          "type": "mapping(address => uint256)"
+        },
+        {
+          "contract": "PaymentSplitter",
+          "name": "totalShares",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "PaymentSplitter",
+          "name": "shares",
+          "key": "address",
+          "value": "uint256"
+        }
+      ]
+    },
+    "access_control": [
+      {
+        "contract": "PaymentSplitter",
+        "function": "addPayee",
+        "modifier": "onlyOwner",
+        "role": "owner"
+      }
+    ],
+    "access_dependencies": [
+      {
+        "function": "addPayee",
+        "source": "modifier:onlyOwner",
+        "condition": "(msg.sender == owner)",
+        "role": "owner"
+      },
+      {
+        "function": "addPayee",
+        "source": "require",
+        "condition": "(msg.sender == owner)",
+        "role": null
+      }
+    ]
+  }
+}

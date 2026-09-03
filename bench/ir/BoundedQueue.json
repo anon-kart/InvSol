@@ -1,0 +1,638 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "BoundedQueue",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "BoundedQueue",
+        "name": "push",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "CAPACITY",
+          "head",
+          "size",
+          "slots"
+        ],
+        "writes": [
+          "head",
+          "size",
+          "slots"
+        ],
+        "member_accesses": [],
+        "internal_calls": [
+          "Wrapped"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "Wrapped"
+        ],
+        "storage_reads": [
+          {
+            "var": "slots",
+            "key": "index"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "head",
+            "key": null
+          },
+          {
+            "var": "size",
+            "key": null
+          },
+          {
+            "var": "slots",
+            "key": "index"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "sum",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < size)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "acc"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "slots[(((head + i)) % CAPACITY)]",
+                    "base": "slots",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "(((head + i)) % CAPACITY)",
+                    "container": "array"
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:size"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "size",
+              "inclusive_upper": false
+            },
+            "loop_id": "BoundedQueue.sum#loop0",
+            "loop_index": 0,
+            "node_id": 87,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "CAPACITY",
+          "head",
+          "size",
+          "slots"
+        ],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "slots",
+            "key": "(((head + i)) % CAPACITY)"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "fill",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "((i < xs.length) && (i < CAPACITY))",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "written"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "slots"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "written",
+                  "expr": "written",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "slots",
+                  "expr": "slots[i]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "slots",
+                  "expr": "slots[i]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                },
+                {
+                  "var": "written",
+                  "expr": "written",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "written"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:CAPACITY"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "BoundedQueue.fill#loop0",
+            "loop_index": 0,
+            "node_id": 125,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "CAPACITY",
+          "head",
+          "size",
+          "slots"
+        ],
+        "writes": [
+          "head",
+          "size",
+          "slots"
+        ],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "slots",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "head",
+            "key": null
+          },
+          {
+            "var": "size",
+            "key": null
+          },
+          {
+            "var": "slots",
+            "key": "i"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "drain",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(size > 0)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "acc",
+                "size"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "slots"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "slots[head]",
+                    "base": "slots",
+                    "scope": "state",
+                    "indexed": true,
+                    "index": "head",
+                    "container": "array"
+                  }
+                },
+                {
+                  "var": "size",
+                  "expr": "size",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "-=",
+                  "kind": "difference",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "slots",
+                  "expr": "slots[head]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "head",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "acc",
+                  "expr": "acc",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                },
+                {
+                  "var": "slots",
+                  "expr": "slots[head]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "head",
+                  "op": "="
+                },
+                {
+                  "var": "head",
+                  "expr": "head",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                },
+                {
+                  "var": "size",
+                  "expr": "size",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "-="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "acc",
+                "size"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:size"
+              ],
+              "index_direction": "decreasing"
+            },
+            "bounds": null,
+            "loop_id": "BoundedQueue.drain#loop0",
+            "loop_index": 0,
+            "node_id": 169,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "decreasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "CAPACITY",
+          "head",
+          "size",
+          "slots"
+        ],
+        "writes": [
+          "head",
+          "size",
+          "slots"
+        ],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "slots",
+            "key": "head"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "head",
+            "key": null
+          },
+          {
+            "var": "size",
+            "key": null
+          },
+          {
+            "var": "slots",
+            "key": "head"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "CAPACITY",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "slots",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256[8]"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "head",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "BoundedQueue",
+        "name": "size",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "BoundedQueue",
+          "name": "CAPACITY",
+          "type": "uint256"
+        },
+        {
+          "contract": "BoundedQueue",
+          "name": "slots",
+          "type": "uint256[8]"
+        },
+        {
+          "contract": "BoundedQueue",
+          "name": "head",
+          "type": "uint256"
+        },
+        {
+          "contract": "BoundedQueue",
+          "name": "size",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

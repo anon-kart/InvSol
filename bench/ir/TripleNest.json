@@ -1,0 +1,727 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "TripleNest",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "TripleNest",
+        "name": "cube",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "a",
+            "type": "uint256"
+          },
+          {
+            "name": "b",
+            "type": "uint256"
+          },
+          {
+            "name": "c",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < a)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "((i * j) + k)",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "k",
+                  "expr": "k",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "a",
+              "inclusive_upper": false
+            },
+            "loop_id": "TripleNest.cube#loop0",
+            "loop_index": 0,
+            "node_id": 72,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "(j < b)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "((i * j) + k)",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "k",
+                  "expr": "k",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "b",
+              "inclusive_upper": false
+            },
+            "loop_id": "TripleNest.cube#loop1",
+            "loop_index": 1,
+            "node_id": 70,
+            "parent_node_id": 72,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "k = 0",
+            "guard": "(k < c)",
+            "update": "(k++)",
+            "body_summary": {
+              "indices": [
+                "k"
+              ],
+              "accumulators": [
+                "total"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "((i * j) + k)",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "total"
+              ],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 2,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "k",
+              "lower": "0",
+              "upper": "c",
+              "inclusive_upper": false
+            },
+            "loop_id": "TripleNest.cube#loop2",
+            "loop_index": 2,
+            "node_id": 68,
+            "parent_node_id": 70,
+            "category": "nested",
+            "depth": 2,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(((a <= 16) && (b <= 16)) && (c <= 16))"
+        ],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TripleNest",
+        "name": "triangular",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "n",
+            "type": "uint256"
+          },
+          {
+            "name": "maxN",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 1",
+            "guard": "(i <= n)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "j",
+                    "base": "j",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "1",
+              "upper": "n",
+              "inclusive_upper": true
+            },
+            "loop_id": "TripleNest.triangular#loop0",
+            "loop_index": 0,
+            "node_id": 117,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 1",
+            "guard": "(j <= i)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [
+                "total"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "j",
+                    "base": "j",
+                    "scope": "local",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "total"
+              ],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "1",
+              "upper": "i",
+              "inclusive_upper": true
+            },
+            "loop_id": "TripleNest.triangular#loop1",
+            "loop_index": 1,
+            "node_id": 115,
+            "parent_node_id": 117,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(n <= maxN)"
+        ],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "TripleNest",
+        "name": "record",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "a",
+            "type": "uint256"
+          },
+          {
+            "name": "b",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < a)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "j",
+                  "expr": "j",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 0,
+              "has_inner_loop": true,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "a",
+              "inclusive_upper": false
+            },
+            "loop_id": "TripleNest.record#loop0",
+            "loop_index": 0,
+            "node_id": 155,
+            "parent_node_id": null,
+            "category": "nested",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "for",
+            "init": "j = 0",
+            "guard": "(j < b)",
+            "update": "(j++)",
+            "body_summary": {
+              "indices": [
+                "j"
+              ],
+              "accumulators": [
+                "total"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "total",
+                  "expr": "total",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "total"
+              ],
+              "external_call_kinds": [],
+              "category": "nested",
+              "depth": 1,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "j",
+              "lower": "0",
+              "upper": "b",
+              "inclusive_upper": false
+            },
+            "loop_id": "TripleNest.record#loop1",
+            "loop_index": 1,
+            "node_id": 153,
+            "parent_node_id": 155,
+            "category": "nested",
+            "depth": 1,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "checksum"
+        ],
+        "writes": [
+          "checksum"
+        ],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "checksum",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "TripleNest",
+        "name": "checksum",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "TripleNest",
+          "name": "checksum",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

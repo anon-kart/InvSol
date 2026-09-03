@@ -1,0 +1,611 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "VoteTally",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "VoteTally",
+        "name": "constructor",
+        "visibility": "public",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "quorum_",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "quorum"
+        ],
+        "writes": [
+          "quorum"
+        ],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "quorum",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "addProposal",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "name",
+            "type": "bytes32"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "proposals"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "push"
+        ],
+        "internal_calls": [
+          "Proposal"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "vote",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(!hasVoted[msg.sender])",
+          "(index < proposals.length)"
+        ],
+        "reads": [
+          "hasVoted",
+          "proposals",
+          "totalVotes"
+        ],
+        "writes": [
+          "hasVoted",
+          "proposals",
+          "totalVotes"
+        ],
+        "member_accesses": [
+          "length",
+          "sender",
+          "voteCount"
+        ],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "hasVoted",
+            "key": "msg.sender"
+          },
+          {
+            "var": "proposals",
+            "key": "index"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "hasVoted",
+            "key": "msg.sender"
+          },
+          {
+            "var": "totalVotes",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "tally",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < proposals.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "sum"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "proposals[i].voteCount",
+                    "base": "proposals",
+                    "scope": "state",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "sum",
+                  "expr": "sum",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "sum"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:proposals"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "proposals.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "VoteTally.tally#loop0",
+            "loop_index": 0,
+            "node_id": 114,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "proposals"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "voteCount"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "proposals",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "winner",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < proposals.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "highest",
+                  "expr": "highest",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                },
+                {
+                  "var": "best",
+                  "expr": "best",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "best",
+                "highest"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:proposals"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "proposals.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "VoteTally.winner#loop0",
+            "loop_index": 0,
+            "node_id": 156,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "proposals"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "voteCount"
+        ],
+        "internal_calls": [
+          "Winner"
+        ],
+        "external_calls": [],
+        "events_emitted": [
+          "Winner"
+        ],
+        "storage_reads": [
+          {
+            "var": "proposals",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "reachedQuorum",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < proposals.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [
+                "counted"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "counted",
+                  "expr": "counted",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "sum",
+                  "source": {
+                    "expr": "proposals[i].voteCount",
+                    "base": "proposals",
+                    "scope": "state",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "counted",
+                  "expr": "counted",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "counted"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:proposals"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "proposals.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "VoteTally.reachedQuorum#loop0",
+            "loop_index": 0,
+            "node_id": 198,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "proposals",
+          "quorum"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "voteCount"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "proposals",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "proposals",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "struct VoteTally.Proposal"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "hasVoted",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "totalVotes",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "VoteTally",
+        "name": "quorum",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "VoteTally",
+          "name": "proposals",
+          "type": "struct VoteTally.Proposal[]"
+        },
+        {
+          "contract": "VoteTally",
+          "name": "hasVoted",
+          "type": "mapping(address => bool)"
+        },
+        {
+          "contract": "VoteTally",
+          "name": "totalVotes",
+          "type": "uint256"
+        },
+        {
+          "contract": "VoteTally",
+          "name": "quorum",
+          "type": "uint256"
+        }
+      ],
+      "mappings": [
+        {
+          "contract": "VoteTally",
+          "name": "hasVoted",
+          "key": "address",
+          "value": "bool"
+        }
+      ]
+    },
+    "access_control": [],
+    "access_dependencies": [
+      {
+        "function": "vote",
+        "source": "require",
+        "condition": "(!hasVoted[msg.sender])",
+        "role": null
+      }
+    ]
+  }
+}

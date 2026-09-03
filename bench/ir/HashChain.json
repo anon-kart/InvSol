@@ -1,0 +1,499 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "HashChain",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "HashChain",
+        "name": "setRoot",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "root_",
+            "type": "bytes32"
+          },
+          {
+            "name": "depth_",
+            "type": "uint256"
+          }
+        ],
+        "returns": [],
+        "loops": [],
+        "requires": [
+          "(depth_ <= 32)"
+        ],
+        "reads": [
+          "depth",
+          "root"
+        ],
+        "writes": [
+          "depth",
+          "root"
+        ],
+        "member_accesses": [],
+        "internal_calls": [
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [
+          {
+            "var": "depth",
+            "key": null
+          },
+          {
+            "var": "root",
+            "key": null
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "HashChain",
+        "name": "computeRoot",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "leaf",
+            "type": "bytes32"
+          },
+          {
+            "name": "proof",
+            "type": "bytes32[]"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bytes32"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < proof.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "node",
+                  "expr": "node",
+                  "scope": "local",
+                  "type": "bytes32",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "node"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "proof.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "HashChain.computeRoot#loop0",
+            "loop_index": 0,
+            "node_id": 86,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [
+          "encodePacked",
+          "length"
+        ],
+        "internal_calls": [
+          "keccak256"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "HashChain",
+        "name": "verify",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "leaf",
+            "type": "bytes32"
+          },
+          {
+            "name": "proof",
+            "type": "bytes32[]"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bool"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < proof.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "node",
+                  "expr": "node",
+                  "scope": "local",
+                  "type": "bytes32",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "node"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "proof.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "HashChain.verify#loop0",
+            "loop_index": 0,
+            "node_id": 126,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "root"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "encodePacked",
+          "length"
+        ],
+        "internal_calls": [
+          "keccak256"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "HashChain",
+        "name": "chain",
+        "visibility": "external",
+        "mutability": "pure",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "seed_",
+            "type": "bytes32"
+          },
+          {
+            "name": "rounds",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "bytes32"
+          },
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(i < rounds)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "i",
+                "steps"
+              ],
+              "mapping_updates": [],
+              "array_updates": [],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "steps",
+                  "expr": "steps",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "i",
+                  "expr": "i",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "mapping_update_facts": [],
+              "array_update_facts": [],
+              "writes": [
+                {
+                  "var": "node",
+                  "expr": "node",
+                  "scope": "local",
+                  "type": "bytes32",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "="
+                },
+                {
+                  "var": "steps",
+                  "expr": "steps",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [
+                {
+                  "kind": "internal",
+                  "callee": "keccak256",
+                  "receiver": "",
+                  "external": false
+                }
+              ],
+              "carried_vars": [
+                "i",
+                "node",
+                "steps"
+              ],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "rounds",
+              "inclusive_upper": false
+            },
+            "loop_id": "HashChain.chain#loop0",
+            "loop_index": 0,
+            "node_id": 178,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [
+          "(rounds <= 64)"
+        ],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [
+          "encodePacked"
+        ],
+        "internal_calls": [
+          "keccak256",
+          "require"
+        ],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "HashChain",
+        "name": "root",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "bytes32"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "HashChain",
+        "name": "depth",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "HashChain",
+          "name": "root",
+          "type": "bytes32"
+        },
+        {
+          "contract": "HashChain",
+          "name": "depth",
+          "type": "uint256"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "ir_version": "0.1",
+  "contract": {
+    "name": "ArrayCompact",
+    "solidity_version": "0.8.26",
+    "functions": [
+      {
+        "contract": "ArrayCompact",
+        "name": "seed",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "xs",
+            "type": "uint256[]"
+          }
+        ],
+        "returns": [],
+        "loops": [
+          {
+            "type": "for",
+            "init": "i = 0",
+            "guard": "(i < xs.length)",
+            "update": "(i++)",
+            "body_summary": {
+              "indices": [
+                "i"
+              ],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "items"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "items",
+                  "expr": "items.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "writes": [
+                {
+                  "var": "items",
+                  "expr": "items.push()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "push",
+                  "source": {
+                    "expr": "xs[i]",
+                    "base": "xs",
+                    "scope": "local",
+                    "indexed": true,
+                    "index": "i",
+                    "container": "array"
+                  }
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "simple",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": "0",
+              "upper": "xs.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ArrayCompact.seed#loop0",
+            "loop_index": 0,
+            "node_id": 33,
+            "parent_node_id": null,
+            "category": "simple",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length",
+          "push"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ArrayCompact",
+        "name": "removeZeros",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "for",
+            "init": "read = 0",
+            "guard": "(read < items.length)",
+            "update": "(read++)",
+            "body_summary": {
+              "indices": [
+                "read"
+              ],
+              "accumulators": [
+                "removed",
+                "write"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "items"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "write",
+                  "expr": "write",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "items",
+                  "expr": "items[write]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "write",
+                  "op": "="
+                }
+              ],
+              "writes": [
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                },
+                {
+                  "var": "items",
+                  "expr": "items[write]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "write",
+                  "op": "="
+                },
+                {
+                  "var": "write",
+                  "expr": "write",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "removed",
+                "write"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "read",
+              "lower": "0",
+              "upper": "items.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ArrayCompact.removeZeros#loop0",
+            "loop_index": 0,
+            "node_id": 80,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          },
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(items.length > write)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [],
+              "mapping_updates": [],
+              "array_updates": [
+                "items"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "items",
+                  "expr": "items.pop()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "pop",
+                  "source": null
+                }
+              ],
+              "writes": [
+                {
+                  "var": "items",
+                  "expr": "items.pop()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "pop",
+                  "source": null
+                }
+              ],
+              "calls": [],
+              "carried_vars": [],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "unknown"
+            },
+            "bounds": null,
+            "loop_id": "ArrayCompact.removeZeros#loop1",
+            "loop_index": 1,
+            "node_id": 91,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "unknown"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [
+          "items"
+        ],
+        "member_accesses": [
+          "length",
+          "pop"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "read"
+          },
+          {
+            "var": "items",
+            "key": "write"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "items",
+            "key": "write"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "ArrayCompact",
+        "name": "swapAndPop",
+        "visibility": "external",
+        "mutability": "nonpayable",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "target",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [
+          {
+            "type": "while",
+            "init": "",
+            "guard": "(i < items.length)",
+            "update": "",
+            "body_summary": {
+              "indices": [],
+              "accumulators": [
+                "i",
+                "removed"
+              ],
+              "mapping_updates": [],
+              "array_updates": [
+                "items"
+              ],
+              "has_external_call_in_loop": false,
+              "accumulator_facts": [
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                },
+                {
+                  "var": "i",
+                  "expr": "i",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+=",
+                  "kind": "count",
+                  "source": {
+                    "expr": "1",
+                    "base": "",
+                    "scope": "literal",
+                    "indexed": false,
+                    "index": null,
+                    "container": null
+                  }
+                }
+              ],
+              "nested_accumulator_facts": [],
+              "direct_calls": [],
+              "mapping_update_facts": [],
+              "array_update_facts": [
+                {
+                  "var": "items",
+                  "expr": "items[i]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                },
+                {
+                  "var": "items",
+                  "expr": "items.pop()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "pop",
+                  "source": null
+                }
+              ],
+              "writes": [
+                {
+                  "var": "items",
+                  "expr": "items[i]",
+                  "scope": "state",
+                  "type": "uint256",
+                  "container": "array",
+                  "key": "i",
+                  "op": "="
+                },
+                {
+                  "var": "removed",
+                  "expr": "removed",
+                  "scope": "local",
+                  "type": "uint256",
+                  "container": "scalar",
+                  "key": null,
+                  "op": "+="
+                },
+                {
+                  "var": "items",
+                  "expr": "items.pop()",
+                  "scope": "state",
+                  "type": "uint256[] storage ref",
+                  "container": "array",
+                  "key": null,
+                  "op": "pop",
+                  "source": null
+                }
+              ],
+              "calls": [],
+              "carried_vars": [
+                "i",
+                "removed"
+              ],
+              "external_call_kinds": [],
+              "category": "dynamic",
+              "depth": 0,
+              "has_inner_loop": false,
+              "guard_runtime_dependencies": [
+                "state:items"
+              ],
+              "index_direction": "increasing"
+            },
+            "bounds": {
+              "index": "i",
+              "lower": null,
+              "upper": "items.length",
+              "inclusive_upper": false
+            },
+            "loop_id": "ArrayCompact.swapAndPop#loop0",
+            "loop_index": 0,
+            "node_id": 140,
+            "parent_node_id": null,
+            "category": "dynamic",
+            "depth": 0,
+            "index_direction": "increasing"
+          }
+        ],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [
+          "items"
+        ],
+        "member_accesses": [
+          "length",
+          "pop"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [
+          {
+            "var": "items",
+            "key": "(items.length - 1)"
+          },
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "storage_writes": [
+          {
+            "var": "items",
+            "key": "i"
+          }
+        ],
+        "synthetic": false
+      },
+      {
+        "contract": "ArrayCompact",
+        "name": "length",
+        "visibility": "external",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [
+          "items"
+        ],
+        "writes": [],
+        "member_accesses": [
+          "length"
+        ],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      },
+      {
+        "contract": "ArrayCompact",
+        "name": "items",
+        "visibility": "public",
+        "mutability": "view",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "returns": [
+          {
+            "type": "uint256"
+          }
+        ],
+        "loops": [],
+        "requires": [],
+        "reads": [],
+        "writes": [],
+        "member_accesses": [],
+        "internal_calls": [],
+        "external_calls": [],
+        "events_emitted": [],
+        "storage_reads": [],
+        "storage_writes": [],
+        "synthetic": false
+      }
+    ],
+    "state": {
+      "variables": [
+        {
+          "contract": "ArrayCompact",
+          "name": "items",
+          "type": "uint256[]"
+        }
+      ],
+      "mappings": []
+    },
+    "access_control": [],
+    "access_dependencies": []
+  }
+}
